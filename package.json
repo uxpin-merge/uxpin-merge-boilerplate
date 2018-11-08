@@ -1,0 +1,19 @@
+{
+  "name": "uxpin-merge-boilerplate-proptypes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcintreder/uxpin-merge-boilerplate-proptypes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcintreder/uxpin-merge-boilerplate-proptypes/issues"
+  },
+  "homepage": "https://github.com/marcintreder/uxpin-merge-boilerplate-proptypes#readme"
+}
