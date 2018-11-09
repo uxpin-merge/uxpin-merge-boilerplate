@@ -1,0 +1,39 @@
+{
+  "rootId": "select548853352",
+  "elements": {
+    "select548853352": {
+      "name": "Select",
+      "props": {
+        "width": 300,
+        "children": [
+          {
+            "uxpinPresetElementId": "selectitem2379554241"
+          },
+          {
+            "uxpinPresetElementId": "selectitem230242005"
+          },
+          {
+            "uxpinPresetElementId": "selectitem1081055471"
+          }
+        ]
+      }
+    },
+    "selectitem2379554241": {
+      "name": "SelectItem",
+      "props": {
+        "children": "Option1"
+      }
+    },
+    "selectitem230242005": {
+      "name": "SelectItem",
+      "props": {
+        "children": "Option2"
+      }
+    },
+    "selectitem1081055471": {
+      "props": {
+        "children": "Option2"
+      }
+    }
+  }
+}

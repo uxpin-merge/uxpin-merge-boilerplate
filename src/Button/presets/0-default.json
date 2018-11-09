@@ -1,0 +1,23 @@
+{
+  "rootId": "button4038267449",
+  "elements": {
+    "button4038267449": {
+      "name": "Button",
+      "props": {
+        "stretched": true,
+        "type": "error",
+        "icon": {
+          "uxpinPresetElementId": "icon3586913996"
+        },
+        "mode": "filled"
+      }
+    },
+    "icon3586913996": {
+      "name": "Icon",
+      "props": {
+        "size": "s",
+        "icon": "TickerSvg"
+      }
+    }
+  }
+}

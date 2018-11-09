@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "uxpin-merge server --webpack-config ./webpack.config.js --wrapper ./src/UXPinWrapper/UXPinWrapper.js"
   },
   "repository": {
     "type": "git",
@@ -12,6 +13,27 @@
   },
   "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "@uxpin/merge-cli": "0.0.15",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-emotion": "^9.2.11",
+    "emotion": "^9.2.12",
+    "lodash": "^4.17.11",
+    "merge": "^1.2.1",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-emotion": "^9.2.12",
+    "recompose": "^0.30.0",
+    "source-map-loader": "^0.2.4",
+    "svg-react-loader": "^0.4.6",
+    "webpack": "^4.22.0",
+    "webpack-cli": "^3.1.2"
+  },
   "bugs": {
     "url": "https://github.com/marcintreder/uxpin-merge-boilerplate-proptypes/issues"
   },

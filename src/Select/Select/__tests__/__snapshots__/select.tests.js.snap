@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Select with width 300 correctly: enzyme.shallow 1`] = `
+<Styled(div)
+  placeholder="Select..."
+  width={300}
+>
+  <Styled(div)
+    onClick={[Function]}
+    placeholder="Select..."
+    width={300}
+  >
+    <Styled(div)>
+      Select...
+    </Styled(div)>
+    <Icon
+      color="#444"
+      icon="ChevronSvg"
+    />
+  </Styled(div)>
+</Styled(div)>
+`;
+
+exports[`renders Select with width auto correctly: enzyme.shallow 1`] = `
+<Styled(div)
+  placeholder="Select..."
+  width="auto"
+>
+  <Styled(div)
+    onClick={[Function]}
+    placeholder="Select..."
+    width="auto"
+  >
+    <Styled(div)>
+      Select...
+    </Styled(div)>
+    <Icon
+      color="#444"
+      icon="ChevronSvg"
+    />
+  </Styled(div)>
+</Styled(div)>
+`;
+
+exports[`renders Select with width stretched correctly: enzyme.shallow 1`] = `
+<Styled(div)
+  placeholder="Select..."
+  width="stretched"
+>
+  <Styled(div)
+    onClick={[Function]}
+    placeholder="Select..."
+    width="stretched"
+  >
+    <Styled(div)>
+      Select...
+    </Styled(div)>
+    <Icon
+      color="#444"
+      icon="ChevronSvg"
+    />
+  </Styled(div)>
+</Styled(div)>
+`;

@@ -1,0 +1,106 @@
+{
+    "blue": {
+        "base": "#006cff",
+        "dark5": "0061e6",
+        "dark10": "0056cc",
+        "dark15": "004cb3",
+        "dark30": "002b66",
+        "light5": "#1a7bff",
+        "light10": "#3389ff",
+        "light15": "#4d98ff",
+        "light30": "#99c4ff",
+        "lightPale": "#f0f6ff"
+    },
+    "silver": {
+        "base": "#f3f3f3",
+        "dark1": "#f0f0f0",
+        "dark5": "#e6e6e6",
+        "dark10": "#dadada",
+        "dark15": "#cdcdcd",
+        "dark20": "#c0c0c0",
+        "dark30": "#a6a6a6",
+        "light1": "#f6f6f6"
+    },
+    "gray": {
+        "base": "#444",
+        "dark1": "#414141",
+        "dark5": "#373737",
+        "dark10": "#2a2a2a",
+        "dark15": "#1e1e1e",
+        "dark20": "#111111",
+        "dark25": "#040404",
+        "light1": "#4a4a4a",
+        "light5": "#515151",
+        "light10": "#5e5e5e",
+        "light15": "#6a6a6a",
+        "light20": "#777777",
+        "light25": "#848484",
+        "light30": "#8c8c8c"
+    },
+    "violet": {
+        "base": "#7800ff"
+    },
+    "red": {
+        "base": "#e20c00",
+        "dark5": "#c80b00",
+        "dark10": "#af0900",
+        "dark15": "#950800",
+        "light5": "#fb0d00",
+        "light15": "#ff3a2f",
+        "light25": "#ff6b62",
+        "pale": "#ffeceb"
+    },
+    "pink": {
+        "base": "#ff56b1"
+    },
+    "aqua": {
+        "base": "#00deff"
+    },
+    "yellow": {
+        "base": "#ffc000"
+    },
+    "orange": {
+        "base": "#ff7d3a",
+        "dark5": "#ff6c21",
+        "dark15": "#ed5000",
+        "dark25": "#ba3f00",
+        "light5": "#ff8e54",
+        "light15": "#ffaf87",
+        "light25": "#ffd1b9",
+        "pale": "#fff3ed"
+    },
+    "green": {
+        "base": "#63ad0e",
+        "dark5": "#55950c",
+        "dark15": "#3a6608",
+        "dark25": "#203704",
+        "light5": "#70c510",
+        "light15": "#8bed1b",
+        "light25": "#a3f04a",
+        "pale": "#f0fde1"
+
+    },
+    "success": "#63ad0e",
+    "default": "#006cff",
+    "error": "#e20c00",
+    "warning": "#ff7d3a",
+    "hover": {
+        "primary": "#1a7bff",
+        "secondary": "#f6f6f6",
+        "success": "#70c510",
+        "error": "#fb0d00",
+        "warning": "#ff8e54"
+    }, 
+    "active": {
+        "primary": "#0056cc",
+        "secondary": "#f0f0f0",
+        "success": "#55950c",
+        "error": "#c80b00",
+        "warning": "#ff6c21"
+    },
+    "disabled": {
+        "background": "#f6f6f6",
+        "border": "#f3f3f3",
+        "color": "#cdcdcd"
+    }
+}

@@ -1,0 +1,7 @@
+{   
+    "box": "4px 2px 35px rgba(243, 243, 243, 0.6)",
+    "primary": "4px 4px 15px rgba(179, 211, 255, 0.1)",
+    "warning": "4px 4px 15px rgba(255, 125, 58, 0.1)",
+    "error": "4px 4px 15px rgba(200, 11, 0, 0.1)",
+    "success": "4px 4px 15px rgba(99, 173, 14, 0.1)"
+}

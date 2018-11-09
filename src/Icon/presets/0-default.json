@@ -1,0 +1,12 @@
+{
+  "rootId": "icon282275244",
+  "elements": {
+    "icon282275244": {
+      "name": "Icon",
+      "props": {
+        "size": "l",
+        "icon": "PinMapSolidSvg"
+      }
+    }
+  }
+}

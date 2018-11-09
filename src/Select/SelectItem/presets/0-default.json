@@ -1,0 +1,11 @@
+{
+  "rootId": "selectitem715195549",
+  "elements": {
+    "selectitem715195549": {
+      "name": "SelectItem",
+      "props": {
+        "children": "Option 1"
+      }
+    }
+  }
+}
