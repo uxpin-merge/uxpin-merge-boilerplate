@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "uxpin-merge server --webpack-config ./webpack.config.js --wrapper ./src/UXPinWrapper/UXPinWrapper.js"
+    "server": "uxpin-merge server --webpack-config ./webpack.config.js --wrapper ./src/UXPinWrapper/UXPinWrapper.js",
+    "start": "uxpin-merge --webpack-config ./webpack.config.js --wrapper ./src/UXPinWrapper/UXPinWrapper.js --uxpin-domain uxpin.dev"
   },
   "repository": {
     "type": "git",

@@ -6,17 +6,8 @@
       "props": {
         "stretched": true,
         "type": "error",
-        "icon": {
-          "uxpinPresetElementId": "icon3586913996"
-        },
+        "icon": "<Icon size=\"s\" icon=\"TickerSvg\" />",
         "mode": "filled"
-      }
-    },
-    "icon3586913996": {
-      "name": "Icon",
-      "props": {
-        "size": "s",
-        "icon": "TickerSvg"
       }
     }
   }
