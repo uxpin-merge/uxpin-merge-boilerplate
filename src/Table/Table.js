@@ -108,7 +108,7 @@ render() {
 
 Table.propTypes = {
   width: PropTypes.oneOf(['stretched', 'auto']),
-  data: PropTypes.shape({ header: PropTypes.arrayOf(PropTypes.string), body: PropTypes.object })
+  data: PropTypes.shape({ header: PropTypes.arrayOf(PropTypes.string), body: PropTypes.array })
 }
 
 Table.defaultProps = {

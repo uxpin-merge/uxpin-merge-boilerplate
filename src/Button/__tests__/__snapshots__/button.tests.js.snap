@@ -24,12 +24,12 @@ exports[`renders Button with icon correctly: enzyme.shallow 1`] = `
 `;
 
 exports[`renders error Button correctly: enzyme.mount 1`] = `
-.emotion-1 {
+.emotion-3 {
   background-color: #e20c00;
   color: white;
 }
 
-.emotion-0 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -57,35 +57,35 @@ exports[`renders error Button correctly: enzyme.mount 1`] = `
   color: white;
 }
 
-.emotion-0:hover {
+.emotion-1:hover {
   background-color: #fb0d00;
   border: 1px solid #fb0d00;
   box-shadow: 4px 4px 15px rgba(200,11,0,0.1);
 }
 
-.emotion-0:focus {
+.emotion-1:focus {
   outline: none;
   background-color: #c80b00;
   border: 1px solid #950800;
 }
 
-.emotion-0:active {
+.emotion-1:active {
   background-color: #c80b00;
   border: 1px solid #c80b00;
   box-shadow: 'none';
 }
 
-.emotion-0:disabled {
+.emotion-1:disabled {
   background-color: #f6f6f6;
   border: 1px solid #f3f3f3;
   color: #cdcdcd;
 }
 
-.emotion-0:disabled:hover {
+.emotion-1:disabled:hover {
   box-shadow: none;
 }
 
-.emotion-0 svg {
+.emotion-1 svg {
   margin: 2px;
   fill: white;
 }
@@ -107,7 +107,7 @@ exports[`renders error Button correctly: enzyme.mount 1`] = `
     type="error"
   >
     <withProps(Styled(button))
-      className="emotion-1"
+      className="emotion-3 emotion-0"
       iconDirection="left"
       isDisabled={false}
       mode="filled"
@@ -116,7 +116,7 @@ exports[`renders error Button correctly: enzyme.mount 1`] = `
       type="error"
     >
       <Styled(button)
-        className="emotion-1"
+        className="emotion-3 emotion-0"
         createProps={[Function]}
         iconDirection="left"
         isDisabled={false}
@@ -126,7 +126,7 @@ exports[`renders error Button correctly: enzyme.mount 1`] = `
         type="error"
       >
         <button
-          className="emotion-0"
+          className="emotion-0 emotion-1 emotion-2"
           mode="filled"
           size="m"
           type="error"
@@ -162,12 +162,12 @@ exports[`renders icon Button correctly: enzyme.shallow 1`] = `
 `;
 
 exports[`renders primary Button correctly: enzyme.mount 1`] = `
-.emotion-1 {
+.emotion-3 {
   background-color: #006cff;
   color: white;
 }
 
-.emotion-0 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -195,35 +195,35 @@ exports[`renders primary Button correctly: enzyme.mount 1`] = `
   color: white;
 }
 
-.emotion-0:hover {
+.emotion-1:hover {
   background-color: #1a7bff;
   border: 1px solid #1a7bff;
   box-shadow: 4px 4px 15px rgba(179,211,255,0.1);
 }
 
-.emotion-0:focus {
+.emotion-1:focus {
   outline: none;
   background-color: #0056cc;
   border: 1px solid 004cb3;
 }
 
-.emotion-0:active {
+.emotion-1:active {
   background-color: #0056cc;
   border: 1px solid #0056cc;
   box-shadow: 'none';
 }
 
-.emotion-0:disabled {
+.emotion-1:disabled {
   background-color: #f6f6f6;
   border: 1px solid #f3f3f3;
   color: #cdcdcd;
 }
 
-.emotion-0:disabled:hover {
+.emotion-1:disabled:hover {
   box-shadow: none;
 }
 
-.emotion-0 svg {
+.emotion-1 svg {
   margin: 2px;
   fill: white;
 }
@@ -245,7 +245,7 @@ exports[`renders primary Button correctly: enzyme.mount 1`] = `
     type="primary"
   >
     <withProps(Styled(button))
-      className="emotion-1"
+      className="emotion-3 emotion-0"
       iconDirection="left"
       isDisabled={false}
       mode="filled"
@@ -254,7 +254,7 @@ exports[`renders primary Button correctly: enzyme.mount 1`] = `
       type="primary"
     >
       <Styled(button)
-        className="emotion-1"
+        className="emotion-3 emotion-0"
         createProps={[Function]}
         iconDirection="left"
         isDisabled={false}
@@ -264,7 +264,7 @@ exports[`renders primary Button correctly: enzyme.mount 1`] = `
         type="primary"
       >
         <button
-          className="emotion-0"
+          className="emotion-0 emotion-1 emotion-2"
           mode="filled"
           size="m"
           type="primary"
@@ -278,28 +278,28 @@ exports[`renders primary Button correctly: enzyme.mount 1`] = `
 `;
 
 exports[`renders primary ghost Button correctly: enzyme.mount 1`] = `
-.emotion-1 {
+.emotion-3 {
   background-color: none;
   color: #006cff;
 }
 
-.emotion-1 svg {
+.emotion-3 svg {
   fill: #006cff;
 }
 
-.emotion-1:hover,
-.emotion-1:active,
-.emotion-1:focus {
+.emotion-3:hover,
+.emotion-3:active,
+.emotion-3:focus {
   color: white;
 }
 
-.emotion-1:hover svg,
-.emotion-1:active svg,
-.emotion-1:focus svg {
+.emotion-3:hover svg,
+.emotion-3:active svg,
+.emotion-3:focus svg {
   fill: white;
 }
 
-.emotion-0 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -327,52 +327,52 @@ exports[`renders primary ghost Button correctly: enzyme.mount 1`] = `
   color: #006cff;
 }
 
-.emotion-0:hover {
+.emotion-1:hover {
   background-color: #1a7bff;
   border: 1px solid #1a7bff;
   box-shadow: 4px 4px 15px rgba(179,211,255,0.1);
 }
 
-.emotion-0:focus {
+.emotion-1:focus {
   outline: none;
   background-color: #0056cc;
   border: 1px solid 004cb3;
 }
 
-.emotion-0:active {
+.emotion-1:active {
   background-color: #0056cc;
   border: 1px solid #0056cc;
   box-shadow: 'none';
 }
 
-.emotion-0:disabled {
+.emotion-1:disabled {
   background-color: #f6f6f6;
   border: 1px solid #f3f3f3;
   color: #cdcdcd;
 }
 
-.emotion-0:disabled:hover {
+.emotion-1:disabled:hover {
   box-shadow: none;
 }
 
-.emotion-0 svg {
+.emotion-1 svg {
   margin: 2px;
   fill: white;
 }
 
-.emotion-0 svg {
+.emotion-1 svg {
   fill: #006cff;
 }
 
-.emotion-0:hover,
-.emotion-0:active,
-.emotion-0:focus {
+.emotion-1:hover,
+.emotion-1:active,
+.emotion-1:focus {
   color: white;
 }
 
-.emotion-0:hover svg,
-.emotion-0:active svg,
-.emotion-0:focus svg {
+.emotion-1:hover svg,
+.emotion-1:active svg,
+.emotion-1:focus svg {
   fill: white;
 }
 
@@ -393,7 +393,7 @@ exports[`renders primary ghost Button correctly: enzyme.mount 1`] = `
     type="primary"
   >
     <withProps(Styled(button))
-      className="emotion-1"
+      className="emotion-3 emotion-0"
       iconDirection="left"
       isDisabled={false}
       mode="ghost"
@@ -402,7 +402,7 @@ exports[`renders primary ghost Button correctly: enzyme.mount 1`] = `
       type="primary"
     >
       <Styled(button)
-        className="emotion-1"
+        className="emotion-3 emotion-0"
         createProps={[Function]}
         iconDirection="left"
         isDisabled={false}
@@ -412,7 +412,7 @@ exports[`renders primary ghost Button correctly: enzyme.mount 1`] = `
         type="primary"
       >
         <button
-          className="emotion-0"
+          className="emotion-0 emotion-1 emotion-2"
           mode="ghost"
           size="m"
           type="primary"
@@ -426,12 +426,12 @@ exports[`renders primary ghost Button correctly: enzyme.mount 1`] = `
 `;
 
 exports[`renders secondary Button correctly: enzyme.mount 1`] = `
-.emotion-1 {
+.emotion-3 {
   background-color: #f3f3f3;
   color: #444;
 }
 
-.emotion-0 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -459,35 +459,35 @@ exports[`renders secondary Button correctly: enzyme.mount 1`] = `
   color: #444;
 }
 
-.emotion-0:hover {
+.emotion-1:hover {
   background-color: #f6f6f6;
   border: 1px solid #f6f6f6;
   box-shadow: 4px 2px 35px rgba(243,243,243,0.6);
 }
 
-.emotion-0:focus {
+.emotion-1:focus {
   outline: none;
   background-color: #f0f0f0;
   border: 1px solid 004cb3;
 }
 
-.emotion-0:active {
+.emotion-1:active {
   background-color: #f0f0f0;
   border: 1px solid #f0f0f0;
   box-shadow: 'none';
 }
 
-.emotion-0:disabled {
+.emotion-1:disabled {
   background-color: #f6f6f6;
   border: 1px solid #f3f3f3;
   color: #cdcdcd;
 }
 
-.emotion-0:disabled:hover {
+.emotion-1:disabled:hover {
   box-shadow: none;
 }
 
-.emotion-0 svg {
+.emotion-1 svg {
   margin: 2px;
   fill: white;
 }
@@ -509,7 +509,7 @@ exports[`renders secondary Button correctly: enzyme.mount 1`] = `
     type="secondary"
   >
     <withProps(Styled(button))
-      className="emotion-1"
+      className="emotion-3 emotion-0"
       iconDirection="left"
       isDisabled={false}
       mode="filled"
@@ -518,7 +518,7 @@ exports[`renders secondary Button correctly: enzyme.mount 1`] = `
       type="secondary"
     >
       <Styled(button)
-        className="emotion-1"
+        className="emotion-3 emotion-0"
         createProps={[Function]}
         iconDirection="left"
         isDisabled={false}
@@ -528,7 +528,7 @@ exports[`renders secondary Button correctly: enzyme.mount 1`] = `
         type="secondary"
       >
         <button
-          className="emotion-0"
+          className="emotion-0 emotion-1 emotion-2"
           mode="filled"
           size="m"
           type="secondary"
@@ -542,12 +542,12 @@ exports[`renders secondary Button correctly: enzyme.mount 1`] = `
 `;
 
 exports[`renders success Button correctly: enzyme.mount 1`] = `
-.emotion-1 {
+.emotion-3 {
   background-color: #63ad0e;
   color: white;
 }
 
-.emotion-0 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -575,35 +575,35 @@ exports[`renders success Button correctly: enzyme.mount 1`] = `
   color: white;
 }
 
-.emotion-0:hover {
+.emotion-1:hover {
   background-color: #70c510;
   border: 1px solid #70c510;
   box-shadow: 4px 4px 15px rgba(99,173,14,0.1);
 }
 
-.emotion-0:focus {
+.emotion-1:focus {
   outline: none;
   background-color: #55950c;
   border: 1px solid #3a6608;
 }
 
-.emotion-0:active {
+.emotion-1:active {
   background-color: #55950c;
   border: 1px solid #55950c;
   box-shadow: 'none';
 }
 
-.emotion-0:disabled {
+.emotion-1:disabled {
   background-color: #f6f6f6;
   border: 1px solid #f3f3f3;
   color: #cdcdcd;
 }
 
-.emotion-0:disabled:hover {
+.emotion-1:disabled:hover {
   box-shadow: none;
 }
 
-.emotion-0 svg {
+.emotion-1 svg {
   margin: 2px;
   fill: white;
 }
@@ -625,7 +625,7 @@ exports[`renders success Button correctly: enzyme.mount 1`] = `
     type="success"
   >
     <withProps(Styled(button))
-      className="emotion-1"
+      className="emotion-3 emotion-0"
       iconDirection="left"
       isDisabled={false}
       mode="filled"
@@ -634,7 +634,7 @@ exports[`renders success Button correctly: enzyme.mount 1`] = `
       type="success"
     >
       <Styled(button)
-        className="emotion-1"
+        className="emotion-3 emotion-0"
         createProps={[Function]}
         iconDirection="left"
         isDisabled={false}
@@ -644,7 +644,7 @@ exports[`renders success Button correctly: enzyme.mount 1`] = `
         type="success"
       >
         <button
-          className="emotion-0"
+          className="emotion-0 emotion-1 emotion-2"
           mode="filled"
           size="m"
           type="success"
@@ -658,12 +658,12 @@ exports[`renders success Button correctly: enzyme.mount 1`] = `
 `;
 
 exports[`renders warning Button correctly: enzyme.mount 1`] = `
-.emotion-1 {
+.emotion-3 {
   background-color: #ff7d3a;
   color: white;
 }
 
-.emotion-0 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -691,35 +691,35 @@ exports[`renders warning Button correctly: enzyme.mount 1`] = `
   color: white;
 }
 
-.emotion-0:hover {
+.emotion-1:hover {
   background-color: #ff8e54;
   border: 1px solid #ff8e54;
   box-shadow: 4px 4px 15px rgba(255,125,58,0.1);
 }
 
-.emotion-0:focus {
+.emotion-1:focus {
   outline: none;
   background-color: #ff6c21;
   border: 1px solid #ed5000;
 }
 
-.emotion-0:active {
+.emotion-1:active {
   background-color: #ff6c21;
   border: 1px solid #ff6c21;
   box-shadow: 'none';
 }
 
-.emotion-0:disabled {
+.emotion-1:disabled {
   background-color: #f6f6f6;
   border: 1px solid #f3f3f3;
   color: #cdcdcd;
 }
 
-.emotion-0:disabled:hover {
+.emotion-1:disabled:hover {
   box-shadow: none;
 }
 
-.emotion-0 svg {
+.emotion-1 svg {
   margin: 2px;
   fill: white;
 }
@@ -741,7 +741,7 @@ exports[`renders warning Button correctly: enzyme.mount 1`] = `
     type="warning"
   >
     <withProps(Styled(button))
-      className="emotion-1"
+      className="emotion-3 emotion-0"
       iconDirection="left"
       isDisabled={false}
       mode="filled"
@@ -750,7 +750,7 @@ exports[`renders warning Button correctly: enzyme.mount 1`] = `
       type="warning"
     >
       <Styled(button)
-        className="emotion-1"
+        className="emotion-3 emotion-0"
         createProps={[Function]}
         iconDirection="left"
         isDisabled={false}
@@ -760,7 +760,7 @@ exports[`renders warning Button correctly: enzyme.mount 1`] = `
         type="warning"
       >
         <button
-          className="emotion-0"
+          className="emotion-0 emotion-1 emotion-2"
           mode="filled"
           size="m"
           type="warning"

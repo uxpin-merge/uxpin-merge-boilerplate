@@ -1,7 +1,7 @@
 import React from "react";
 import * as enzyme from "enzyme";
 import toJson from "enzyme-to-json";
-import Table from "../Table.tsx";
+import Table from "../Table";
 
 test("renders table with width stretched correctly", () => {
     const table = (

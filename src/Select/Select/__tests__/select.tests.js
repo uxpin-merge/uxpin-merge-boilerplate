@@ -1,8 +1,8 @@
 import React from "react";
 import * as enzyme from "enzyme";
 import toJson from "enzyme-to-json";
-import Select from "../Select.tsx";
-import SelectItem from "../../SelectItem/SelectItem.tsx";
+import Select from "../Select";
+import SelectItem from "../../SelectItem/SelectItem";
 
 test("renders Select with width 300 correctly", () => {
   const select = (

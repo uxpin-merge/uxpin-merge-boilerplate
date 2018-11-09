@@ -21,14 +21,7 @@ module.exports = {
           loader: 'svg-react-loader'
         },
         {
-          use: {
-            loader: "babel-loader",
-            options: {
-              babelrc: false,
-              presets: ['@babel/preset-env', '@babel/preset-react'],
-              plugins: ['emotion']
-            }
-          },
+          loader: "babel-loader",
           test: /\.js?$/,
           exclude: /node_modules/
         },

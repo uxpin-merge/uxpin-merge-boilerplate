@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "uxpin-merge server --webpack-config ./webpack.config.js --wrapper ./src/UXPinWrapper/UXPinWrapper.js"
   },
   "repository": {
@@ -14,14 +14,20 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@babel/cli": "^7.1.2",
+    "@babel/cli": "^7.1.5",
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "@uxpin/merge-cli": "0.0.15",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-loader": "^8.0.4",
     "babel-plugin-emotion": "^9.2.11",
     "emotion": "^9.2.12",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
+    "enzyme-to-json": "^3.3.4",
+    "jest": "^23.6.0",
+    "jest-emotion": "^9.2.11",
     "lodash": "^4.17.11",
     "merge": "^1.2.1",
     "prop-types": "^15.6.2",
