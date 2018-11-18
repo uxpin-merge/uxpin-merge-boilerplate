@@ -7,7 +7,9 @@
         "stretched": true,
         "type": "error",
         "icon": "<Icon size=\"s\" icon=\"TickerSvg\" />",
-        "mode": "filled"
+        "mode": "filled",
+        "size": "s",
+        "children": "Merge!"
       }
     }
   }

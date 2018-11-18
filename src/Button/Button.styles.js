@@ -126,7 +126,7 @@ const setIconMargin = (direction, buttonSize, label) => {
   ** That let's us create an icon button when
   ** there's no label
   */
-    if(label[2]) {
+    if(label[1] && label[1].length > 0) {
       if(direction === "left") {
         switch(buttonSize){
           case "xs":
@@ -160,44 +160,46 @@ const setIconMargin = (direction, buttonSize, label) => {
         case "xxl":
           return `${size.xs}px 0 0 ${size.s}px`;
         case "xxxl":
-          return `${size.s}px 0 0 ${size.s}px`;
+          return `${size.s}px 0 0 ${size.m}px`;
       }     
     }
   }
-  else {
+  else if(!label[1] || label[1].length === 0){
     switch(buttonSize){
       case "xs":
-        return `${size.xs/2}px -${size.xs}px ${size.xs/2}px -${size.xs}px `;
+        return `-2px`;
       case "s":
-        return `${size.xs}px -${size.xs}px ${size.xs}px -${size.xs}px `;
+        return `2px`;
       case "m":
-        return `${size.xs/4}px`;
+        return `${size.xs/3}px`;
       case "l":
-        return `${size.xs/4}px`;
+        return `${size.xs/1.33}px`;
       case "xl":
         return `${size.m}px`;
       case "xxl":
-        return `${size.l}px`;
-      case "xxxl":
         return `${size.xl}px`;
+      case "xxxl":
+        return `${size.xl * 1.33}px`;
     }     
   }
 }
 
 const setPadding = (buttonSize, label) => {
-  if(label[2] && buttonSize === "m" || buttonSize === "s" || buttonSize === "xs") {
-    return `0 ${size.l}px 0 ${size.l}px`;
+  if (label[1]) {
+    if(label[1].length > 0 && buttonSize === "m" || label[1].length > 0 && buttonSize === "s" || label[1].length > 0 && buttonSize === "xs") {
+      return `0 ${size.l}px 0 ${size.l}px`;
+    }
+    else if(label[1].length > 0 && buttonSize === "l") {
+      return `0 ${size.xl}px 0 ${size.xl}px`;
+    }
+    else if(label[1].length > 0 && buttonSize === "xl") {
+      return `0 ${size.xxl*1.5}px 0 ${size.xxl*1.5}px`;
+    }
+    else if(label[1].length > 0 && buttonSize === "xxl" || label[1].length > 0 && buttonSize === "xxxl") {
+      return `0 ${size.xxxl*2}px 0 ${size.xxxl*2}px`;
+    }
   }
-  else if(label[2] && buttonSize === "l") {
-    return `0 ${size.xl}px 0 ${size.xl}px`;
-  }
-  else if(label[2] && buttonSize === "xl") {
-    return `0 ${size.xxl}px 0 ${size.xxl}px`;
-  }
-  else if(label[2] && buttonSize === "xxl" || buttonSize === "xxxl") {
-    return `0 ${size.xxxl}px 0 ${size.xxxl}px`;
-  }
-  else if(!label[2] && buttonSize !== "l") {
+  else if(!label[1] || label[1].length === 0) {
     return `${size.xs}px ${size.xs}px`;
   }
   else {
@@ -213,7 +215,7 @@ const ButtonCommon = withProps({
   align-items: center;
   justify-content: center;
   width: ${props => props.stretched ? "100%" : "auto"};
-  padding: ${props => setPadding(props.size, props.children)};        
+  padding: ${props => setPadding(props.size, props.children)};     
   border-radius: ${borders.borderRadius};
   border: ${props => `1px solid ${backgroundSelector(props.type)}`};
   font-family: ${typography.fontFamily};
