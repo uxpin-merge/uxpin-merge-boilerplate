@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "server": "uxpin-merge server --webpack-config ./webpack.config.js --wrapper ./src/UXPinWrapper/UXPinWrapper.js",
-    "start": "uxpin-merge --webpack-config ./webpack.config.js --wrapper ./src/UXPinWrapper/UXPinWrapper.js --uxpin-domain uxpin.dev"
+    "start": "uxpin-merge --webpack-config ./webpack.config.js --wrapper ./src/UXPinWrapper/UXPinWrapper.js --uxpin-domain t16543previewexperiment.docker.uxpin.com"
   },
   "repository": {
     "type": "git",
