@@ -48,7 +48,7 @@ const MenuStyles = styled("ul")`
     left: 0;
     width: ${props => props.width === 'stretched' ? "100%" : props.width === 'auto' ? 'auto' : `${props.width}px`};
     min-width: 250px;
-    margin: 1px 0 0 6px;
+    margin: 1px 0;
     padding: ${size.s}px 0 ${size.s}px 0;
     background: white;
     box-shadow: ${shadow.box};

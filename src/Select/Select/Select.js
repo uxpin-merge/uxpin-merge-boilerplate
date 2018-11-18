@@ -7,7 +7,7 @@ import { ItemStyles, MenuStyles, SelectContainerStyles, SelectContent, SelectSty
 export default class Select extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { open: false, content: this.props.placeholder };
+    this.state = { open: this.props.defaultOpen, content: this.props.placeholder };
   this.toggleList = this.toggleList.bind(this)
   }
 
@@ -70,10 +70,12 @@ selectItem(content, id) {
 Select.propTypes = {
   children: PropTypes.node,
   width: PropTypes.oneOfType([PropTypes.oneOf(['stretched', 'auto']), PropTypes.number]),
+  defaultOpen: PropTypes.bool,
   placeholder: PropTypes.string
 }
 
 Select.defaultProps = {
   placeholder: 'Select...',
+  defaultOpen: false,
   width: 'stretched'
 };
