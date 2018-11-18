@@ -9,7 +9,8 @@
         "icon": "<Icon size=\"s\" icon=\"TickerSvg\" />",
         "mode": "filled",
         "size": "s",
-        "children": "Merge!"
+        "children": "Merge!",
+        "isDisabled": true
       }
     }
   }

@@ -208,7 +208,7 @@ const setPadding = (buttonSize, label) => {
 }
 
 const ButtonCommon = withProps({
-  createProps: props => this.props.isDisabled
+  createProps: props => this.props.disabled
 })(styled("button")`
   display: flex;
   flex-direction: ${props => props.iconDirection === "left" ? "row" : "row-reverse"};
