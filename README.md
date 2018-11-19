@@ -14,6 +14,11 @@ All the components are built with React.js and styled with Emotion. Styles are u
 
 This boilerplate needs node and npm installed to run. Once you're ready clone the repository and install all the dependencies (`npm install`). 
 
+## What is Merge Experimental Mode
+![alt text](https://preview.ibb.co/fsq20L/merge-exp.png)
+
+Merge Experimental Mode let's you render your React.js components in a dev version of UXPin Design Editor directly from your local environment. You can test your components and see how they're going to behave in UXPin Design Editor!
+
 ## Rendering Components in the browser
 
 Among the dependencies of this boilerplate you'll find `uxpin-merge` this tool prepares components for integration with UXPin. It has a built in development server that you can use to see the rendered components in the browser. To start the dev server use the following command:
