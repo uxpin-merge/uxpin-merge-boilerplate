@@ -2,6 +2,7 @@
 
 exports[`renders Button with icon correctly: enzyme.shallow 1`] = `
 <Styled(withProps(Styled(button)))
+  disabled={false}
   icon={
     <Icon
       icon="TickerSvg"
@@ -9,7 +10,6 @@ exports[`renders Button with icon correctly: enzyme.shallow 1`] = `
     />
   }
   iconDirection="left"
-  isDisabled={false}
   mode="filled"
   size="m"
   stretched={false}
@@ -46,7 +46,7 @@ exports[`renders error Button correctly: enzyme.mount 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   width: auto;
-  padding: 8px 8px;
+  padding: 0 16px 0 16px;
   border-radius: 3px;
   border: 1px solid #e20c00;
   font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;
@@ -86,21 +86,21 @@ exports[`renders error Button correctly: enzyme.mount 1`] = `
 }
 
 .emotion-1 svg {
-  margin: 2px;
+  margin: 0 8px 0 0;
   fill: white;
 }
 
 <Button
+  disabled={false}
   iconDirection="left"
-  isDisabled={false}
   mode="filled"
   size="m"
   stretched={false}
   type="error"
 >
   <Styled(withProps(Styled(button)))
+    disabled={false}
     iconDirection="left"
-    isDisabled={false}
     mode="filled"
     size="m"
     stretched={false}
@@ -108,8 +108,8 @@ exports[`renders error Button correctly: enzyme.mount 1`] = `
   >
     <withProps(Styled(button))
       className="emotion-3 emotion-0"
+      disabled={false}
       iconDirection="left"
-      isDisabled={false}
       mode="filled"
       size="m"
       stretched={false}
@@ -118,8 +118,8 @@ exports[`renders error Button correctly: enzyme.mount 1`] = `
       <Styled(button)
         className="emotion-3 emotion-0"
         createProps={[Function]}
+        disabled={false}
         iconDirection="left"
-        isDisabled={false}
         mode="filled"
         size="m"
         stretched={false}
@@ -127,6 +127,7 @@ exports[`renders error Button correctly: enzyme.mount 1`] = `
       >
         <button
           className="emotion-0 emotion-1 emotion-2"
+          disabled={false}
           mode="filled"
           size="m"
           type="error"
@@ -141,6 +142,7 @@ exports[`renders error Button correctly: enzyme.mount 1`] = `
 
 exports[`renders icon Button correctly: enzyme.shallow 1`] = `
 <Styled(withProps(Styled(button)))
+  disabled={false}
   icon={
     <Icon
       icon="TickerSvg"
@@ -148,7 +150,6 @@ exports[`renders icon Button correctly: enzyme.shallow 1`] = `
     />
   }
   iconDirection="left"
-  isDisabled={false}
   mode="filled"
   size="m"
   stretched={false}
@@ -184,7 +185,7 @@ exports[`renders primary Button correctly: enzyme.mount 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   width: auto;
-  padding: 8px 8px;
+  padding: 0 16px 0 16px;
   border-radius: 3px;
   border: 1px solid #006cff;
   font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;
@@ -224,21 +225,21 @@ exports[`renders primary Button correctly: enzyme.mount 1`] = `
 }
 
 .emotion-1 svg {
-  margin: 2px;
+  margin: 0 8px 0 0;
   fill: white;
 }
 
 <Button
+  disabled={false}
   iconDirection="left"
-  isDisabled={false}
   mode="filled"
   size="m"
   stretched={false}
   type="primary"
 >
   <Styled(withProps(Styled(button)))
+    disabled={false}
     iconDirection="left"
-    isDisabled={false}
     mode="filled"
     size="m"
     stretched={false}
@@ -246,8 +247,8 @@ exports[`renders primary Button correctly: enzyme.mount 1`] = `
   >
     <withProps(Styled(button))
       className="emotion-3 emotion-0"
+      disabled={false}
       iconDirection="left"
-      isDisabled={false}
       mode="filled"
       size="m"
       stretched={false}
@@ -256,8 +257,8 @@ exports[`renders primary Button correctly: enzyme.mount 1`] = `
       <Styled(button)
         className="emotion-3 emotion-0"
         createProps={[Function]}
+        disabled={false}
         iconDirection="left"
-        isDisabled={false}
         mode="filled"
         size="m"
         stretched={false}
@@ -265,6 +266,7 @@ exports[`renders primary Button correctly: enzyme.mount 1`] = `
       >
         <button
           className="emotion-0 emotion-1 emotion-2"
+          disabled={false}
           mode="filled"
           size="m"
           type="primary"
@@ -316,7 +318,7 @@ exports[`renders primary ghost Button correctly: enzyme.mount 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   width: auto;
-  padding: 8px 8px;
+  padding: 0 16px 0 16px;
   border-radius: 3px;
   border: 1px solid #006cff;
   font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;
@@ -356,7 +358,7 @@ exports[`renders primary ghost Button correctly: enzyme.mount 1`] = `
 }
 
 .emotion-1 svg {
-  margin: 2px;
+  margin: 0 8px 0 0;
   fill: white;
 }
 
@@ -377,16 +379,16 @@ exports[`renders primary ghost Button correctly: enzyme.mount 1`] = `
 }
 
 <Button
+  disabled={false}
   iconDirection="left"
-  isDisabled={false}
   mode="ghost"
   size="m"
   stretched={false}
   type="primary"
 >
   <Styled(withProps(Styled(button)))
+    disabled={false}
     iconDirection="left"
-    isDisabled={false}
     mode="ghost"
     size="m"
     stretched={false}
@@ -394,8 +396,8 @@ exports[`renders primary ghost Button correctly: enzyme.mount 1`] = `
   >
     <withProps(Styled(button))
       className="emotion-3 emotion-0"
+      disabled={false}
       iconDirection="left"
-      isDisabled={false}
       mode="ghost"
       size="m"
       stretched={false}
@@ -404,8 +406,8 @@ exports[`renders primary ghost Button correctly: enzyme.mount 1`] = `
       <Styled(button)
         className="emotion-3 emotion-0"
         createProps={[Function]}
+        disabled={false}
         iconDirection="left"
-        isDisabled={false}
         mode="ghost"
         size="m"
         stretched={false}
@@ -413,6 +415,7 @@ exports[`renders primary ghost Button correctly: enzyme.mount 1`] = `
       >
         <button
           className="emotion-0 emotion-1 emotion-2"
+          disabled={false}
           mode="ghost"
           size="m"
           type="primary"
@@ -448,7 +451,7 @@ exports[`renders secondary Button correctly: enzyme.mount 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   width: auto;
-  padding: 8px 8px;
+  padding: 0 16px 0 16px;
   border-radius: 3px;
   border: 1px solid #f3f3f3;
   font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;
@@ -488,21 +491,21 @@ exports[`renders secondary Button correctly: enzyme.mount 1`] = `
 }
 
 .emotion-1 svg {
-  margin: 2px;
+  margin: 0 8px 0 0;
   fill: white;
 }
 
 <Button
+  disabled={false}
   iconDirection="left"
-  isDisabled={false}
   mode="filled"
   size="m"
   stretched={false}
   type="secondary"
 >
   <Styled(withProps(Styled(button)))
+    disabled={false}
     iconDirection="left"
-    isDisabled={false}
     mode="filled"
     size="m"
     stretched={false}
@@ -510,8 +513,8 @@ exports[`renders secondary Button correctly: enzyme.mount 1`] = `
   >
     <withProps(Styled(button))
       className="emotion-3 emotion-0"
+      disabled={false}
       iconDirection="left"
-      isDisabled={false}
       mode="filled"
       size="m"
       stretched={false}
@@ -520,8 +523,8 @@ exports[`renders secondary Button correctly: enzyme.mount 1`] = `
       <Styled(button)
         className="emotion-3 emotion-0"
         createProps={[Function]}
+        disabled={false}
         iconDirection="left"
-        isDisabled={false}
         mode="filled"
         size="m"
         stretched={false}
@@ -529,6 +532,7 @@ exports[`renders secondary Button correctly: enzyme.mount 1`] = `
       >
         <button
           className="emotion-0 emotion-1 emotion-2"
+          disabled={false}
           mode="filled"
           size="m"
           type="secondary"
@@ -564,7 +568,7 @@ exports[`renders success Button correctly: enzyme.mount 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   width: auto;
-  padding: 8px 8px;
+  padding: 0 16px 0 16px;
   border-radius: 3px;
   border: 1px solid #63ad0e;
   font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;
@@ -604,21 +608,21 @@ exports[`renders success Button correctly: enzyme.mount 1`] = `
 }
 
 .emotion-1 svg {
-  margin: 2px;
+  margin: 0 8px 0 0;
   fill: white;
 }
 
 <Button
+  disabled={false}
   iconDirection="left"
-  isDisabled={false}
   mode="filled"
   size="m"
   stretched={false}
   type="success"
 >
   <Styled(withProps(Styled(button)))
+    disabled={false}
     iconDirection="left"
-    isDisabled={false}
     mode="filled"
     size="m"
     stretched={false}
@@ -626,8 +630,8 @@ exports[`renders success Button correctly: enzyme.mount 1`] = `
   >
     <withProps(Styled(button))
       className="emotion-3 emotion-0"
+      disabled={false}
       iconDirection="left"
-      isDisabled={false}
       mode="filled"
       size="m"
       stretched={false}
@@ -636,8 +640,8 @@ exports[`renders success Button correctly: enzyme.mount 1`] = `
       <Styled(button)
         className="emotion-3 emotion-0"
         createProps={[Function]}
+        disabled={false}
         iconDirection="left"
-        isDisabled={false}
         mode="filled"
         size="m"
         stretched={false}
@@ -645,6 +649,7 @@ exports[`renders success Button correctly: enzyme.mount 1`] = `
       >
         <button
           className="emotion-0 emotion-1 emotion-2"
+          disabled={false}
           mode="filled"
           size="m"
           type="success"
@@ -680,7 +685,7 @@ exports[`renders warning Button correctly: enzyme.mount 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   width: auto;
-  padding: 8px 8px;
+  padding: 0 16px 0 16px;
   border-radius: 3px;
   border: 1px solid #ff7d3a;
   font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;
@@ -720,21 +725,21 @@ exports[`renders warning Button correctly: enzyme.mount 1`] = `
 }
 
 .emotion-1 svg {
-  margin: 2px;
+  margin: 0 8px 0 0;
   fill: white;
 }
 
 <Button
+  disabled={false}
   iconDirection="left"
-  isDisabled={false}
   mode="filled"
   size="m"
   stretched={false}
   type="warning"
 >
   <Styled(withProps(Styled(button)))
+    disabled={false}
     iconDirection="left"
-    isDisabled={false}
     mode="filled"
     size="m"
     stretched={false}
@@ -742,8 +747,8 @@ exports[`renders warning Button correctly: enzyme.mount 1`] = `
   >
     <withProps(Styled(button))
       className="emotion-3 emotion-0"
+      disabled={false}
       iconDirection="left"
-      isDisabled={false}
       mode="filled"
       size="m"
       stretched={false}
@@ -752,8 +757,8 @@ exports[`renders warning Button correctly: enzyme.mount 1`] = `
       <Styled(button)
         className="emotion-3 emotion-0"
         createProps={[Function]}
+        disabled={false}
         iconDirection="left"
-        isDisabled={false}
         mode="filled"
         size="m"
         stretched={false}
@@ -761,6 +766,7 @@ exports[`renders warning Button correctly: enzyme.mount 1`] = `
       >
         <button
           className="emotion-0 emotion-1 emotion-2"
+          disabled={false}
           mode="filled"
           size="m"
           type="warning"

@@ -71,6 +71,7 @@ exports[`renders table with few headers correctly: enzyme.shallow 1`] = `
           band
           <Styled(div)>
             <Button
+              disabled={false}
               icon={
                 <Icon
                   color="#f6f6f6"
@@ -79,7 +80,6 @@ exports[`renders table with few headers correctly: enzyme.shallow 1`] = `
                 />
               }
               iconDirection="left"
-              isDisabled={false}
               mode="flat"
               onClick={[Function]}
               size="s"
@@ -87,6 +87,7 @@ exports[`renders table with few headers correctly: enzyme.shallow 1`] = `
               type="secondary"
             />
             <Button
+              disabled={false}
               icon={
                 <Icon
                   icon="ChevronSvg"
@@ -94,7 +95,6 @@ exports[`renders table with few headers correctly: enzyme.shallow 1`] = `
                 />
               }
               iconDirection="left"
-              isDisabled={false}
               mode="flat"
               onClick={[Function]}
               size="s"
@@ -111,6 +111,7 @@ exports[`renders table with few headers correctly: enzyme.shallow 1`] = `
           singer
           <Styled(div)>
             <Button
+              disabled={false}
               icon={
                 <Icon
                   color="#f6f6f6"
@@ -119,7 +120,6 @@ exports[`renders table with few headers correctly: enzyme.shallow 1`] = `
                 />
               }
               iconDirection="left"
-              isDisabled={false}
               mode="flat"
               onClick={[Function]}
               size="s"
@@ -127,6 +127,7 @@ exports[`renders table with few headers correctly: enzyme.shallow 1`] = `
               type="secondary"
             />
             <Button
+              disabled={false}
               icon={
                 <Icon
                   icon="ChevronSvg"
@@ -134,7 +135,6 @@ exports[`renders table with few headers correctly: enzyme.shallow 1`] = `
                 />
               }
               iconDirection="left"
-              isDisabled={false}
               mode="flat"
               onClick={[Function]}
               size="s"
@@ -151,6 +151,7 @@ exports[`renders table with few headers correctly: enzyme.shallow 1`] = `
           rhythm guitar
           <Styled(div)>
             <Button
+              disabled={false}
               icon={
                 <Icon
                   color="#f6f6f6"
@@ -159,7 +160,6 @@ exports[`renders table with few headers correctly: enzyme.shallow 1`] = `
                 />
               }
               iconDirection="left"
-              isDisabled={false}
               mode="flat"
               onClick={[Function]}
               size="s"
@@ -167,6 +167,7 @@ exports[`renders table with few headers correctly: enzyme.shallow 1`] = `
               type="secondary"
             />
             <Button
+              disabled={false}
               icon={
                 <Icon
                   icon="ChevronSvg"
@@ -174,7 +175,6 @@ exports[`renders table with few headers correctly: enzyme.shallow 1`] = `
                 />
               }
               iconDirection="left"
-              isDisabled={false}
               mode="flat"
               onClick={[Function]}
               size="s"
@@ -380,6 +380,7 @@ exports[`renders table with width auto correctly: enzyme.shallow 1`] = `
           band
           <Styled(div)>
             <Button
+              disabled={false}
               icon={
                 <Icon
                   color="#f6f6f6"
@@ -388,7 +389,6 @@ exports[`renders table with width auto correctly: enzyme.shallow 1`] = `
                 />
               }
               iconDirection="left"
-              isDisabled={false}
               mode="flat"
               onClick={[Function]}
               size="s"
@@ -396,6 +396,7 @@ exports[`renders table with width auto correctly: enzyme.shallow 1`] = `
               type="secondary"
             />
             <Button
+              disabled={false}
               icon={
                 <Icon
                   icon="ChevronSvg"
@@ -403,7 +404,6 @@ exports[`renders table with width auto correctly: enzyme.shallow 1`] = `
                 />
               }
               iconDirection="left"
-              isDisabled={false}
               mode="flat"
               onClick={[Function]}
               size="s"
@@ -420,6 +420,7 @@ exports[`renders table with width auto correctly: enzyme.shallow 1`] = `
           singer
           <Styled(div)>
             <Button
+              disabled={false}
               icon={
                 <Icon
                   color="#f6f6f6"
@@ -428,7 +429,6 @@ exports[`renders table with width auto correctly: enzyme.shallow 1`] = `
                 />
               }
               iconDirection="left"
-              isDisabled={false}
               mode="flat"
               onClick={[Function]}
               size="s"
@@ -436,6 +436,7 @@ exports[`renders table with width auto correctly: enzyme.shallow 1`] = `
               type="secondary"
             />
             <Button
+              disabled={false}
               icon={
                 <Icon
                   icon="ChevronSvg"
@@ -443,7 +444,6 @@ exports[`renders table with width auto correctly: enzyme.shallow 1`] = `
                 />
               }
               iconDirection="left"
-              isDisabled={false}
               mode="flat"
               onClick={[Function]}
               size="s"
@@ -460,6 +460,7 @@ exports[`renders table with width auto correctly: enzyme.shallow 1`] = `
           rhythm guitar
           <Styled(div)>
             <Button
+              disabled={false}
               icon={
                 <Icon
                   color="#f6f6f6"
@@ -468,7 +469,6 @@ exports[`renders table with width auto correctly: enzyme.shallow 1`] = `
                 />
               }
               iconDirection="left"
-              isDisabled={false}
               mode="flat"
               onClick={[Function]}
               size="s"
@@ -476,6 +476,7 @@ exports[`renders table with width auto correctly: enzyme.shallow 1`] = `
               type="secondary"
             />
             <Button
+              disabled={false}
               icon={
                 <Icon
                   icon="ChevronSvg"
@@ -483,7 +484,6 @@ exports[`renders table with width auto correctly: enzyme.shallow 1`] = `
                 />
               }
               iconDirection="left"
-              isDisabled={false}
               mode="flat"
               onClick={[Function]}
               size="s"
@@ -500,6 +500,7 @@ exports[`renders table with width auto correctly: enzyme.shallow 1`] = `
           lead guitar
           <Styled(div)>
             <Button
+              disabled={false}
               icon={
                 <Icon
                   color="#f6f6f6"
@@ -508,7 +509,6 @@ exports[`renders table with width auto correctly: enzyme.shallow 1`] = `
                 />
               }
               iconDirection="left"
-              isDisabled={false}
               mode="flat"
               onClick={[Function]}
               size="s"
@@ -516,6 +516,7 @@ exports[`renders table with width auto correctly: enzyme.shallow 1`] = `
               type="secondary"
             />
             <Button
+              disabled={false}
               icon={
                 <Icon
                   icon="ChevronSvg"
@@ -523,7 +524,6 @@ exports[`renders table with width auto correctly: enzyme.shallow 1`] = `
                 />
               }
               iconDirection="left"
-              isDisabled={false}
               mode="flat"
               onClick={[Function]}
               size="s"
@@ -540,6 +540,7 @@ exports[`renders table with width auto correctly: enzyme.shallow 1`] = `
           bass
           <Styled(div)>
             <Button
+              disabled={false}
               icon={
                 <Icon
                   color="#f6f6f6"
@@ -548,7 +549,6 @@ exports[`renders table with width auto correctly: enzyme.shallow 1`] = `
                 />
               }
               iconDirection="left"
-              isDisabled={false}
               mode="flat"
               onClick={[Function]}
               size="s"
@@ -556,6 +556,7 @@ exports[`renders table with width auto correctly: enzyme.shallow 1`] = `
               type="secondary"
             />
             <Button
+              disabled={false}
               icon={
                 <Icon
                   icon="ChevronSvg"
@@ -563,7 +564,6 @@ exports[`renders table with width auto correctly: enzyme.shallow 1`] = `
                 />
               }
               iconDirection="left"
-              isDisabled={false}
               mode="flat"
               onClick={[Function]}
               size="s"
@@ -580,6 +580,7 @@ exports[`renders table with width auto correctly: enzyme.shallow 1`] = `
           drums
           <Styled(div)>
             <Button
+              disabled={false}
               icon={
                 <Icon
                   color="#f6f6f6"
@@ -588,7 +589,6 @@ exports[`renders table with width auto correctly: enzyme.shallow 1`] = `
                 />
               }
               iconDirection="left"
-              isDisabled={false}
               mode="flat"
               onClick={[Function]}
               size="s"
@@ -596,6 +596,7 @@ exports[`renders table with width auto correctly: enzyme.shallow 1`] = `
               type="secondary"
             />
             <Button
+              disabled={false}
               icon={
                 <Icon
                   icon="ChevronSvg"
@@ -603,7 +604,6 @@ exports[`renders table with width auto correctly: enzyme.shallow 1`] = `
                 />
               }
               iconDirection="left"
-              isDisabled={false}
               mode="flat"
               onClick={[Function]}
               size="s"
@@ -620,6 +620,7 @@ exports[`renders table with width auto correctly: enzyme.shallow 1`] = `
           keyboard
           <Styled(div)>
             <Button
+              disabled={false}
               icon={
                 <Icon
                   color="#f6f6f6"
@@ -628,7 +629,6 @@ exports[`renders table with width auto correctly: enzyme.shallow 1`] = `
                 />
               }
               iconDirection="left"
-              isDisabled={false}
               mode="flat"
               onClick={[Function]}
               size="s"
@@ -636,6 +636,7 @@ exports[`renders table with width auto correctly: enzyme.shallow 1`] = `
               type="secondary"
             />
             <Button
+              disabled={false}
               icon={
                 <Icon
                   icon="ChevronSvg"
@@ -643,7 +644,6 @@ exports[`renders table with width auto correctly: enzyme.shallow 1`] = `
                 />
               }
               iconDirection="left"
-              isDisabled={false}
               mode="flat"
               onClick={[Function]}
               size="s"
@@ -969,6 +969,7 @@ exports[`renders table with width stretched correctly: enzyme.shallow 1`] = `
           band
           <Styled(div)>
             <Button
+              disabled={false}
               icon={
                 <Icon
                   color="#f6f6f6"
@@ -977,7 +978,6 @@ exports[`renders table with width stretched correctly: enzyme.shallow 1`] = `
                 />
               }
               iconDirection="left"
-              isDisabled={false}
               mode="flat"
               onClick={[Function]}
               size="s"
@@ -985,6 +985,7 @@ exports[`renders table with width stretched correctly: enzyme.shallow 1`] = `
               type="secondary"
             />
             <Button
+              disabled={false}
               icon={
                 <Icon
                   icon="ChevronSvg"
@@ -992,7 +993,6 @@ exports[`renders table with width stretched correctly: enzyme.shallow 1`] = `
                 />
               }
               iconDirection="left"
-              isDisabled={false}
               mode="flat"
               onClick={[Function]}
               size="s"
@@ -1009,6 +1009,7 @@ exports[`renders table with width stretched correctly: enzyme.shallow 1`] = `
           singer
           <Styled(div)>
             <Button
+              disabled={false}
               icon={
                 <Icon
                   color="#f6f6f6"
@@ -1017,7 +1018,6 @@ exports[`renders table with width stretched correctly: enzyme.shallow 1`] = `
                 />
               }
               iconDirection="left"
-              isDisabled={false}
               mode="flat"
               onClick={[Function]}
               size="s"
@@ -1025,6 +1025,7 @@ exports[`renders table with width stretched correctly: enzyme.shallow 1`] = `
               type="secondary"
             />
             <Button
+              disabled={false}
               icon={
                 <Icon
                   icon="ChevronSvg"
@@ -1032,7 +1033,6 @@ exports[`renders table with width stretched correctly: enzyme.shallow 1`] = `
                 />
               }
               iconDirection="left"
-              isDisabled={false}
               mode="flat"
               onClick={[Function]}
               size="s"
@@ -1049,6 +1049,7 @@ exports[`renders table with width stretched correctly: enzyme.shallow 1`] = `
           rhythm guitar
           <Styled(div)>
             <Button
+              disabled={false}
               icon={
                 <Icon
                   color="#f6f6f6"
@@ -1057,7 +1058,6 @@ exports[`renders table with width stretched correctly: enzyme.shallow 1`] = `
                 />
               }
               iconDirection="left"
-              isDisabled={false}
               mode="flat"
               onClick={[Function]}
               size="s"
@@ -1065,6 +1065,7 @@ exports[`renders table with width stretched correctly: enzyme.shallow 1`] = `
               type="secondary"
             />
             <Button
+              disabled={false}
               icon={
                 <Icon
                   icon="ChevronSvg"
@@ -1072,7 +1073,6 @@ exports[`renders table with width stretched correctly: enzyme.shallow 1`] = `
                 />
               }
               iconDirection="left"
-              isDisabled={false}
               mode="flat"
               onClick={[Function]}
               size="s"
@@ -1089,6 +1089,7 @@ exports[`renders table with width stretched correctly: enzyme.shallow 1`] = `
           lead guitar
           <Styled(div)>
             <Button
+              disabled={false}
               icon={
                 <Icon
                   color="#f6f6f6"
@@ -1097,7 +1098,6 @@ exports[`renders table with width stretched correctly: enzyme.shallow 1`] = `
                 />
               }
               iconDirection="left"
-              isDisabled={false}
               mode="flat"
               onClick={[Function]}
               size="s"
@@ -1105,6 +1105,7 @@ exports[`renders table with width stretched correctly: enzyme.shallow 1`] = `
               type="secondary"
             />
             <Button
+              disabled={false}
               icon={
                 <Icon
                   icon="ChevronSvg"
@@ -1112,7 +1113,6 @@ exports[`renders table with width stretched correctly: enzyme.shallow 1`] = `
                 />
               }
               iconDirection="left"
-              isDisabled={false}
               mode="flat"
               onClick={[Function]}
               size="s"
@@ -1129,6 +1129,7 @@ exports[`renders table with width stretched correctly: enzyme.shallow 1`] = `
           bass
           <Styled(div)>
             <Button
+              disabled={false}
               icon={
                 <Icon
                   color="#f6f6f6"
@@ -1137,7 +1138,6 @@ exports[`renders table with width stretched correctly: enzyme.shallow 1`] = `
                 />
               }
               iconDirection="left"
-              isDisabled={false}
               mode="flat"
               onClick={[Function]}
               size="s"
@@ -1145,6 +1145,7 @@ exports[`renders table with width stretched correctly: enzyme.shallow 1`] = `
               type="secondary"
             />
             <Button
+              disabled={false}
               icon={
                 <Icon
                   icon="ChevronSvg"
@@ -1152,7 +1153,6 @@ exports[`renders table with width stretched correctly: enzyme.shallow 1`] = `
                 />
               }
               iconDirection="left"
-              isDisabled={false}
               mode="flat"
               onClick={[Function]}
               size="s"
@@ -1169,6 +1169,7 @@ exports[`renders table with width stretched correctly: enzyme.shallow 1`] = `
           drums
           <Styled(div)>
             <Button
+              disabled={false}
               icon={
                 <Icon
                   color="#f6f6f6"
@@ -1177,7 +1178,6 @@ exports[`renders table with width stretched correctly: enzyme.shallow 1`] = `
                 />
               }
               iconDirection="left"
-              isDisabled={false}
               mode="flat"
               onClick={[Function]}
               size="s"
@@ -1185,6 +1185,7 @@ exports[`renders table with width stretched correctly: enzyme.shallow 1`] = `
               type="secondary"
             />
             <Button
+              disabled={false}
               icon={
                 <Icon
                   icon="ChevronSvg"
@@ -1192,7 +1193,6 @@ exports[`renders table with width stretched correctly: enzyme.shallow 1`] = `
                 />
               }
               iconDirection="left"
-              isDisabled={false}
               mode="flat"
               onClick={[Function]}
               size="s"
@@ -1209,6 +1209,7 @@ exports[`renders table with width stretched correctly: enzyme.shallow 1`] = `
           keyboard
           <Styled(div)>
             <Button
+              disabled={false}
               icon={
                 <Icon
                   color="#f6f6f6"
@@ -1217,7 +1218,6 @@ exports[`renders table with width stretched correctly: enzyme.shallow 1`] = `
                 />
               }
               iconDirection="left"
-              isDisabled={false}
               mode="flat"
               onClick={[Function]}
               size="s"
@@ -1225,6 +1225,7 @@ exports[`renders table with width stretched correctly: enzyme.shallow 1`] = `
               type="secondary"
             />
             <Button
+              disabled={false}
               icon={
                 <Icon
                   icon="ChevronSvg"
@@ -1232,7 +1233,6 @@ exports[`renders table with width stretched correctly: enzyme.shallow 1`] = `
                 />
               }
               iconDirection="left"
-              isDisabled={false}
               mode="flat"
               onClick={[Function]}
               size="s"
