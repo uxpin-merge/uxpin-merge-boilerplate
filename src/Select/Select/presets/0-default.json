@@ -4,7 +4,6 @@
     "select548853352": {
       "name": "Select",
       "props": {
-        "width": 300,
         "children": [
           {
             "uxpinPresetElementId": "selectitem2379554241"

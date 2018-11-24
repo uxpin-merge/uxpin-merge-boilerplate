@@ -44,7 +44,10 @@ selectItem(content, id) {
                 size="s"
                 stretched={false}
                 icon={<Icon icon="ActionCloseSvg" size="xs" color="#444"/>}
-                onClick={(e) => this.restartSelect(e)} />
+                onClick={(e) => {
+                  this.restartSelect(e)
+                  this.props.onRestart()
+                }} />
             : ''}
             <Icon icon="ChevronSvg" color="#444"/>
         </SelectStyles>
@@ -55,7 +58,10 @@ selectItem(content, id) {
               return <ItemStyles
                       id={`${i}listItem`}
                       active={this.state.selected}
-                      onClick={() => this.selectItem(option, i)}
+                      onClick={() => {
+                        this.selectItem(option, i)
+                        this.props.onSelect()
+                      }}
                       {...this.props}
                       >
                       {item}
@@ -69,9 +75,11 @@ selectItem(content, id) {
 
 Select.propTypes = {
   children: PropTypes.node,
-  width: PropTypes.oneOfType([PropTypes.oneOf(['stretched', 'auto']), PropTypes.number]),
+  width: PropTypes.oneOf(['stretched', 'auto']),
   defaultOpen: PropTypes.bool,
-  placeholder: PropTypes.string
+  placeholder: PropTypes.string,
+  onSelect: PropTypes.func,
+  onRestart: PropTypes.func
 }
 
 Select.defaultProps = {

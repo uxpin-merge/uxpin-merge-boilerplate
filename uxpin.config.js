@@ -10,6 +10,17 @@ module.exports = {
             "src/Select/SelectItem/SelectItem.js",
             "src/Table/Table.js"
           ]
+        },
+        {
+          name: "Charts",
+          include: [
+            "src/LineChart/LineChart.js",
+            "src/LineMarkChart/LineMarkChart.js",
+            "src/MarkChart/MarkChart.js",
+            "src/AreaChart/AreaChart.js",
+            "src/BarChart/BarChart.js",
+            "src/PieChart/PieChart.js"
+          ]
         }
       ]
     }

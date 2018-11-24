@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "server": "uxpin-merge server --webpack-config ./webpack.config.js --wrapper ./src/UXPinWrapper/UXPinWrapper.js",
-    "start": "uxpin-merge --webpack-config ./webpack.config.js --wrapper ./src/UXPinWrapper/UXPinWrapper.js --uxpin-domain t16543previewexperiment.docker.uxpin.com"
+    "start": "uxpin-merge --webpack-config ./webpack.config.js --wrapper ./src/UXPinWrapper/UXPinWrapper.js --uxpin-domain merge.uxpin.cloud"
   },
   "repository": {
     "type": "git",
@@ -44,5 +44,8 @@
   "bugs": {
     "url": "https://github.com/marcintreder/uxpin-merge-boilerplate-proptypes/issues"
   },
-  "homepage": "https://github.com/marcintreder/uxpin-merge-boilerplate-proptypes#readme"
+  "homepage": "https://github.com/marcintreder/uxpin-merge-boilerplate-proptypes#readme",
+  "dependencies": {
+    "react-vis": "^1.11.5"
+  }
 }

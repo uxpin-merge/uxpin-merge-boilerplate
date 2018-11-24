@@ -1,0 +1,23 @@
+{
+  "rootId": "piechart1234650178",
+  "elements": {
+    "piechart1234650178": {
+      "name": "PieChart",
+      "props": {
+        "width": 300,
+        "height": 300,
+        "data": [
+          { "theta": 1, "label": "apples" }, {"theta": 4, "label": "oranges"}, {"theta": 6, "label": "cherries"}
+        ],
+        "startData": [
+          { "theta": 0, "label": "apples" }, {"theta": 0, "label": "oranges"}, {"theta": 0, "label": "cherries"}
+        ],
+        "animation": "gentle",
+        "padAngle": "0.02",
+        "radius": 140,
+        "innerRadius": 120,
+        "hint": true
+      }
+    }
+  }
+}
