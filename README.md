@@ -1,6 +1,6 @@
 # UXPin Merge – Experimental Mode Boilerplate Repository
 
-UXPin Merge is a revolutionary technology that lets users import (and keep in sync) coded React.js components from GIT repositories to UXPin editor("http://uxpin.com"). The imported components are 100% identical to components used by developers during the development process. It means that components are going to look and, function (interactions, data) identical to the real product experienced by the users. 
+UXPin Merge is a revolutionary technology that lets users import (and keep in sync) coded React.js components from GIT repositories to UXPin editor("http://uxpin.com"). The imported components are 100% identical to components used by developers during the development process. It means that components are going to look and, function (interactions, data) identical to the real product experienced by the users.
 
 To make the first steps in the world of Merge easy, we've prepared this boilerplate repository with examples of components that shows the power of Merge:
 * Configurable Button with multiple styling options
@@ -12,7 +12,7 @@ All the components are built with React.js and styled with Emotion. Styles are u
 
 ## Installation
 
-This boilerplate needs node and npm installed to run. Once you're ready clone the repository and install all the dependencies (`npm install`). 
+This boilerplate needs node and npm installed to run. Once you're ready clone the repository and install all the dependencies (`npm install`).
 
 ## What is Merge Experimental Mode
 ![alt text](https://preview.ibb.co/fsq20L/merge-exp.png)
@@ -55,7 +55,6 @@ Adding components to Merge is no different than creating normal React.js compone
 * Only one component is allowed per file and directory e.g. `./src/Button/Button.js`
 * You have to add the component to uxpin.config.js file
 * You have to prepare presets for every component (temporary restrictions to be replaced by jsx presets)
-* If you want to render component in a dev server you also have to create a markdown file with a preview of the component (temporary restriction to be replaced by jsx presets)
 
 ## Creating presets (temporary requirement)
 
@@ -91,7 +90,7 @@ For example:
 
 As you can see at the top of the structure you need a reference to `rootId`. That can be any string, but to make things easier a good practice is to use name of the element and random integers (easier to read and assures uniqueness). Subsequently, under the `elements` key, you will list all the components that are going to be rendered in Merge. Every component has to be identified by a unique id (root component has to repeat the id inside of the elements key) and has to have a `props` key that lists all the properties (leave empty if component doesn't have any props – `props: {}`).
 
-In case of components that accept other components via props (like the icon props in the button presented above) you have to create "uxpinPresetElementId" (just like for the root element) and use the id as a reference under `elements` id. 
+In case of components that accept other components via props (like the icon props in the button presented above) you have to create "uxpinPresetElementId" (just like for the root element) and use the id as a reference under `elements` id.
 
 If there's more than one element listed in props, the preset will look in the following way (take a look at `children` prop):
 
@@ -137,22 +136,3 @@ If there's more than one element listed in props, the preset will look in the fo
 }
 
 ```
-
-
-## Creating component previews for the dev server (temporary requirement)
-
-To see presets on the dev server you have to create markdown files named exactly like the component and placed in the same directory. Inside of the markdown file simply list an example of the implementation of the component. Example:
-
-```markdown
-# Button
-
-```javascript
-<Button
-    stretched={false}
-    type="error"
-    icon={<Icon size="s" icon="TickerSvg"/>}
-    iconDirection="left"
-    mode="filled" />
-```
-```
-
