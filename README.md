@@ -60,40 +60,11 @@ Adding components to Merge is no different than creating normal React.js compone
 
 Preset (to be replaced with JSX presets in the future) is a JSON file that describes components in a structured way.
 
-For example:
+* For `./src/Button/Button.js` component we require one preset in `./src/Button/presets/0-default.json`
+* More presets can be added (not yet supported in the editor) by defining the sort index and readable name in the file name (for example: `100-Button with icon.json`, `200-Icon Button.json`).
 
-```json
-{
-  "rootId": "button4038267449",
-  "elements": {
-    "button4038267449": {
-      "name": "Button",
-      "props": {
-        "stretched": true,
-        "type": "error",
-        "icon": {
-          "uxpinPresetElementId": "icon3586913996"
-        },
-        "mode": "filled"
-      }
-    },
-    "icon3586913996": {
-      "name": "Icon",
-      "props": {
-        "size": "s",
-        "icon": "TickerSvg"
-      }
-    }
-  }
-}
-```
 
-As you can see at the top of the structure you need a reference to `rootId`. That can be any string, but to make things easier a good practice is to use name of the element and random integers (easier to read and assures uniqueness). Subsequently, under the `elements` key, you will list all the components that are going to be rendered in Merge. Every component has to be identified by a unique id (root component has to repeat the id inside of the elements key) and has to have a `props` key that lists all the properties (leave empty if component doesn't have any props – `props: {}`).
-
-In case of components that accept other components via props (like the icon props in the button presented above) you have to create "uxpinPresetElementId" (just like for the root element) and use the id as a reference under `elements` id.
-
-If there's more than one element listed in props, the preset will look in the following way (take a look at `children` prop):
-
+Example preset:
 ```json
 {
   "rootId": "select548853352",
@@ -135,4 +106,27 @@ If there's more than one element listed in props, the preset will look in the fo
   }
 }
 
+```
+
+As you can see at the top of the structure you need a reference to `rootId`. That can be any string, but to make things easier a good practice is to use name of the element and random integers (easier to read and assures uniqueness). Subsequently, under the `elements` key, you will list all the components that are going to be rendered in Merge. Every component has to be identified by a unique id (root component has to repeat the id inside of the elements key) and has to have a `props` key that lists all the properties (leave empty if component doesn't have any props – `props: {}`).
+
+For components that have other components given as `children` (like the `SelectItem` component in the `Select` presented above) you have to create `"uxpinPresetElementId"` (just like for the root element) and use the id as a reference under `elements` id.
+
+In case of components that accept other components via props other than `children` (like `icon` property in the `Button` below) you have to pass a JSX syntax as a property value:
+
+```json
+{
+  "rootId": "button4038267449",
+  "elements": {
+    "button4038267449": {
+      "name": "Button",
+      "props": {
+        "stretched": true,
+        "type": "error",
+        "icon": "<Icon size=\"s\" icon=\"TickerSvg\"/>",
+        "mode": "filled"
+      }
+    }
+  }
+}
 ```
