@@ -7,6 +7,7 @@ To make the first steps in the world of Merge easy, we've prepared this boilerpl
 * Select with nested components
 * Icon with access to dozens of SVG icons
 * Table that automatically renders from a provided objects and adds sorting
+* 5 animated charts created with React-vis library
 
 All the components are built with React.js and styled with Emotion. Styles are using tokens stored in JSON files.
 
