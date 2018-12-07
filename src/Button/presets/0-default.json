@@ -8,7 +8,7 @@
         "type": "error",
         "icon": "<Icon size=\"s\" icon=\"TickerSvg\" />",
         "mode": "filled",
-        "size": "s",
+        "size": "m",
         "children": "Merge!",
         "isDisabled": true
       }
