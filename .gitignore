@@ -65,3 +65,7 @@ typings/
 
 # Merge
 .uxpin-merge
+
+# package-lock.json
+
+package-lock.json
