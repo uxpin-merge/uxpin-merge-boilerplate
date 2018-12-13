@@ -46,6 +46,10 @@
   },
   "homepage": "https://github.com/marcintreder/uxpin-merge-boilerplate-proptypes#readme",
   "dependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.10.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-react": "^7.11.1",
     "react-vis": "^1.11.5"
   }
 }
