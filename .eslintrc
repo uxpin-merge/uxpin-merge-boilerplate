@@ -127,9 +127,10 @@
     ],
     "operator-assignment": 0,
     "no-bitwise": 2,
+    // TODO: change complexity to 10 after refactor
     "complexity": [
       2,
-      10
+      100
     ],
     "max-depth": [
       2,
@@ -137,7 +138,7 @@
     ],
     "max-len": [
       2,
-      120
+      200
     ],
     "arrow-parens": [
       2,
@@ -188,6 +189,8 @@
     "react/self-closing-comp": 0,
     "react/sort-comp": 0,
     "react/destructuring-assignment": 0,
-    "react/jsx-filename-extension": 0
+    "react/jsx-filename-extension": 0,
+    "react/no-array-index-key": 0,
+    "react/no-access-state-in-setstate": 0
   }
 }

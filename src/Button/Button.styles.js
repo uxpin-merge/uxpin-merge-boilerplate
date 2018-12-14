@@ -163,7 +163,7 @@ const setIconMargin = (direction, buttonSize, label) => {
       case 'xs':
         return '-2px';
       case 's':
-        return `2px`;
+        return '2px';
       case 'l':
         return `${size.xs / 1.33}px`;
       case 'xl':

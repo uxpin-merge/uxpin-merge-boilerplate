@@ -85,6 +85,7 @@ PieChart.propTypes = {
   /** Turns, on/off animation and allows for selection of different types of animations. */
   animation: PropTypes.oneOf([false, 'noWobble', 'gentle', 'wobbly', 'stiff']),
   /** Color to be used on all chart lines, unless colorRange is provided */
+  // eslint-disable-next-line react/no-unused-prop-types
   color: PropTypes.string,
   /** Array with colors to be used across all chart lines. If array doesn't specify color for all the chart lines, color property is used. */
   colorRange: PropTypes.arrayOf(PropTypes.string),
@@ -107,6 +108,7 @@ PieChart.propTypes = {
   onNearestXY: PropTypes.func,
   onSeriesClick: PropTypes.func,
   onSeriesMouseOver: PropTypes.func,
+  // eslint-disable-next-line react/no-unused-prop-types
   onSeriesMouseOut: PropTypes.func,
   onSeriesRightClick: PropTypes.func,
 };

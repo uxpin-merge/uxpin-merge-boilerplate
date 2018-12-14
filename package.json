@@ -37,7 +37,6 @@
     "jest": "^23.6.0",
     "jest-emotion": "^9.2.11",
     "merge": "^1.2.1",
-    "recompose": "^0.30.0",
     "source-map-loader": "^0.2.4",
     "svg-react-loader": "^0.4.6",
     "webpack": "^4.22.0",
@@ -55,6 +54,7 @@
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-emotion": "^9.2.12",
-    "react-vis": "^1.11.5"
+    "react-vis": "^1.11.5",
+    "recompose": "^0.30.0"
   }
 }

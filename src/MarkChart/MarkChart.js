@@ -82,9 +82,9 @@ export default class MarkChart extends React.Component {
                 : this.props.fill
             }
             opacity={
-              this.props.styles !== undefined &&
-              this.props.styles[0] &&
-              this.props.styles[0].opacity
+              this.props.styles !== undefined
+              && this.props.styles[0]
+              && this.props.styles[0].opacity
                 ? parseFloat(this.props.styles[0].opacity)
                 : parseFloat(this.props.opacity)
             }
@@ -212,6 +212,7 @@ MarkChart.propTypes = {
   onNearestXY: PropTypes.func,
   onSeriesClick: PropTypes.func,
   onSeriesMouseOver: PropTypes.func,
+  // eslint-disable-next-line react/no-unused-prop-types
   onSeriesMouseOut: PropTypes.func,
   onSeriesRightClick: PropTypes.func,
 };

@@ -37,6 +37,7 @@ export default class AreaChart extends React.Component {
     this.state = {
       data: this.props.startData ? getStartData() : this.props.data,
       crosshairValues: [],
+      // eslint-disable-next-line react/no-unused-state
       hintValue: {},
     };
   }
@@ -129,9 +130,9 @@ export default class AreaChart extends React.Component {
             }
             curve={curve(this.props.curve)}
             opacity={
-              this.props.styles !== undefined &&
-            this.props.styles[0] &&
-            this.props.styles[0].opacity
+              this.props.styles !== undefined
+            && this.props.styles[0]
+            && this.props.styles[0].opacity
                 ? parseFloat(this.props.styles[0].opacity)
                 : parseFloat(this.props.opacity)
             }
@@ -289,6 +290,7 @@ AreaChart.propTypes = {
   onNearestXY: PropTypes.func,
   onSeriesClick: PropTypes.func,
   onSeriesMouseOver: PropTypes.func,
+  // eslint-disable-next-line react/no-unused-prop-types
   onSeriesMouseOut: PropTypes.func,
   onSeriesRightClick: PropTypes.func,
 };

@@ -1,10 +1,20 @@
 import styled from 'react-emotion';
-import { css } from 'emotion';
 import * as colors from '../../styles/colors.json';
-import * as borders from '../../styles/borders.json';
 import * as shadow from '../../styles/shadows.json';
 import * as typography from '../../styles/typography.json';
 import * as size from '../../styles/sizes.json';
+
+const getWidth = (props) => {
+  if (props.width === 'stretched') {
+    return '100%';
+  }
+
+  if (props.width === 'auto') {
+    return 'auto';
+  }
+
+  return `${props.width}px`;
+};
 
 const SelectContainerStyles = styled('div')`
     width: ${(props) => (props.stretched ? '100%' : 'auto')};
@@ -20,14 +30,14 @@ const SelectStyles = styled('div')`
     flex: 1 0 auto;
     align-items: center;
     justify-content: space-between;
-    width: ${(props) => (props.width === 'stretched' ? '100%' : props.width === 'auto' ? 'auto' : `${props.width}px`)};
+    width: ${(props) => getWidth(props)};
     min-width: 250px;
     height: ${size.xxl}px;
     margin-bottom: 3px;
     border-bottom: 1px solid ${colors.silver.dark20};
 
     button {
-      margin-left: auto;  
+      margin-left: auto;
     }
     svg {
       min-width: fit-content;
@@ -46,7 +56,7 @@ const MenuStyles = styled('ul')`
     display: flex;
     flex-direction: column;
     left: 0;
-    width: ${(props) => (props.width === 'stretched' ? '100%' : props.width === 'auto' ? 'auto' : `${props.width}px`)};
+    width: ${(props) => getWidth(props)};
     min-width: 250px;
     margin: 1px 0;
     padding: ${size.s}px 0 ${size.s}px 0;
