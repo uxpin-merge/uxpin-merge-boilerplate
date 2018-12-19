@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 export default function SelectItem(props) {
   return (
@@ -10,5 +10,5 @@ export default function SelectItem(props) {
 }
 
 SelectItem.propTypes = {
-  children: PropTypes.string
-}
+  children: PropTypes.string,
+};

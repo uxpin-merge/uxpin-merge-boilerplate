@@ -3,8 +3,6 @@
   "parser": "babel-eslint",
   "plugins": [
     "react",
-    "jsx-a11y",
-    "import",
     "jest"
   ],
   "env": {
@@ -141,11 +139,6 @@
       2,
       120
     ],
-    "import/no-extraneous-dependencies": 0,
-    "import/no-named-as-default-member": 1,
-    "import/no-named-default": 2,
-    "import/no-mutable-exports": 2,
-    "import/prefer-default-export": 1,
     "arrow-parens": [
       2,
       "always"
@@ -168,11 +161,6 @@
     "prefer-rest-params": 1,
     "prefer-spread": 1,
     "global-require": 0,
-    "jsx-a11y/anchor-has-content": 1,
-    "jsx-a11y/href-no-hash": 1,
-    "jsx-a11y/img-has-alt": 1,
-    "jsx-a11y/label-has-for": 1,
-    "jsx-a11y/no-static-element-interactions": 1,
     "react/forbid-prop-types": 0,
     "react/jsx-closing-bracket-location": [
       2,
@@ -196,8 +184,10 @@
     "react/prefer-es6-class": 1,
     "react/prefer-stateless-function": 1,
     "react/prop-types": 1,
-    "react/require-default-props": 1,
+    "react/require-default-props": 0,
     "react/self-closing-comp": 0,
-    "react/sort-comp": 0
+    "react/sort-comp": 0,
+    "react/destructuring-assignment": 0,
+    "react/jsx-filename-extension": 0
   }
 }
