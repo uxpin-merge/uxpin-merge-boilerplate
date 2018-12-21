@@ -1,240 +1,230 @@
-import styled from "react-emotion";
-import {css} from "emotion";
-import withProps from "recompose/withProps";
-import * as colors from "../styles/colors.json";
-import * as borders from "../styles/borders.json";
-import * as shadow from "../styles/shadows.json";
-import * as typography from "../styles/typography.json";
-import * as size from "../styles/sizes.json";
+import styled from 'react-emotion';
+import { css } from 'emotion';
+import withProps from 'recompose/withProps';
+import * as colors from '../styles/colors.json';
+import * as borders from '../styles/borders.json';
+import * as shadow from '../styles/shadows.json';
+import * as typography from '../styles/typography.json';
+import * as size from '../styles/sizes.json';
 
 /* Selects the right background color based on passed props */
 const backgroundSelector = (type, mode) => {
   if (!mode) {
     switch (type) {
-      case "primary":
+      case 'primary':
         return colors.blue.base;
-      case "secondary": 
+      case 'secondary':
         return colors.silver.base;
-      case "success":
+      case 'success':
         return colors.success;
-      case "error":
+      case 'error':
         return colors.error;
-      case "warning":
+      case 'warning':
         return colors.warning;
       default:
         return colors.blue.base;
-        break;
     }
-  } else if (mode === "active") {
+  } else if (mode === 'active') {
     switch (type) {
-      case "primary":
+      case 'primary':
         return colors.active.primary;
-      case "secondary":
-        return colors.active.secondary
-      case "success":
+      case 'secondary':
+        return colors.active.secondary;
+      case 'success':
         return colors.active.success;
-      case "error":
+      case 'error':
         return colors.active.error;
-      case "warning":
+      case 'warning':
         return colors.active.warning;
       default:
         return colors.active.default;
-        break;
     }
-  } else if (mode === "hover") {
+  } else if (mode === 'hover') {
     switch (type) {
-      case "primary":
+      case 'primary':
         return colors.hover.primary;
-      case "secondary": 
+      case 'secondary':
         return colors.hover.secondary;
-      case "success":
+      case 'success':
         return colors.hover.success;
-      case "error":
+      case 'error':
         return colors.hover.error;
-      case "warning":
+      case 'warning':
         return colors.hover.warning;
       default:
         return colors.hover.default;
-        break;
     }
   }
 };
 
 /* Selects the right shadow for button type */
-const shadowSelector = type => {
+const shadowSelector = (type) => {
   switch (type) {
-    case "primary":
+    case 'primary':
       return shadow.primary;
-    case "secondary":
+    case 'secondary':
       return shadow.box;
-    case "success":
+    case 'success':
       return shadow.success;
-    case "error":
+    case 'error':
       return shadow.error;
-    case "warning":
+    case 'warning':
       return shadow.warning;
     default:
       return shadow.default;
-      break;
   }
-}
+};
 
-const borderFocusSelector = type => {
+const borderFocusSelector = (type) => {
   switch (type) {
-    case "default":
+    case 'default':
       return colors.blue.dark15;
-    case "success":
+    case 'success':
       return colors.green.dark15;
-    case "error":
+    case 'error':
       return colors.red.dark15;
-    case "warning":
+    case 'warning':
       return colors.orange.dark15;
     default:
       return colors.blue.dark15;
-      break;
   }
-}
+};
 
 /* Selects the right font size based on passed props */
-const sizeSelector = size => {
+const sizeSelector = (size) => {
   switch (size) {
-    case "xs":
+    case 'xs':
       return typography.size.xs;
-    case "s":
+    case 's':
       return typography.size.s;
-    case "m":
+    case 'm':
       return typography.size.m;
-    case "l":
+    case 'l':
       return typography.size.l;
-    case "xl":
+    case 'xl':
       return typography.size.xl;
-    case "xxl":
+    case 'xxl':
       return typography.size.xxl;
-    case "xxxl":
+    case 'xxxl':
       return typography.size.xxxl;
     default:
       return typography.size.m;
-      break;
   }
 };
 
 const setIconMargin = (direction, buttonSize, label) => {
-  /* If there's any label return positive margin 
+  /* If there's any label return positive margin
   ** Second index of props.children keeps
   ** the actual child string. If there are no
   ** children, 2nd index is undefined.
   ** That let's us create an icon button when
   ** there's no label
   */
-    if(label[1] && label[1].length > 0) {
-      if(direction === "left") {
-        switch(buttonSize){
-          case "xs":
-            return `2px ${size.xs}px 0 0`;
-          case "s":
-            return `2px ${size.xs}px 0 0`;
-          case "m":
-            return `0 ${size.xs}px 0 0`;
-          case "l":
-            return `0 ${size.xs}px 0 0`;
-          case "xl":
-            return `${size.xs}px ${size.xs}px 0 0 `;
-          case "xxl":
-            return `${size.xs}px ${size.s}px 0 0 `;
-          case "xxxl":
-            return `${size.s}px ${size.s}px 0 0 `;
-        }     
-      }     
-    else{
-      switch(buttonSize){
-        case "xs":
+  if (label[1] && label[1].length > 0) {
+    if (direction === 'left') {
+      switch (buttonSize) {
+        case 'xs':
+          return `2px ${size.xs}px 0 0`;
+        case 's':
+          return `2px ${size.xs}px 0 0`;
+        case 'l':
+          return `0 ${size.xs}px 0 0`;
+        case 'xl':
+          return `${size.xs}px ${size.xs}px 0 0 `;
+        case 'xxl':
+          return `${size.xs}px ${size.s}px 0 0 `;
+        case 'xxxl':
+          return `${size.s}px ${size.s}px 0 0 `;
+        case 'm':
+        default:
+          return `0 ${size.xs}px 0 0`;
+      }
+    } else {
+      switch (buttonSize) {
+        case 'xs':
           return `2px 0 0 ${size.xs}px`;
-        case "s":
+        case 's':
           return `2px 0 0 ${size.xs}px`;
-        case "m":
+        case 'l':
           return `0 0 0 ${size.xs}px`;
-        case "l":
-          return `0 0 0 ${size.xs}px`;
-        case "xl":
+        case 'xl':
           return `${size.xs}px 0 0 ${size.xs}px`;
-        case "xxl":
+        case 'xxl':
           return `${size.xs}px 0 0 ${size.s}px`;
-        case "xxxl":
+        case 'xxxl':
           return `${size.s}px 0 0 ${size.m}px`;
-      }     
+        case 'm':
+        default:
+          return `0 0 0 ${size.xs}px`;
+      }
+    }
+  } else if (!label[1] || label[1].length === 0) {
+    switch (buttonSize) {
+      case 'xs':
+        return '-2px';
+      case 's':
+        return '2px';
+      case 'l':
+        return `${size.xs / 1.33}px`;
+      case 'xl':
+        return `${size.m}px`;
+      case 'xxl':
+        return `${size.xl}px`;
+      case 'xxxl':
+        return `${size.xl * 1.33}px`;
+      case 'm':
+      default:
+        return `${size.xs / 3}px`;
     }
   }
-  else if(!label[1] || label[1].length === 0){
-    switch(buttonSize){
-      case "xs":
-        return `-2px`;
-      case "s":
-        return `2px`;
-      case "m":
-        return `${size.xs/3}px`;
-      case "l":
-        return `${size.xs/1.33}px`;
-      case "xl":
-        return `${size.m}px`;
-      case "xxl":
-        return `${size.xl}px`;
-      case "xxxl":
-        return `${size.xl * 1.33}px`;
-    }     
-  }
-}
+};
 
 const setPadding = (buttonSize, label) => {
   if (label[1]) {
-    if(label[1].length > 0 && buttonSize === "m" || label[1].length > 0 && buttonSize === "s" || label[1].length > 0 && buttonSize === "xs") {
+    if (label[1].length > 0 && buttonSize === 'm' || label[1].length > 0 && buttonSize === 's' || label[1].length > 0 && buttonSize === 'xs') {
       return `0 ${size.l}px 0 ${size.l}px`;
-    }
-    else if(label[1].length > 0 && buttonSize === "l") {
+    } if (label[1].length > 0 && buttonSize === 'l') {
       return `0 ${size.xl}px 0 ${size.xl}px`;
+    } if (label[1].length > 0 && buttonSize === 'xl') {
+      return `0 ${size.xxl * 1.5}px 0 ${size.xxl * 1.5}px`;
+    } if (label[1].length > 0 && buttonSize === 'xxl' || label[1].length > 0 && buttonSize === 'xxxl') {
+      return `0 ${size.xxxl * 2}px 0 ${size.xxxl * 2}px`;
     }
-    else if(label[1].length > 0 && buttonSize === "xl") {
-      return `0 ${size.xxl*1.5}px 0 ${size.xxl*1.5}px`;
-    }
-    else if(label[1].length > 0 && buttonSize === "xxl" || label[1].length > 0 && buttonSize === "xxxl") {
-      return `0 ${size.xxxl*2}px 0 ${size.xxxl*2}px`;
-    }
-  }
-  else if(!label[1] || label[1].length === 0) {
+  } else if (!label[1] || label[1].length === 0) {
     return `${size.xs}px ${size.xs}px`;
-  }
-  else {
+  } else {
     return `${size.s}px ${size.m}px`;
   }
-}
+};
 
 const ButtonCommon = withProps({
-  createProps: props => this.props.disabled
-})(styled("button")`
+  createProps: (props) => props.disabled,
+})(styled('button')`
   display: flex;
-  flex-direction: ${props => props.iconDirection === "left" ? "row" : "row-reverse"};
+  flex-direction: ${(props) => (props.iconDirection === 'left' ? 'row' : 'row-reverse')};
   align-items: center;
   justify-content: center;
-  width: ${props => props.stretched ? "100%" : "auto"};
-  padding: ${props => setPadding(props.size, props.children)};     
+  width: ${(props) => (props.stretched ? '100%' : 'auto')};
+  padding: ${(props) => setPadding(props.size, props.children)};     
   border-radius: ${borders.borderRadius};
-  border: ${props => `1px solid ${backgroundSelector(props.type)}`};
+  border: ${(props) => `1px solid ${backgroundSelector(props.type)}`};
   font-family: ${typography.fontFamily};
   font-weight: ${typography.weight.bold};
-  line-height: ${props => `${sizeSelector(props.size) * typography.lineHeightMultiplier.button}px}`};
-  font-size: ${props => `${sizeSelector(props.size)}px`};
+  line-height: ${(props) => `${sizeSelector(props.size) * typography.lineHeightMultiplier.button}px}`};
+  font-size: ${(props) => `${sizeSelector(props.size)}px`};
   &:hover {
-    background-color: ${props => backgroundSelector(props.type, "hover")};
-    border: ${props => `1px solid ${backgroundSelector(props.type, "hover")}`};
-    box-shadow: ${props => shadowSelector(props.type)};
+    background-color: ${(props) => backgroundSelector(props.type, 'hover')};
+    border: ${(props) => `1px solid ${backgroundSelector(props.type, 'hover')}`};
+    box-shadow: ${(props) => shadowSelector(props.type)};
   }
   &:focus {
     outline: none;
-    background-color: ${props => backgroundSelector(props.type, "active")};
-    border: ${props => `1px solid ${borderFocusSelector(props.type)}`};
+    background-color: ${(props) => backgroundSelector(props.type, 'active')};
+    border: ${(props) => `1px solid ${borderFocusSelector(props.type)}`};
   }
   &:active {
-    background-color: ${props => backgroundSelector(props.type, "active")};
-    border: ${props => `1px solid ${backgroundSelector(props.type, "active")}`};
+    background-color: ${(props) => backgroundSelector(props.type, 'active')};
+    border: ${(props) => `1px solid ${backgroundSelector(props.type, 'active')}`};
     box-shadow: 'none';
   }
   &:disabled {
@@ -246,62 +236,60 @@ const ButtonCommon = withProps({
     }
   }
   svg {
-    margin: ${props => setIconMargin(props.iconDirection, props.size, props.children)};
+    margin: ${(props) => setIconMargin(props.iconDirection, props.size, props.children)};
     fill: white;
   }
 `);
 
 
 const modes = (mode, type) => {
-  if(mode === "ghost") {
+  if (mode === 'ghost') {
     return css`
       background-color: none;
-      color: ${ type !== "secondary" ? backgroundSelector(type) : colors.gray.base};
+      color: ${type !== 'secondary' ? backgroundSelector(type) : colors.gray.base};
       svg {
-        fill: ${ type !== "secondary" ? backgroundSelector(type) : colors.gray.base};
+        fill: ${type !== 'secondary' ? backgroundSelector(type) : colors.gray.base};
       }
       &:hover, &:active, &:focus {
-        color: ${type !== "secondary" ? "white" : colors.gray.base};
+        color: ${type !== 'secondary' ? 'white' : colors.gray.base};
         svg {
-          fill: ${type !== "secondary" ? "white" : colors.gray.base};
+          fill: ${type !== 'secondary' ? 'white' : colors.gray.base};
         }
       }
-  ` 
-  }
-  else if(mode === "minimal") {
+  `;
+  } if (mode === 'minimal') {
     return css`
       background-color: transparent;
       border: none;
-      color: ${ type !== "secondary" ? backgroundSelector(type) : colors.gray.base};
+      color: ${type !== 'secondary' ? backgroundSelector(type) : colors.gray.base};
       svg {
-        fill: ${ type !== "secondary" ? backgroundSelector(type) : colors.gray.base};
+        fill: ${type !== 'secondary' ? backgroundSelector(type) : colors.gray.base};
       }
       &:hover {
         background: none;
         border: none;
         box-shadow: none;
         svg {
-          fill: ${backgroundSelector(type, "hover")}
+          fill: ${backgroundSelector(type, 'hover')}
         }
       }
       &:active, &:focus {
         background: none;
         border: none;
         svg {
-          fill: ${backgroundSelector(type, "active")}
+          fill: ${backgroundSelector(type, 'active')}
         }
       }
     `;
-  }
-  else if(mode === "flat") {
+  } if (mode === 'flat') {
     return css`
       background-color: transparent;
       border: none;
       height: ${size.m};
       padding: 0 ${size.xs}px;
-      color: ${ type !== "secondary" ? backgroundSelector(type) : colors.gray.base};
+      color: ${type !== 'secondary' ? backgroundSelector(type) : colors.gray.base};
       svg {
-        fill: ${ type !== "secondary" ? backgroundSelector(type) : colors.gray.base};
+        fill: ${type !== 'secondary' ? backgroundSelector(type) : colors.gray.base};
         margin: 0;
       }
       &:hover {
@@ -309,29 +297,27 @@ const modes = (mode, type) => {
         border: none;
         box-shadow: none;
         svg {
-          fill: ${backgroundSelector(type, "hover")}
+          fill: ${backgroundSelector(type, 'hover')}
         }
       }
       &:active, &:focus {
         background: none;
         border: none;
         svg {
-          fill: ${backgroundSelector(type, "active")}
+          fill: ${backgroundSelector(type, 'active')}
         }
       }
-      
     `;
   }
-  else {
-    return css`
+
+  return css`
       background-color: ${backgroundSelector(type)};
-      color: ${type !== "secondary" ? "white" : colors.gray.base};
-    `
-  }
-}
+      color: ${type !== 'secondary' ? 'white' : colors.gray.base};
+    `;
+};
 
 const ButtonStyles = styled(ButtonCommon)`
-  ${props => modes(props.mode, props.type)};
+  ${(props) => modes(props.mode, props.type)};
 `;
 
 

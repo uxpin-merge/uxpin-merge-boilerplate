@@ -1,6 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
-import ChartStyles from "../chartStyles/chart.styles";
+import React from 'react';
+import PropTypes from 'prop-types';
 import {
   XYPlot,
   XAxis,
@@ -9,38 +8,38 @@ import {
   VerticalGridLines,
   MarkSeries,
   Crosshair,
-  Hint
-} from "react-vis";
+  Hint,
+} from 'react-vis';
+import ChartStyles from '../chartStyles/chart.styles';
 
 export default class MarkChart extends React.Component {
   constructor(props) {
     super(props);
 
     const getStartData = () => {
-      if(Array.isArray(this.props.startData[0]) && this.props.startData.length === this.props.data.length) {
+      if (Array.isArray(this.props.startData[0]) && this.props.startData.length === this.props.data.length) {
+        return this.props.startData;
+      } if (!Array.isArray(this.props.startData[0]) && this.props.startData.length === this.props.data.length) {
         return this.props.startData;
       }
-      else if(!Array.isArray(this.props.startData[0]) && this.props.startData.length === this.props.data.length) {
-        return this.props.startData;
-      }
-      else {
-        return this.props.data
-      }
-    }
+
+      return this.props.data;
+    };
 
     this.state = {
       data: this.props.startData ? getStartData() : this.props.data,
       crosshairValues: [],
       hintValue: '',
-      showHint: false
+      showHint: false,
     };
   }
+
   componentDidMount() {
     this.setState({ data: this.props.data });
   }
 
   getCrosshair(value, { index }) {
-    this.setState({ crosshairValues: this.state.data.map(d => d[index]) });
+    this.setState({ crosshairValues: this.state.data.map((d) => d[index]) });
   }
 
   restartCrosshair() {
@@ -48,13 +47,11 @@ export default class MarkChart extends React.Component {
   }
 
   getHint(value) {
-    if(!this.state.showHint) {
-      this.setState({showHint: true, hintValue: value});
+    if (!this.state.showHint) {
+      this.setState({ showHint: true, hintValue: value });
+    } else {
+      this.setState({ showHint: false, hintValue: '' });
     }
-    else {
-      this.setState({showHint: false, hintValue: ''});
-    }
-    
   }
 
   render() {
@@ -66,8 +63,7 @@ export default class MarkChart extends React.Component {
         onMouseLeave={() => this.restartCrosshair()}
         xType={this.props.xScaleType}
         yType={this.props.yScaleType}
-        margin={this.props.margin}
-      >
+        margin={this.props.margin}>
         {this.props.verticalGridLines ? <VerticalGridLines /> : undefined}
         {this.props.horizontalGridLines ? <HorizontalGridLines /> : undefined}
         {this.props.xLabels ? <XAxis title={this.props.xAxisTitle} /> : undefined}
@@ -86,16 +82,16 @@ export default class MarkChart extends React.Component {
                 : this.props.fill
             }
             opacity={
-              this.props.styles !== undefined &&
-              this.props.styles[0] &&
-              this.props.styles[0].opacity
-                ? parseFloat(this.props.styles[i].opacity)
+              this.props.styles !== undefined
+              && this.props.styles[0]
+              && this.props.styles[0].opacity
+                ? parseFloat(this.props.styles[0].opacity)
                 : parseFloat(this.props.opacity)
             }
             strokeWidth={
-              this.props.styles !== undefined &&
-              this.props.styles[0] &&
-              this.props.styles[0].strokeWidth
+              this.props.styles !== undefined
+              && this.props.styles[0]
+              && this.props.styles[0].strokeWidth
                 ? this.props.styles[0].strokeWidth
                 : this.props.strokeWidth
             }
@@ -109,48 +105,46 @@ export default class MarkChart extends React.Component {
             animation={this.props.animation}
           />
         ) : (
-          this.state.data.map((e, i) => {
-            return (
-              <MarkSeries
-                key={i}
-                data={this.state.data[i]}
-                color={
-                  this.props.colorRange !== undefined &&
-                  this.props.colorRange[i]
+          this.state.data.map((e, i) => (
+            <MarkSeries
+              key={i}
+              data={this.state.data[i]}
+              color={
+                  this.props.colorRange !== undefined
+                  && this.props.colorRange[i]
                     ? this.props.colorRange[i]
                     : this.props.color
                 }
-                fill={
-                  this.props.fillRange !== undefined &&
-                  this.props.fillRange[i]
+              fill={
+                  this.props.fillRange !== undefined
+                  && this.props.fillRange[i]
                     ? this.props.fillRange[i]
-                    : this.props.fill 
+                    : this.props.fill
                 }
-                opacity={
-                  this.props.styles !== undefined &&
-                  this.props.styles[i] &&
-                  this.props.styles[i].opacity
+              opacity={
+                  this.props.styles !== undefined
+                  && this.props.styles[i]
+                  && this.props.styles[i].opacity
                     ? parseFloat(this.props.styles[i].opacity)
                     : parseFloat(this.props.opacity)
                 }
-                strokeWidth={
-                  this.props.styles !== undefined &&
-                  this.props.styles[i] &&
-                  this.props.styles[i].strokeWidth
+              strokeWidth={
+                  this.props.styles !== undefined
+                  && this.props.styles[i]
+                  && this.props.styles[i].strokeWidth
                     ? this.props.styles[i].strokeWidth
                     : this.props.strokeWidth
                 }
-                onValueClick={(value) => this.getHint(value)}
-                onNearestX={(value, index) => this.getCrosshair(value, index)}
-                onNearestXY={this.props.onNearestXY}
-                onSeriesClick={this.props.onSeriesClick}
-                onSeriesRightClick={this.props.onSeriesRightClick}
-                onSeriesMouseOver={this.props.onSeriesMouseOver}
-                onSeriesMouseOut={this.props.onSeriesMouseOver}
-                animation={this.props.animation}
-              />
-            );
-          })
+              onValueClick={(value) => this.getHint(value)}
+              onNearestX={(value, index) => this.getCrosshair(value, index)}
+              onNearestXY={this.props.onNearestXY}
+              onSeriesClick={this.props.onSeriesClick}
+              onSeriesRightClick={this.props.onSeriesRightClick}
+              onSeriesMouseOver={this.props.onSeriesMouseOver}
+              onSeriesMouseOut={this.props.onSeriesMouseOver}
+              animation={this.props.animation}
+            />
+          ))
         )}
         {this.props.crossHair ? (
           <Crosshair values={this.state.crosshairValues} />
@@ -173,7 +167,9 @@ MarkChart.propTypes = {
   /** Height of the Chart in px. Accepts only numbers. */
   height: PropTypes.number,
   /** Sets margin for the chart inside of the container. Format: {"top": 0, "right": 0, "bottom": 0, "left": 0 } */
-  margin: PropTypes.shape({left: PropTypes.number, right: PropTypes.number, top: PropTypes.number, bottom: PropTypes.number}),
+  margin: PropTypes.shape({
+    left: PropTypes.number, right: PropTypes.number, top: PropTypes.number, bottom: PropTypes.number,
+  }),
   /** Turns on/off horizontal labels. */
   xLabels: PropTypes.bool,
   /** Title for the horizontal label. */
@@ -189,13 +185,13 @@ MarkChart.propTypes = {
   /** Data Array. Structure: [[{"x": 0, "y": 1}, {"x": 1, "y": 3}], [{"x: 0", "y": 2}, {"x": 1, "y": 3]].  */
   data: PropTypes.array,
   /** Type of the scale for X axis. Linear allows only for numbers, Ordinal let's you specify x axis as text e.g. "Q1" */
-  xScaleType: PropTypes.oneOf(["linear", "ordinal"]),
+  xScaleType: PropTypes.oneOf(['linear', 'ordinal']),
   /** Type of the scale for Y axis. Linear allows only for numbers, Ordinal let's you specify x axis as text e.g. "Q1" */
-  yScaleType: PropTypes.oneOf(["linear", "ordinal"]),
+  yScaleType: PropTypes.oneOf(['linear', 'ordinal']),
   /** Starting point for data set. Used for triggering animation. Same data structure as data property. */
   startData: PropTypes.array,
   /** Turns, on/off animation and allows for selection of different types of animations. */
-  animation: PropTypes.oneOf([false, "noWobble", "gentle", "wobbly", "stiff"]),
+  animation: PropTypes.oneOf([false, 'noWobble', 'gentle', 'wobbly', 'stiff']),
   /** Color to be used on all chart lines, unless colorRange is provided */
   color: PropTypes.string,
   /** Array with colors to be used across all chart lines. If array doesn't specify color for all the chart lines, color property is used. */
@@ -216,8 +212,9 @@ MarkChart.propTypes = {
   onNearestXY: PropTypes.func,
   onSeriesClick: PropTypes.func,
   onSeriesMouseOver: PropTypes.func,
+  // eslint-disable-next-line react/no-unused-prop-types
   onSeriesMouseOut: PropTypes.func,
-  onSeriesRightClick: PropTypes.func
+  onSeriesRightClick: PropTypes.func,
 };
 
 MarkChart.defaultProps = {
@@ -229,5 +226,5 @@ MarkChart.defaultProps = {
   horizontalGridLines: true,
   crossHair: false,
   hint: false,
-  opacity: "0.6"
+  opacity: '0.6',
 };

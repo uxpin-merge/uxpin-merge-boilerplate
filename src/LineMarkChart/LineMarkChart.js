@@ -1,6 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
-import ChartStyles from "../chartStyles/chart.styles";
+import React from 'react';
+import PropTypes from 'prop-types';
 import {
   curveCatmullRom,
   curveCatmullRomClosed,
@@ -8,8 +7,8 @@ import {
   curveBundle,
   curveCardinal,
   curveCardinalOpen,
-  curveCardinalClosed
-} from "d3-shape";
+  curveCardinalClosed,
+} from 'd3-shape';
 import {
   XYPlot,
   XAxis,
@@ -18,38 +17,38 @@ import {
   VerticalGridLines,
   LineMarkSeries,
   Crosshair,
-  Hint
-} from "react-vis";
+  Hint,
+} from 'react-vis';
+import ChartStyles from '../chartStyles/chart.styles';
 
 export default class LineMarkChart extends React.Component {
   constructor(props) {
     super(props);
 
     const getStartData = () => {
-      if(Array.isArray(this.props.startData[0]) && this.props.startData.length === this.props.data.length) {
+      if (Array.isArray(this.props.startData[0]) && this.props.startData.length === this.props.data.length) {
+        return this.props.startData;
+      } if (!Array.isArray(this.props.startData[0]) && this.props.startData.length === this.props.data.length) {
         return this.props.startData;
       }
-      else if(!Array.isArray(this.props.startData[0]) && this.props.startData.length === this.props.data.length) {
-        return this.props.startData;
-      }
-      else {
-        return this.props.data
-      }
-    }
+
+      return this.props.data;
+    };
 
     this.state = {
       data: this.props.startData ? getStartData() : this.props.data,
       crosshairValues: [],
       hintValue: '',
-      showHint: false
+      showHint: false,
     };
   }
+
   componentDidMount() {
     this.setState({ data: this.props.data });
   }
 
   getCrosshair(value, { index }) {
-    this.setState({ crosshairValues: this.state.data.map(d => d[index]) });
+    this.setState({ crosshairValues: this.state.data.map((d) => d[index]) });
   }
 
   restartCrosshair() {
@@ -57,66 +56,65 @@ export default class LineMarkChart extends React.Component {
   }
 
   getHint(value) {
-    if(!this.state.showHint) {
-      this.setState({showHint: true, hintValue: value});
+    if (!this.state.showHint) {
+      this.setState({ showHint: true, hintValue: value });
+    } else {
+      this.setState({ showHint: false, hintValue: '' });
     }
-    else {
-      this.setState({showHint: false, hintValue: ''});
-    }
-    
   }
 
   render() {
-    const curve = type => {
+    const curve = (type) => {
       switch (type) {
-        case "no curve":
-          return "";
-        case "curveNatural":
+        case 'curveNatural':
           return type;
-        case "curveBasis":
+        case 'curveBasis':
           return type;
-        case "curveBasisClosed":
+        case 'curveBasisClosed':
           return type;
-        case "curveLinear":
+        case 'curveLinear':
           return type;
-        case "curveLinearClosed":
+        case 'curveLinearClosed':
           return type;
-        case "curveMonotoneX":
+        case 'curveMonotoneX':
           return type;
-        case "curveMonotoneY":
+        case 'curveMonotoneY':
           return type;
-        case "curveStep":
+        case 'curveStep':
           return type;
-        case "curveStepAfter":
+        case 'curveStepAfter':
           return type;
-        case "curveStepBefore":
+        case 'curveStepBefore':
           return type;
-        case "curveCatmullRom":
+        case 'curveCatmullRom':
           return curveCatmullRom.alpha(
             parseFloat(this.props.curveCatmullRomAlpha)
           );
-        case "curveCatmullRomClosed":
+        case 'curveCatmullRomClosed':
           return curveCatmullRomClosed.alpha(
             parseFloat(this.props.curveCatmullRomAlpha)
           );
-        case "curveCatmullRomOpen":
+        case 'curveCatmullRomOpen':
           return curveCatmullRomOpen.alpha(
             parseFloat(this.props.curveCatmullRomAlpha)
           );
-        case "curveBundle":
+        case 'curveBundle':
           return curveBundle.beta(parseFloat(this.props.curveBundleBeta));
-        case "curveCardinal":
+        case 'curveCardinal':
           return curveCardinal.tension(
             parseFloat(this.props.curveCardinalTension)
           );
-        case "curveCardinalOpen":
+        case 'curveCardinalOpen':
           return curveCardinalOpen.tension(
             parseFloat(this.props.curveCardinalTension)
           );
-        case "curveCardinalClosed":
+        case 'curveCardinalClosed':
           return curveCardinalClosed.tension(
             parseFloat(this.props.curveCardinalTension)
           );
+        case 'no curve':
+        default:
+          return '';
       }
     };
     return (
@@ -127,8 +125,7 @@ export default class LineMarkChart extends React.Component {
         onMouseLeave={() => this.restartCrosshair()}
         xType={this.props.xScaleType}
         yType={this.props.yScaleType}
-        margin={this.props.margin}
-      >
+        margin={this.props.margin}>
         {this.props.verticalGridLines ? <VerticalGridLines /> : undefined}
         {this.props.horizontalGridLines ? <HorizontalGridLines /> : undefined}
         {this.props.xLabels ? <XAxis title={this.props.xAxisTitle} /> : undefined}
@@ -149,23 +146,23 @@ export default class LineMarkChart extends React.Component {
             size={this.props.size}
             curve={curve(this.props.curve)}
             opacity={
-              this.props.styles !== undefined &&
-              this.props.styles[0] &&
-              this.props.styles[0].opacity
-                ? parseFloat(this.props.styles[i].opacity)
+              this.props.styles !== undefined
+              && this.props.styles[0]
+              && this.props.styles[0].opacity
+                ? parseFloat(this.props.styles[0].opacity)
                 : parseFloat(this.props.opacity)
             }
             strokeWidth={
-              this.props.styles !== undefined &&
-              this.props.styles[0] &&
-              this.props.styles[0].strokeWidth
+              this.props.styles !== undefined
+              && this.props.styles[0]
+              && this.props.styles[0].strokeWidth
                 ? this.props.styles[0].strokeWidth
                 : this.props.strokeWidth
             }
             strokeStyle={
-              this.props.styles !== undefined &&
-              this.props.styles[0] &&
-              this.props.styles[0].strokeStyle
+              this.props.styles !== undefined
+              && this.props.styles[0]
+              && this.props.styles[0].strokeStyle
                 ? this.props.styles[0].strokeStyle
                 : this.props.strokeStyle
             }
@@ -179,57 +176,55 @@ export default class LineMarkChart extends React.Component {
             animation={this.props.animation}
           />
         ) : (
-          this.state.data.map((e, i) => {
-            return (
-              <LineMarkSeries
-                key={i}
-                data={this.state.data[i]}
-                color={
-                  this.props.colorRange !== undefined &&
-                  this.props.colorRange[i]
+          this.state.data.map((e, i) => (
+            <LineMarkSeries
+              key={i}
+              data={this.state.data[i]}
+              color={
+                  this.props.colorRange !== undefined
+                  && this.props.colorRange[i]
                     ? this.props.colorRange[i]
                     : this.props.color
                 }
-                fill={
-                  this.props.fillRange !== undefined &&
-                  this.props.fillRange[i]
+              fill={
+                  this.props.fillRange !== undefined
+                  && this.props.fillRange[i]
                     ? this.props.fillRange[i]
                     : this.props.fill
                 }
-                size={this.props.size}
-                curve={curve(this.props.curve)}
-                opacity={
-                  this.props.styles !== undefined &&
-                  this.props.styles[i] &&
-                  this.props.styles[i].opacity
+              size={this.props.size}
+              curve={curve(this.props.curve)}
+              opacity={
+                  this.props.styles !== undefined
+                  && this.props.styles[i]
+                  && this.props.styles[i].opacity
                     ? parseFloat(this.props.styles[i].opacity)
                     : parseFloat(this.props.opacity)
                 }
-                strokeWidth={
-                  this.props.styles !== undefined &&
-                  this.props.styles[i] &&
-                  this.props.styles[i].strokeWidth
+              strokeWidth={
+                  this.props.styles !== undefined
+                  && this.props.styles[i]
+                  && this.props.styles[i].strokeWidth
                     ? this.props.styles[i].strokeWidth
                     : this.props.strokeWidth
                 }
-                strokeStyle={
-                  this.props.styles !== undefined &&
-                  this.props.styles[i] &&
-                  this.props.styles[i].strokeStyle
+              strokeStyle={
+                  this.props.styles !== undefined
+                  && this.props.styles[i]
+                  && this.props.styles[i].strokeStyle
                     ? this.props.styles[i].strokeStyle
                     : this.props.strokeStyle
                 }
-                onValueClick={(value) => this.getHint(value)}
-                onNearestX={(value, index) => this.getCrosshair(value, index)}
-                onNearestXY={this.props.onNearestXY}
-                onSeriesClick={this.props.onSeriesClick}
-                onSeriesRightClick={this.props.onSeriesRightClick}
-                onSeriesMouseOver={this.props.onSeriesMouseOver}
-                onSeriesMouseOut={this.props.onSeriesMouseOver}
-                animation={this.props.animation}
-              />
-            );
-          })
+              onValueClick={(value) => this.getHint(value)}
+              onNearestX={(value, index) => this.getCrosshair(value, index)}
+              onNearestXY={this.props.onNearestXY}
+              onSeriesClick={this.props.onSeriesClick}
+              onSeriesRightClick={this.props.onSeriesRightClick}
+              onSeriesMouseOver={this.props.onSeriesMouseOver}
+              onSeriesMouseOut={this.props.onSeriesMouseOver}
+              animation={this.props.animation}
+            />
+          ))
         )}
         {this.props.crossHair ? (
           <Crosshair values={this.state.crosshairValues} />
@@ -252,7 +247,9 @@ LineMarkChart.propTypes = {
   /** Height of the Chart in px. Accepts only numbers. */
   height: PropTypes.number,
   /** Sets margin for the chart inside of the container. Format: {"top": 0, "right": 0, "bottom": 0, "left": 0 } */
-  margin: PropTypes.shape({left: PropTypes.number, right: PropTypes.number, top: PropTypes.number, bottom: PropTypes.number}),
+  margin: PropTypes.shape({
+    left: PropTypes.number, right: PropTypes.number, top: PropTypes.number, bottom: PropTypes.number,
+  }),
   /** Turns on/off horizontal labels. */
   xLabels: PropTypes.bool,
   /** Horizontal label (x axis) */
@@ -268,13 +265,13 @@ LineMarkChart.propTypes = {
   /** Data Array. Structure: [[{"x": 0, "y": 1}, {"x": 1, "y": 3}], [{"x: 0", "y": 2}, {"x": 1, "y": 3]].  */
   data: PropTypes.array,
   /** Type of the scale for X axis. Linear allows only for numbers, Ordinal let's you specify x axis as text e.g. "Q1" */
-  xScaleType: PropTypes.oneOf(["linear", "ordinal"]),
+  xScaleType: PropTypes.oneOf(['linear', 'ordinal']),
   /** Type of the scale for Y axis. Linear allows only for numbers, Ordinal let's you specify x axis as text e.g. "Q1" */
-  yScaleType: PropTypes.oneOf(["linear", "ordinal"]),
+  yScaleType: PropTypes.oneOf(['linear', 'ordinal']),
   /** Starting point for data set. Used for triggering animation. Same data structure as data property. */
   startData: PropTypes.array,
   /** Turns, on/off animation and allows for selection of different types of animations. */
-  animation: PropTypes.oneOf([false, "noWobble", "gentle", "wobbly", "stiff"]),
+  animation: PropTypes.oneOf([false, 'noWobble', 'gentle', 'wobbly', 'stiff']),
   /** Color to be used on all chart lines, unless colorRange is provided */
   color: PropTypes.string,
   /** Array with colors to be used across all chart lines. If array doesn't specify color for all the chart lines, color property is used. */
@@ -290,27 +287,27 @@ LineMarkChart.propTypes = {
   /** Specifies width of the line for all the chart lines, unless styles array is provided */
   strokeWidth: PropTypes.number,
   /** Specifies style of the line for all the chart lines, unless styles array is provided */
-  strokeStyle: PropTypes.oneOf(["solid", "dashed"]),
+  strokeStyle: PropTypes.oneOf(['solid', 'dashed']),
   /** Select the kind of curve for all the chart lines */
   curve: PropTypes.oneOf([
-    "no curve",
-    "curveNatural",
-    "curveBasis",
-    "curveBasisClosed",
-    "curveLinear",
-    "curveLinearClosed",
-    "curveMonotoneX",
-    "curveMonotoneY",
-    "curveStep",
-    "curveStepAfter",
-    "curveStepBefore",
-    "curveCatmullRom",
-    "curveCatmullRomOpen",
-    "curveCatmullRomClosed",
-    "curveBundle",
-    "curveCardinal",
-    "curveCardinalOpen",
-    "curveCardinalClosed"
+    'no curve',
+    'curveNatural',
+    'curveBasis',
+    'curveBasisClosed',
+    'curveLinear',
+    'curveLinearClosed',
+    'curveMonotoneX',
+    'curveMonotoneY',
+    'curveStep',
+    'curveStepAfter',
+    'curveStepBefore',
+    'curveCatmullRom',
+    'curveCatmullRomOpen',
+    'curveCatmullRomClosed',
+    'curveBundle',
+    'curveCardinal',
+    'curveCardinalOpen',
+    'curveCardinalClosed',
   ]),
   /** Additional param to modify the curvature of curveCatmullRom, curveCatmullRomOpen and curveCatmullRomClosed  */
   curveCatmullRomAlpha: PropTypes.string,
@@ -326,8 +323,9 @@ LineMarkChart.propTypes = {
   onNearestXY: PropTypes.func,
   onSeriesClick: PropTypes.func,
   onSeriesMouseOver: PropTypes.func,
+  // eslint-disable-next-line react/no-unused-prop-types
   onSeriesMouseOut: PropTypes.func,
-  onSeriesRightClick: PropTypes.func
+  onSeriesRightClick: PropTypes.func,
 };
 
 LineMarkChart.defaultProps = {
@@ -338,9 +336,9 @@ LineMarkChart.defaultProps = {
   verticalGridLines: true,
   horizontalGridLines: true,
   size: 5,
-  curve: "curveNatural",
+  curve: 'curveNatural',
   strokeWidth: 3,
   crossHair: false,
   hint: false,
-  opacity: "0.6"
+  opacity: '0.6',
 };

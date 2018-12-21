@@ -1,20 +1,18 @@
 import React from 'react';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 import ButtonStyles from './Button.styles';
 
-const Button = (props) => {
-  return (
-    <ButtonStyles {...props}>
-      {props.icon}
-      {props.children}
-    </ButtonStyles>
-  );
-};
+const Button = (props) => (
+  <ButtonStyles {...props}>
+    {props.icon}
+    {props.children}
+  </ButtonStyles>
+);
 
 Button.propTypes = {
   onClick: PropTypes.func,
   disabled: PropTypes.bool,
-  type: PropTypes.oneOf(['primary', 'secondary', 'success' , 'error', 'warning']),
+  type: PropTypes.oneOf(['primary', 'secondary', 'success', 'error', 'warning']),
   mode: PropTypes.oneOf(['filled', 'ghost', 'minimal', 'flat']),
   title: PropTypes.string,
   background: PropTypes.string,
@@ -22,8 +20,8 @@ Button.propTypes = {
   stretched: PropTypes.bool,
   children: PropTypes.string,
   icon: PropTypes.node,
-  iconDirection: PropTypes.oneOf(['left', 'right'])
-}
+  iconDirection: PropTypes.oneOf(['left', 'right']),
+};
 
 Button.defaultProps = {
   iconDirection: 'left',
@@ -31,7 +29,7 @@ Button.defaultProps = {
   mode: 'filled',
   size: 'm',
   stretched: true,
-  type: 'primary'
+  type: 'primary',
 };
 
 export { Button as default };

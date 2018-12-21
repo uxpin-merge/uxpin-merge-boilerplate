@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 import Button from '../Button/Button';
 import Icon from '../Icon/Icon';
 import {
@@ -48,55 +48,49 @@ export default class Table extends React.Component {
     }
   }
 
-render() {
+  render() {
     return (
       <TableStyles {...this.props}>
         <thead>
           <HeaderRowStyles>
-            {this.state.header.map((item, i) => {
-              return (
-                <HeaderCellStyles key={i}>
+            {this.state.header.map((item, i) => (
+              <HeaderCellStyles key={i}>
                 <HeaderCellWrapper>
                   {item}
                   <SortingStyles>
                     <Button
-                     mode="flat"
-                     type="secondary"
-                     size="s"
-                     stretched={false}
-                     icon={<Icon icon="ChevronSvg" size="xs" color="#f6f6f6" />}
-                     onClick={(e) => this.sortData(e, 'za', item)}
+                      mode="flat"
+                      type="secondary"
+                      size="s"
+                      stretched={false}
+                      icon={<Icon icon="ChevronSvg" size="xs" color="#f6f6f6" />}
+                      onClick={(e) => this.sortData(e, 'za', item)}
                     />
                     <Button
-                     mode="flat"
-                     type="secondary"
-                     size="s"
-                     stretched={false}
-                     icon={<Icon icon="ChevronSvg" size="xs" />}
-                     onClick={(e) => this.sortData(e, 'az', item)}
+                      mode="flat"
+                      type="secondary"
+                      size="s"
+                      stretched={false}
+                      icon={<Icon icon="ChevronSvg" size="xs" />}
+                      onClick={(e) => this.sortData(e, 'az', item)}
                     />
                   </SortingStyles>
                 </HeaderCellWrapper>
-            </HeaderCellStyles>
-              );
-            })}
+              </HeaderCellStyles>
+            ))}
           </HeaderRowStyles>
         </thead>
         <tbody>
           {this.state.body.map(
-            (item, i) => {
-              return (
-                <BodyRowStyles key={i}>
-                  {this.props.data.header.map((elem, e) => {
-                    return item[elem] ? (
-                      <BodyCellStyles key={e}>{item[elem]}</BodyCellStyles>
-                    ) : (
-                      <BodyCellStylesNone key={e}>none</BodyCellStylesNone>
-                    );
-                  })}
-                </BodyRowStyles>
-              );
-            },
+            (item, i) => (
+              <BodyRowStyles key={i}>
+                {this.props.data.header.map((elem, e) => (item[elem] ? (
+                  <BodyCellStyles key={e}>{item[elem]}</BodyCellStyles>
+                ) : (
+                  <BodyCellStylesNone key={e}>none</BodyCellStylesNone>
+                )))}
+              </BodyRowStyles>
+            )
           )}
         </tbody>
       </TableStyles>
@@ -105,11 +99,10 @@ render() {
 }
 
 
-
 Table.propTypes = {
   width: PropTypes.oneOf(['stretched', 'auto']),
-  data: PropTypes.shape({ header: PropTypes.arrayOf(PropTypes.string), body: PropTypes.array })
-}
+  data: PropTypes.shape({ header: PropTypes.arrayOf(PropTypes.string), body: PropTypes.array }),
+};
 
 Table.defaultProps = {
   width: 'stretched',

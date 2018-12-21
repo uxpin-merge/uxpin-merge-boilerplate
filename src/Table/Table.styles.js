@@ -1,15 +1,14 @@
-import styled from "react-emotion";
-import {css} from "emotion";
-import * as colors from "../styles/colors.json";
-import * as borders from "../styles/borders.json";
-import * as shadow from "../styles/shadows.json";
-import * as typography from "../styles/typography.json";
-import * as size from "../styles/sizes.json";
+import styled from 'react-emotion';
+import * as colors from '../styles/colors.json';
+import * as borders from '../styles/borders.json';
+import * as shadow from '../styles/shadows.json';
+import * as typography from '../styles/typography.json';
+import * as size from '../styles/sizes.json';
 
 const TableStyles = styled('table')`
     display: table;
     table-layout: fixed;
-    width: ${props => props.width === "stretched" ? "100%" : "auto"};
+    width: ${(props) => (props.width === 'stretched' ? '100%' : 'auto')};
     box-shadow: ${shadow.box};
     border: ${borders.borderStandard} ${colors.silver.base};
     font-family: ${typography.lineHeightMultiplier};
@@ -62,4 +61,6 @@ const BodyCellStylesNone = styled(BodyCellStyles)`
     color: ${colors.gray.light30};
 `;
 
-export { BodyCellStyles, BodyCellStylesNone, BodyRowStyles, HeaderCellStyles, HeaderCellWrapper, HeaderRowStyles, SortingStyles, TableStyles };
+export {
+  BodyCellStyles, BodyCellStylesNone, BodyRowStyles, HeaderCellStyles, HeaderCellWrapper, HeaderRowStyles, SortingStyles, TableStyles,
+};
