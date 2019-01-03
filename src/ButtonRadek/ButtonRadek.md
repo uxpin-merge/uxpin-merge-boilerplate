@@ -7,5 +7,5 @@
     mode="filled"
     icon={<Icon size="s" icon="TickerSvg" />}
     size="s"
-    >Merge!</Button>
+    >That's my button!</Button>
 ```
