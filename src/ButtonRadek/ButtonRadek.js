@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ButtonStyles from './Button.styles';
+import ButtonStyles from './ButtonRadek.styles';
 
-const Button = (props) => (
+const ButtonRadek = (props) => (
   <ButtonStyles {...props}>
     {props.icon}
     {props.children}
   </ButtonStyles>
 );
 
-Button.propTypes = {
+ButtonRadek.propTypes = {
   onClick: PropTypes.func,
   disabled: PropTypes.bool,
   type: PropTypes.oneOf(['primary', 'secondary', 'success', 'error', 'warning']),
@@ -23,7 +23,7 @@ Button.propTypes = {
   iconDirection: PropTypes.oneOf(['left', 'right']),
 };
 
-Button.defaultProps = {
+ButtonRadek.defaultProps = {
   iconDirection: 'left',
   disabled: false,
   mode: 'filled',
@@ -32,4 +32,4 @@ Button.defaultProps = {
   type: 'primary',
 };
 
-export { Button as default };
+export { ButtonRadek as default };

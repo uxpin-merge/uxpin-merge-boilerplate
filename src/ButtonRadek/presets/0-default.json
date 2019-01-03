@@ -1,15 +1,15 @@
 {
-  "rootId": "button4038267449",
+  "rootId": "button4038267419",
   "elements": {
     "button4038267449": {
-      "name": "Button",
+      "name": "Button.Radek",
       "props": {
         "stretched": true,
         "type": "error",
         "icon": "<Icon size=\"s\" icon=\"TickerSvg\" />",
         "mode": "filled",
         "size": "m",
-        "children": "Merge!",
+        "children": "That's my button!",
         "isDisabled": true
       }
     }
