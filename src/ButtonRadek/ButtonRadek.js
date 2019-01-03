@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ButtonStyles from './ButtonRadek.styles';
+import ButtonRadekStyles from './ButtonRadek.styles';
 
 const ButtonRadek = (props) => (
-  <ButtonStyles {...props}>
+  <ButtonRadekStyles {...props}>
     {props.icon}
     {props.children}
-  </ButtonStyles>
+  </ButtonRadekStyles>
 );
 
 ButtonRadek.propTypes = {

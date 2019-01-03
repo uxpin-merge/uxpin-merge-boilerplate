@@ -316,9 +316,9 @@ const modes = (mode, type) => {
     `;
 };
 
-const ButtonStyles = styled(ButtonCommon)`
+const ButtonRadekStyles = styled(ButtonCommon)`
   ${(props) => modes(props.mode, props.type)};
 `;
 
 
-export default ButtonStyles;
+export default ButtonRadekStyles;
