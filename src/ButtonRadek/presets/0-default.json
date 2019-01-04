@@ -2,7 +2,7 @@
   "rootId": "button4038267419",
   "elements": {
     "button4038267419": {
-      "name": "Button.Radek",
+      "name": "ButtonRadek",
       "props": {
         "stretched": true,
         "type": "error",
