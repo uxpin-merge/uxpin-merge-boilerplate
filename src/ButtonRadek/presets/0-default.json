@@ -5,7 +5,7 @@
       "name": "ButtonRadek",
       "props": {
         "stretched": true,
-        "type": "error",
+        "type": "primary",
         "icon": "<Icon size=\"s\" icon=\"TickerSvg\" />",
         "mode": "filled",
         "size": "m",
