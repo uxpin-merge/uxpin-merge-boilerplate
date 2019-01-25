@@ -1,4 +1,4 @@
-import React from 'React';
+import React from 'react';
 import Select from '../Select';
 import SelectItem from '../../SelectItem/SelectItem';
 
