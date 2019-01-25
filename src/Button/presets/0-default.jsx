@@ -4,7 +4,7 @@ import Icon from '../../Icon/Icon';
 
 export default (
   <Button
-    rootId="button1"
+    uxpId="button1"
     stretched
     type="error"
     mode="filled"
