@@ -1,10 +1,9 @@
 import React from 'react';
 import Button from '../Button';
-import Icon from '../../Icon/Icon';
 
 export default (
   <Button
-    icon={<Icon icon="TickerSvg" size="s" uxpId="button2" />}
+    icon={"<Icon icon=\"TickerSvg\" size=\"s\" />"}
     mode="filled"
     size="s"
     stretched
