@@ -1,7 +1,7 @@
 import React from 'react';
 import LineMarkChart from '../LineMarkChart';
 
-const chartData =[
+const chartData = [
   { x: 0, y: 8 },
   { x: 1, y: 5 },
   { x: 2, y: 4 },

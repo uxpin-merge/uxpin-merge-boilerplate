@@ -33,7 +33,7 @@ export default (
     data={chartData}
     height={300}
     hint
-    margin={{top: 20, right: 20}}
+    margin={{ top: 20, right: 20 }}
     opacity="0.3"
     startData={chartStartData}
     strokeWidth={12}

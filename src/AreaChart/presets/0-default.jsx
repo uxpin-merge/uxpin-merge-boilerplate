@@ -25,7 +25,7 @@ const chartData = [
     { x: 7, y: 1 },
     { x: 8, y: 9 },
     { x: 9, y: 11 },
-  ]
+  ],
 ];
 const chartStartData = [
   [
@@ -51,18 +51,18 @@ const chartStartData = [
     { x: 7, y: 2 },
     { x: 8, y: 3 },
     { x: 9, y: 4 },
-  ]
+  ],
 ];
 
 export default (
   <AreaChart
     animation="gentle"
-    colorRange={["teal", "red"]}
+    colorRange={['teal', 'red']}
     curve="curveLinear"
     data={chartData}
     opacity="0.6"
     startData={chartStartData}
-    styles={[{"strokeStyle": "dashed"}]}
+    styles={[{ strokeStyle: 'dashed' }]}
     uxpId="areaChart1"
     width={500}
   />

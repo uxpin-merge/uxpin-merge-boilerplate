@@ -3,7 +3,7 @@ import Button from '../Button';
 
 export default (
   <Button
-    icon={"<Icon icon=\"TickerSvg\" size=\"s\" />"}
+    icon={'<Icon icon=\'TickerSvg\' size=\'s\' />'}
     mode="filled"
     size="s"
     stretched

@@ -25,7 +25,7 @@ const chartdata = [
     { x: 7, y: 1 },
     { x: 8, y: 9 },
     { x: 9, y: 11 },
-  ]
+  ],
 ];
 
 const chartStartData = [
@@ -52,18 +52,18 @@ const chartStartData = [
     { x: 7, y: 2 },
     { x: 8, y: 3 },
     { x: 9, y: 4 },
-  ]
+  ],
 ];
 
 export default (
   <LineChart
     animation="stiff"
-    colorRange={["teal", "red"]}
+    colorRange={['teal', 'red']}
     curve="curveLinear"
     data={chartdata}
     opacity="0.6"
     startData={chartStartData}
-    styles={[{strokeStyle: "dashed"}]}
+    styles={[{ strokeStyle: 'dashed' }]}
     uxpId="lineChart1"
     width={500}
   />

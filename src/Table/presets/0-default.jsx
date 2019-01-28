@@ -50,8 +50,8 @@ const tableData = {
       bass: 'roger glover',
       drums: 'ian paice',
       keyboard: 'jon lord',
-    }
-  ]
+    },
+  ],
 };
 
 export default (
