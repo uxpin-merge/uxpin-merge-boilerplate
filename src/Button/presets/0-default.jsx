@@ -8,7 +8,7 @@ export default (
     stretched
     type="error"
     mode="filled"
-    icon={<Icon size="s" icon="TickerSvg" />}
+    icon={<Icon uxpId="button2" size="s" icon="TickerSvg" />}
     size="s"
   >
     Merge!
