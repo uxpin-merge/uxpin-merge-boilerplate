@@ -4,13 +4,12 @@ import Icon from '../../Icon/Icon';
 
 export default (
   <Button
-    uxpId="button1"
+    icon={<Icon icon="TickerSvg" size="s" uxpId="button2" />}
+    mode="filled"
+    size="s"
     stretched
     type="error"
-    mode="filled"
-    icon={<Icon uxpId="button2" size="s" icon="TickerSvg" />}
-    size="s"
-  >
+    uxpId="button1">
     Merge!
   </Button>
 );

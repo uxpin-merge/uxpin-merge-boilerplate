@@ -11,7 +11,7 @@ const chartData =[
   { x: 6, y: 6 },
   { x: 7, y: 3 },
   { x: 8, y: 2 },
-  { x: 9, y: 0 }
+  { x: 9, y: 0 },
 ];
 
 const chartStartData = [
@@ -24,7 +24,7 @@ const chartStartData = [
   { x: 6, y: 0 },
   { x: 7, y: 0 },
   { x: 8, y: 0 },
-  { x: 9, y: 0 }
+  { x: 9, y: 0 },
 ];
 
 export default (
