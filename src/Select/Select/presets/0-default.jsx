@@ -1,6 +1,6 @@
 import React from 'react';
-import Select from '../Select';
 import SelectItem from '../../SelectItem/SelectItem';
+import Select from '../Select';
 
 export default (
   <Select uxpId="select1">
