@@ -2,7 +2,7 @@ version: 2
 jobs:
   build-and-test:
     docker:
-      - image: uxpin2/node8:1.0
+      - image: uxpin2/node8:8.1.2-1
         auth:
           username: $DOCKER_USER
           password: $DOCKER_PASS
