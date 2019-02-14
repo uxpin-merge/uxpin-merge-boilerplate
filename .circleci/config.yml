@@ -1,17 +1,13 @@
-version: 2
 jobs:
-  build-and-test:
+  build:
     docker:
-      - image: uxpin2/node8:1.0
+      - image: uxpin2/node8:8.1.2-1
         auth:
           username: $DOCKER_USER
           password: $DOCKER_PASS
     working_directory: ~/project/
     steps:
       - checkout
-      - run:
-          name: 'Login to NPM'
-          command: npm i -g npm-cli-login && npm-cli-login
       - run:
           name: "Install dependencies"
           command: npm install
@@ -23,10 +19,4 @@ jobs:
           command: ./node_modules/eslint/bin/eslint.js --ext js,jsx src --ignore-pattern *.tests.js
       - run:
           name: 'Push to UXPin'
-          command: ./node_modules/@uxpin/merge-cli/bin/uxpin-merge push --webpack-config ./webpack.config.js --wrapper ./src/UXPinWrapper/UXPinWrapper.js --uxpin-domain uxpin.com --token $TOKEN
-
-workflows:
-  version: 2
-  build-and-test:
-    jobs:
-      - build-and-test
+          command: ./node_modules/@uxpin/merge-cli/bin/uxpin-merge push --webpack-config ./webpack.config.js --wrapper ./src/UXPinWrapper/UXPinWrapper.js
