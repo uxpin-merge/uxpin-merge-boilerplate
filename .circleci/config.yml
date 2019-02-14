@@ -1,7 +1,7 @@
 jobs:
   build:
     docker:
-      - image: uxpin2/node8:8.1.2-1
+      - image: uxpin2/node8:1.0
         auth:
           username: $DOCKER_USER
           password: $DOCKER_PASS
