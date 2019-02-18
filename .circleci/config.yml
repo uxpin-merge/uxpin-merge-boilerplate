@@ -16,7 +16,7 @@ jobs:
           command: npm run test
       - run:
           name: "Check ESLint"
-          command: ./node_modules/eslint/bin/eslint.js --ext js,jsx src --ignore-pattern *.tests.js
+          command: npm run check
       - run:
           name: 'Push to UXPin'
           command: ./node_modules/@uxpin/merge-cli/bin/uxpin-merge push --webpack-config ./webpack.config.js --wrapper ./src/UXPinWrapper/UXPinWrapper.js
