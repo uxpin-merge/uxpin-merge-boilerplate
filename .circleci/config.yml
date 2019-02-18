@@ -1,0 +1,22 @@
+jobs:
+  build:
+    docker:
+      - image: uxpin2/node8:1.0
+        auth:
+          username: $DOCKER_USER
+          password: $DOCKER_PASS
+    working_directory: ~/project/
+    steps:
+      - checkout
+      - run:
+          name: "Install dependencies"
+          command: npm install
+      - run:
+          name: "Run tests"
+          command: npm run test
+      - run:
+          name: "Check ESLint"
+          command: npm run check
+      - run:
+          name: 'Push to UXPin'
+          command: ./node_modules/@uxpin/merge-cli/bin/uxpin-merge push --webpack-config ./webpack.config.js --wrapper ./src/UXPinWrapper/UXPinWrapper.js

@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "check": "eslint --ext js,jsx src --ignore-pattern *.tests.js",
     "test": "jest",
     "server": "uxpin-merge server --webpack-config ./webpack.uxpin.config.js --wrapper ./src/UXPinWrapper/UXPinWrapper.js",
     "start": "uxpin-merge --webpack-config ./webpack.uxpin.config.js --wrapper ./src/UXPinWrapper/UXPinWrapper.js --uxpin-domain merge.uxpin.cloud"
@@ -19,7 +20,7 @@
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
-    "@uxpin/merge-cli": "1.1.0-dev.2",
+    "@uxpin/merge-cli": "1.2.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
