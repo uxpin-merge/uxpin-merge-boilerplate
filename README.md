@@ -291,6 +291,8 @@ jobs:
 
 An alternative to CI Server integration is one time push. This option should be used only if you're not planning frequent updates of components. Open your terminal and type:
 
-```./node_modules/.bin/uxpin-merge push --webpack-config ./webpack.config.js --wrapper ./src/Wrapper/UXPinWrapper.js --token "YOUR_AUTH_TOKEN"```
+```
+./node_modules/.bin/uxpin-merge push --webpack-config ./webpack.config.js --wrapper ./src/Wrapper/UXPinWrapper.js --token "YOUR_AUTH_TOKEN"
+```
 
 
