@@ -57,77 +57,193 @@ Adding components to Merge is no different than creating normal React.js compone
 * You have to add the component to uxpin.config.js file
 * You have to prepare presets for every component (temporary restrictions to be replaced by jsx presets)
 
-## Creating presets (temporary requirement)
+## Authoring JSX Presets
 
-Preset (to be replaced with JSX presets in the future) is a JSON file that describes components in a structured way.
+Merge requires JSX presets to be stored in the presets subdirectory of every component. Why? Presets are used to render the initial configuration of every component. Merge needs to know which composition of properties (including children) should be rendered by default. This composition will rendered by default whenever you, or anyone on your team, drag & drops component on the canvas in UXPin editor.
 
-* For `./src/Button/Button.js` component we require one preset in `./src/Button/presets/0-default.json`
-* More presets can be added (not yet supported in the editor) by defining the sort index and readable name in the file name (for example: `100-Button with icon.json`, `200-Icon Button.json`).
+A typical preset looks like this: 
 
 
-Example preset:
-```json
-{
-  "rootId": "select548853352",
-  "elements": {
-    "select548853352": {
-      "name": "Select",
-      "props": {
-        "width": 300,
-        "children": [
-          {
-            "uxpinPresetElementId": "selectitem2379554241"
-          },
-          {
-            "uxpinPresetElementId": "selectitem230242005"
-          },
-          {
-            "uxpinPresetElementId": "selectitem1081055471"
-          }
-        ]
-      }
-    },
-    "selectitem2379554241": {
-      "name": "SelectItem",
-      "props": {
-        "children": "Option1"
-      }
-    },
-    "selectitem230242005": {
-      "name": "SelectItem",
-      "props": {
-        "children": "Option2"
-      }
-    },
-    "selectitem1081055471": {
-      "props": {
-        "children": "Option2"
-      }
-    }
-  }
-}
-
+import React from 'react';
+import Button from '../Button';
+ 
+``` 
+export default (
+    <Button         
+        uxpId="button1"
+        icon={'<Icon icon=\'TickerSvg\' size=\'s\' />'}
+        mode="filled"
+        size="s"
+        stretched
+        type="error"
+    >
+        Merge!
+    </Button>
+);
 ```
 
-As you can see at the top of the structure you need a reference to `rootId`. That can be any string, but to make things easier a good practice is to use name of the element and random integers (easier to read and assures uniqueness). Subsequently, under the `elements` key, you will list all the components that are going to be rendered in Merge. Every component has to be identified by a unique id (root component has to repeat the id inside of the elements key) and has to have a `props` key that lists all the properties (leave empty if component doesn't have any props – `props: {}`).
+At the top of the file you have to import React library and all the components that you want to represent in the preset. In the export default() part of the preset place the JSX code representing the desired, default, composition of your component. JSX representation of every component, apart from the usual configuration of properties, must have a unique UXPin ID attribute – uxpId. uxpId lets Merge properly render every component and track overrides of components (shall that happen in the future). 
 
-For components that have other components given as `children` (like the `SelectItem` component in the `Select` presented above) you have to create `"uxpinPresetElementId"` (just like for the root element) and use the id as a reference under `elements` id.
 
-In case of components that accept other components via props other than `children` (like `icon` property in the `Button` below) you have to pass a JSX syntax as a property value:
+Component IDs and Nested Components
 
-```json
-{
-  "rootId": "button4038267449",
-  "elements": {
-    "button4038267449": {
-      "name": "Button",
-      "props": {
-        "stretched": true,
-        "type": "error",
-        "icon": "<Icon size=\"s\" icon=\"TickerSvg\"/>",
-        "mode": "filled"
-      }
-    }
-  }
-}
+Merge JSX presets can represent complex, nested, structures of components. In cases like this, it's very important to remember that all uxpId attributes have to hold unique values. In a given preset two components cannot have the same uxpId. Other than that creating presets for nested structures works just like composing JSX code in React.js components. You have to import all the components and create the full structure in export default() directive. 
+
 ```
+import React from 'react';
+import SelectItem from '../../SelectItem/SelectItem';
+import Select from '../Select';
+ 
+export default (
+  <Select uxpId="select1">
+    <SelectItem uxpId="select.item.1">Option1</SelectItem>
+    <SelectItem uxpId="select.item.2">Option2</SelectItem>
+    <SelectItem uxpId="select.item.3">Option3</SelectItem>
+  </Select>
+);
+```
+
+When choosing name for uxpId for components, think about the role they're playing. In the future you may want to automatically replace one nested component with another one (say, a Button has just been deprecated and replaced by ButtonNew). In that case, keeping the same uxpId will allow Merge to automatically update all designs with the new component.
+
+Properties Requirements
+Content of all the properties in JSX presets must be serializable as JSON. You may build custom functions and manipulate data in the preset file, but the end result must be serializable. 
+
+For example, the following JSX preset is valid:
+
+
+
+import React from 'react';
+import Button from '../Select';
+ 
+const customFunction = () => "HelloWorld";
+ 
+export default (
+  <Button
+    uxpId="signup1"
+    size="large"
+    custom={customFunction()}
+  >
+    Signup Now!
+  </Button>
+);
+
+While this preset is incorrect (passing a function through props is currently unsupported):
+
+
+```
+import React from 'react';
+import Button from '../Select';
+ 
+const customFunction = () => "HelloWorld";
+ 
+export default (
+  <Button
+    uxpId="signup1"
+    size="large"
+    custom={customFunction}
+  >
+    Signup Now!
+  </Button>
+);
+```
+
+In preset files you can easily import and modify data sets to be used by your component. Take this example:
+
+```
+import React from 'react';
+import Table from '../Table';
+ 
+const tableData = {
+  header: ['band', 'singer', 'rhythm guitar', 'lead guitar', 'bass', 'drums', 'keyboard'],
+  body: [
+    {
+      band: 'metallica',
+      singer: 'james hetfield',
+      'rhythm guitar': 'james hetfield',
+      'lead guitar': 'kirk hammet',
+      bass: 'robert trujillo',
+      drums: 'lars ulrich',
+    },
+    {
+      band: 'slayer',
+      singer: 'tom araya',
+      'rhythm guitar': 'kerry king',
+      'lead guitar': 'gary holt',
+      bass: 'tom araya',
+      drums: 'paul bostaph',
+    },
+    {
+      band: 'black sabbath',
+      singer: 'ozzy osbourne',
+      'lead guitar': 'tommy iommi',
+      bass: 'geezer butler',
+      drums: 'bill ward',
+    },
+    {
+      band: 'queen',
+      singer: 'freddy mercury',
+      'lead guitar': 'brian may',
+      bass: 'john deacon',
+      drums: 'roger taylor',
+      keyboard: 'freddy mercury',
+    },
+    {
+      band: 'led zeppelin',
+      singer: 'robert plant',
+      'lead guitar': 'jimmy page',
+      bass: 'john paul johns',
+      drums: 'bonzo bonham',
+      keyboard: 'john paul johns',
+    },
+    {
+      band: 'deep purple',
+      singer: 'ian gillan',
+      'lead guitar': 'ritchie blackmore',
+      bass: 'roger glover',
+      drums: 'ian paice',
+      keyboard: 'jon lord',
+    },
+  ],
+};
+ 
+export default (
+  <Table
+    data={tableData}
+    uxpId="table1"
+    width="stretched"
+  />
+);
+```
+
+This is a perfectly valid JSX preset! And things get even better – your data can be imported from an external JS or JSON file.
+
+
+
+If you want to pass another component via props, you have to pass it as a string. This is a temporary restriction. We're working on removing it.
+
+Merge will automatically transform it to a full component upon rendering. Take a look at property icon in this component preset:
+
+
+```
+import React from 'react';
+import Button from '../Button';
+ 
+ 
+export default (
+    <Button         
+        uxpId="button1"
+        icon={'<Icon icon=\'TickerSvg\' size=\'s\' />'}
+        mode="filled"
+        size="s"
+        stretched
+        type="error"
+    >
+        Merge!
+    </Button>
+);
+```
+
+Merge Presets are very powerful and with handling this power comes a lot of responsibility! Please remember that changes in preset will update design, unless properties were overridden in a particular project in UXPin (warning). 
+
+
+
