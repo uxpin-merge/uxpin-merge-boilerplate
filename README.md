@@ -11,6 +11,8 @@ To make the first steps in the world of Merge easy, we've prepared this boilerpl
 
 All the components are built with React.js and styled with Emotion. Styles are using tokens stored in JSON files.
 
+To learn more about Merge – visit [our wiki](https://wikiuxpin.atlassian.net/wiki/spaces/MA/overview)
+
 ## Installation
 
 This boilerplate needs node and npm installed to run. Once you're ready clone the repository and install all the dependencies (`npm install`).
@@ -57,17 +59,19 @@ Adding components to Merge is no different than creating normal React.js compone
 * You have to add the component to uxpin.config.js file
 * You have to prepare presets for every component (temporary restrictions to be replaced by jsx presets)
 
+Every component has to be referenced in UXPin Merge Config file [`./uxpin.config.js`](https://wikiuxpin.atlassian.net/wiki/spaces/MA/pages/665714725/UXPin+Merge+Config+File).
+
 ## Authoring JSX Presets
 
-Merge requires JSX presets to be stored in the presets subdirectory of every component. Why? Presets are used to render the initial configuration of every component. Merge needs to know which composition of properties (including children) should be rendered by default. This composition will rendered by default whenever you, or anyone on your team, drag & drops component on the canvas in UXPin editor.
+Merge requires JSX presets to be stored in the presets subdirectory of every component. Why? Presets are used to render the initial configuration of every component. Merge needs to know which composition of properties (including children) should be rendered by default. This composition will be rendered by default whenever you, or anyone on your team, drag & drops component on the canvas in UXPin editor.
 
 A typical preset looks like this: 
 
 
+```
 import React from 'react';
 import Button from '../Button';
  
-``` 
 export default (
     <Button         
         uxpId="button1"
@@ -110,8 +114,7 @@ Content of all the properties in JSX presets must be serializable as JSON. You m
 
 For example, the following JSX preset is valid:
 
-
-
+```
 import React from 'react';
 import Button from '../Select';
  
@@ -126,6 +129,7 @@ export default (
     Signup Now!
   </Button>
 );
+```
 
 While this preset is incorrect (passing a function through props is currently unsupported):
 
@@ -218,8 +222,7 @@ export default (
 This is a perfectly valid JSX preset! And things get even better – your data can be imported from an external JS or JSON file.
 
 
-
-If you want to pass another component via props, you have to pass it as a string. This is a temporary restriction. We're working on removing it.
+If you want to pass another component via props, you have to pass it as a string. _This is a temporary restriction._ We're working on removing it.
 
 Merge will automatically transform it to a full component upon rendering. Take a look at property icon in this component preset:
 
@@ -245,5 +248,49 @@ export default (
 
 Merge Presets are very powerful and with handling this power comes a lot of responsibility! Please remember that changes in preset will update design, unless properties were overridden in a particular project in UXPin (warning). 
 
+Learne more about [JSX Presets in Merge Wiki](https://wikiuxpin.atlassian.net/wiki/spaces/MA/pages/665747488/Authoring+and+Managing+JSX+Presets)
+
+## CI Integration
+
+The recommended way to send your React.js components to your production UXPin account is via integration with Continues Integration server (Circle CI, Travis...). 
+
+To start the integration:
+
+1. go to your UXPin account,
+2. enter UXPin design editor,
+3. create a new library,
+4. select option "import React components"
+5. copy the Auth token (🚨do not share it with anyone and do not place it in any files checked into git repository. This token provides direct access to the library on your account)
+
+![alt text](https://i.ibb.co/DGzrnWY/merge-ci-1.gif "Merge CI Integration")
+
+Once you obtained the Auth Token, go to your CI app, start a project tracking your design system repository (if you haven't yet) and add a new environment variable UXPIN_AUTH_TOKEN with value set to your Auth token copied from your UXPin account
+In the config of your CI server add a new step and run the following command (adjust attributes where necessary): 
+
+```
+./node_modules/.bin/uxpin-merge push --webpack-config ./webpack.config.js --wrapper ./src/Wrapper/UXPinWrapper.js
+```
+
+The simplest config file (for CircleCI) looks like this:
+
+```
+jobs:
+  build:
+    docker:
+      - image: circleci/node:10.15-stretch-browsers
+    working_directory: ~/project/
+    steps:
+      - checkout
+      - run:
+          name: "Install dependencies"
+          command: npm install
+      - run:
+          name: 'Push to UXPin'
+          command: ./node_modules/.bin/uxpin-merge push --webpack-config ./webpack.config.js --wrapper ./src/Wrapper/UXPinWrapper.js
+```          
+
+An alternative to CI Server integration is one time push. This option should be used only if you're not planning frequent updates of components. Open your terminal and type:
+
+```./node_modules/.bin/uxpin-merge push --webpack-config ./webpack.config.js --wrapper ./src/Wrapper/UXPinWrapper.js --token "YOUR_AUTH_TOKEN"```
 
 
