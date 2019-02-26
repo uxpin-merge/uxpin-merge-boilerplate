@@ -57,7 +57,7 @@ Adding components to Merge is no different than creating normal React.js compone
 * Components need to exist in separate directories
 * Only one component is allowed per file and directory e.g. `./src/Button/Button.js`
 * You have to add the component to uxpin.config.js file
-* You have to prepare presets for every component (temporary restrictions to be replaced by jsx presets)
+ * You have to prepare a default preset for every component
 
 Every component has to be referenced in UXPin Merge Config file [`./uxpin.config.js`](https://wikiuxpin.atlassian.net/wiki/spaces/MA/pages/665714725/UXPin+Merge+Config+File).
 
