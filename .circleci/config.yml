@@ -9,5 +9,11 @@ jobs:
           name: "Install dependencies"
           command: npm install
       - run:
+          name: "Run tests"
+          command: npm run test
+      - run:
+          name: "Check ESLint"
+          command: npm run check
+      - run:
           name: 'Push to UXPin'
           command: ./node_modules/@uxpin/merge-cli/bin/uxpin-merge push --webpack-config ./webpack.config.js --wrapper ./src/UXPinWrapper/UXPinWrapper.js
