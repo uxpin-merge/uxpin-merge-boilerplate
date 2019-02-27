@@ -36,20 +36,6 @@ When you're changing anything in the components files and you want to re-render 
 killall -9 node
 ```
 
-## Tests
-
-This repository uses tests created with Jest-Emotion and Enzyme. To run all the test suites use:
-
-```bash
-npm test
-```
-
-When you're modifying components, you have to generate new snapshots:
-
-```bash
-npm test -- -u
-```
-
 ## Adding new components
 
 Adding components to Merge is no different than creating normal React.js components. Merge accepts any standard approach to React. The only limitations that you should be aware of are:
@@ -295,4 +281,17 @@ An alternative to CI Server integration is one time push. This option should be 
 ./node_modules/.bin/uxpin-merge push --webpack-config ./webpack.config.js --wrapper ./src/Wrapper/UXPinWrapper.js --token "YOUR_AUTH_TOKEN"
 ```
 
+## Tests
+
+This repository uses tests created with Jest-Emotion and Enzyme. To run all the test suites use:
+
+```bash
+npm test
+```
+
+When you're modifying components, you have to generate new snapshots:
+
+```bash
+npm test -- -u
+```
 
