@@ -6,7 +6,7 @@ export default (
   <Button
     icon={<Icon icon="TickerSvg" size="s" uxpId="button2" />}
     mode="filled"
-    size="s"
+    size="xl"
     stretched
     type="error"
     uxpId="button1">
