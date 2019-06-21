@@ -5,6 +5,7 @@ import Icon from '../../Icon/Icon';
 import {
   ItemStyles, MenuStyles, SelectContainerStyles, SelectContent, SelectStyles,
 } from './Select.styles';
+import SelectItem from './SelectItem/SelectItem';
 
 export default class Select extends React.Component {
   constructor(props) {
@@ -80,6 +81,8 @@ export default class Select extends React.Component {
     );
   }
 }
+
+Select.SelectItem = SelectItem;
 
 Select.propTypes = {
   children: PropTypes.node,

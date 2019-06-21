@@ -1,5 +1,5 @@
 import React from 'react';
-import SelectItem from '../../SelectItem/SelectItem';
+import SelectItem from '../SelectItem/SelectItem';
 import Select from '../Select';
 
 export default (
