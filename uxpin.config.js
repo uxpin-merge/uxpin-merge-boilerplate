@@ -8,7 +8,7 @@ module.exports = {
           'src/Icon/Icon.js',
           'src/Select/Select/Select.js',
           'src/Select/SelectItem/SelectItem.js',
-          'src/Table/Table.js'
+          'src/Table/Table.js',
         ]
       },
       {
@@ -21,8 +21,14 @@ module.exports = {
           'src/BarChart/BarChart.js',
           'src/PieChart/PieChart.js'
         ]
+      },
+      {
+        name: 'Mine',
+        include: [
+          'src/TimeAgo/TimeAgo.js'
+        ]
       }
     ]
   },
-  name: 'UXPin Merge Boilerplate'
+  name: 'UXPin Merge Boilerplate Edited'
 };

@@ -197,7 +197,7 @@ BarChart.propTypes = {
   /** Turns, on/off animation and allows for selection of different types of animations. */
   animation: PropTypes.oneOf([false, 'noWobble', 'gentle', 'wobbly', 'stiff']),
   /** Width of every bar in %. 1.0 means the full width.  */
-  barWidth: PropTypes.number,
+  barWidth: PropTypes.string,
   /** Color to be used on all chart lines, unless colorRange is provided */
   color: PropTypes.string,
   /** Array with colors to be used across all chart lines. If array doesn't specify color for all the chart lines, color property is used. */
