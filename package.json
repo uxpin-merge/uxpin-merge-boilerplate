@@ -1,5 +1,5 @@
 {
-  "name": "uxpin-merge-boilerplate-proptypes",
+  "name": "uxpin-merge-boilerplate",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/marcintreder/uxpin-merge-boilerplate-proptypes.git"
+    "url": "git+https://github.com/uxpin-merge/uxpin-merge-boilerplate.git"
   },
   "author": "",
   "license": "ISC",
@@ -44,9 +44,9 @@
     "webpack-cli": "^3.1.2"
   },
   "bugs": {
-    "url": "https://github.com/marcintreder/uxpin-merge-boilerplate-proptypes/issues"
+    "url": "https://github.com/uxpin-merge/uxpin-merge-boilerplate/issues"
   },
-  "homepage": "https://github.com/marcintreder/uxpin-merge-boilerplate-proptypes#readme",
+  "homepage": "https://github.com/uxpin-merge/uxpin-merge-boilerplate#readme",
   "dependencies": {
     "d3-shape": "^1.2.2",
     "emotion": "^9.2.12",
