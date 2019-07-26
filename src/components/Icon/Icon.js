@@ -6,19 +6,14 @@ import * as Icons from './icons';
 const getIconSize = (size) => {
   switch (size) {
     case 'xs':
-      return `${sizes.xs}px`;
     case 's':
-      return `${sizes.s}px`;
     case 'm':
-      return `${sizes.m}px`;
     case 'l':
-      return `${sizes.l}px`;
     case 'xl':
-      return `${sizes.xl}px`;
     case 'xxl':
-      return `${sizes.xxl}px`;
     case 'xxxl':
-      return `${sizes.xxxl}px`;
+      return `${sizes[size]}px`;
+
     default:
       return `${sizes.xs}px`;
   }
