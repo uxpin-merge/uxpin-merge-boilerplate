@@ -4,22 +4,22 @@ module.exports = {
       {
         name: 'General',
         include: [
-          'src/Button/Button.js',
-          'src/Icon/Icon.js',
-          'src/Select/Select/Select.js',
-          'src/Select/SelectItem/SelectItem.js',
-          'src/Table/Table.js'
+          'src/components/Button/Button.js',
+          'src/components/Icon/Icon.js',
+          'src/components/Select/Select/Select.js',
+          'src/components/Select/SelectItem/SelectItem.js',
+          'src/components/Table/Table.js'
         ]
       },
       {
         name: 'Charts',
         include: [
-          'src/LineChart/LineChart.js',
-          'src/LineMarkChart/LineMarkChart.js',
-          'src/MarkChart/MarkChart.js',
-          'src/AreaChart/AreaChart.js',
-          'src/BarChart/BarChart.js',
-          'src/PieChart/PieChart.js'
+          'src/components/Charts/LineChart/LineChart.js',
+          'src/components/Charts/LineMarkChart/LineMarkChart.js',
+          'src/components/Charts/MarkChart/MarkChart.js',
+          'src/components/Charts/AreaChart/AreaChart.js',
+          'src/components/Charts/BarChart/BarChart.js',
+          'src/components/Charts/PieChart/PieChart.js'
         ]
       }
     ]

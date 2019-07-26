@@ -6,8 +6,8 @@
   "scripts": {
     "check": "eslint --ext js,jsx src --ignore-pattern *.tests.js",
     "test": "jest",
-    "server": "uxpin-merge server --webpack-config ./webpack.uxpin.config.js --wrapper ./src/UXPinWrapper/UXPinWrapper.js",
-    "start": "uxpin-merge --webpack-config ./webpack.uxpin.config.js --wrapper ./src/UXPinWrapper/UXPinWrapper.js"
+    "server": "uxpin-merge server --webpack-config ./webpack.uxpin.config.js --wrapper ./src/components/UXPinWrapper/UXPinWrapper.js",
+    "start": "uxpin-merge --webpack-config ./webpack.uxpin.config.js --wrapper ./src/components/UXPinWrapper/UXPinWrapper.js"
   },
   "repository": {
     "type": "git",
