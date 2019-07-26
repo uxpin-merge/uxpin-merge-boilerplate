@@ -750,7 +750,7 @@ exports[`renders LineChart with incorrect startData set: enzyme.mount 1`] = `
             }
           >
             <g
-              className="rv-xy-plot__grid-lines"
+              className="rv-xy-plot__grid-lines undefined"
               transform="translate(40,10)"
             >
               <line
@@ -1062,7 +1062,7 @@ exports[`renders LineChart with incorrect startData set: enzyme.mount 1`] = `
             }
           >
             <g
-              className="rv-xy-plot__grid-lines"
+              className="rv-xy-plot__grid-lines undefined"
               transform="translate(40,10)"
             >
               <line
@@ -3302,7 +3302,7 @@ exports[`renders LineChart with one line correctly: enzyme.mount 1`] = `
             }
           >
             <g
-              className="rv-xy-plot__grid-lines"
+              className="rv-xy-plot__grid-lines undefined"
               transform="translate(40,10)"
             >
               <line
@@ -3614,7 +3614,7 @@ exports[`renders LineChart with one line correctly: enzyme.mount 1`] = `
             }
           >
             <g
-              className="rv-xy-plot__grid-lines"
+              className="rv-xy-plot__grid-lines undefined"
               transform="translate(40,10)"
             >
               <line
@@ -6026,7 +6026,7 @@ exports[`renders LineChart with two lines correctly: enzyme.mount 1`] = `
             }
           >
             <g
-              className="rv-xy-plot__grid-lines"
+              className="rv-xy-plot__grid-lines undefined"
               transform="translate(40,10)"
             >
               <line
@@ -6422,7 +6422,7 @@ exports[`renders LineChart with two lines correctly: enzyme.mount 1`] = `
             }
           >
             <g
-              className="rv-xy-plot__grid-lines"
+              className="rv-xy-plot__grid-lines undefined"
               transform="translate(40,10)"
             >
               <line

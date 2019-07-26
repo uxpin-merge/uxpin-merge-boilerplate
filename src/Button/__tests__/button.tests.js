@@ -1,9 +1,8 @@
-import React from 'react';
 import * as enzyme from 'enzyme';
 import toJson from 'enzyme-to-json';
-import Button from '../Button';
+import * as React from 'react';
 import Icon from '../../Icon/Icon';
-
+import Button from '../Button';
 
 test('renders error Button correctly', () => {
   const button = (

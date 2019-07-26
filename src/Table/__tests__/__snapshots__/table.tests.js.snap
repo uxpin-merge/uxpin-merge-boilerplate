@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders table with few headers correctly: enzyme.shallow 1`] = `
-<Styled(table)
+<TableStyles
   data={
     Object {
       "body": Array [
@@ -63,13 +63,13 @@ exports[`renders table with few headers correctly: enzyme.shallow 1`] = `
   width="auto"
 >
   <thead>
-    <Styled(tr)>
-      <Styled(th)
+    <HeaderRowStyles>
+      <HeaderCellStyles
         key="0"
       >
-        <Styled(div)>
+        <HeaderCellWrapper>
           band
-          <Styled(div)>
+          <SortingStyles>
             <Button
               disabled={false}
               icon={
@@ -101,15 +101,15 @@ exports[`renders table with few headers correctly: enzyme.shallow 1`] = `
               stretched={false}
               type="secondary"
             />
-          </Styled(div)>
-        </Styled(div)>
-      </Styled(th)>
-      <Styled(th)
+          </SortingStyles>
+        </HeaderCellWrapper>
+      </HeaderCellStyles>
+      <HeaderCellStyles
         key="1"
       >
-        <Styled(div)>
+        <HeaderCellWrapper>
           singer
-          <Styled(div)>
+          <SortingStyles>
             <Button
               disabled={false}
               icon={
@@ -141,15 +141,15 @@ exports[`renders table with few headers correctly: enzyme.shallow 1`] = `
               stretched={false}
               type="secondary"
             />
-          </Styled(div)>
-        </Styled(div)>
-      </Styled(th)>
-      <Styled(th)
+          </SortingStyles>
+        </HeaderCellWrapper>
+      </HeaderCellStyles>
+      <HeaderCellStyles
         key="2"
       >
-        <Styled(div)>
+        <HeaderCellWrapper>
           rhythm guitar
-          <Styled(div)>
+          <SortingStyles>
             <Button
               disabled={false}
               icon={
@@ -181,132 +181,132 @@ exports[`renders table with few headers correctly: enzyme.shallow 1`] = `
               stretched={false}
               type="secondary"
             />
-          </Styled(div)>
-        </Styled(div)>
-      </Styled(th)>
-    </Styled(tr)>
+          </SortingStyles>
+        </HeaderCellWrapper>
+      </HeaderCellStyles>
+    </HeaderRowStyles>
   </thead>
   <tbody>
-    <Styled(tr)
+    <BodyRowStyles
       key="0"
     >
-      <Styled(td)
+      <BodyCellStyles
         key="0"
       >
         metallica
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="1"
       >
         james hatfield
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="2"
       >
         james hatfield
-      </Styled(td)>
-    </Styled(tr)>
-    <Styled(tr)
+      </BodyCellStyles>
+    </BodyRowStyles>
+    <BodyRowStyles
       key="1"
     >
-      <Styled(td)
+      <BodyCellStyles
         key="0"
       >
         slayer
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="1"
       >
         tom araya
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="2"
       >
         kerry king
-      </Styled(td)>
-    </Styled(tr)>
-    <Styled(tr)
+      </BodyCellStyles>
+    </BodyRowStyles>
+    <BodyRowStyles
       key="2"
     >
-      <Styled(td)
+      <BodyCellStyles
         key="0"
       >
         black sabbath
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="1"
       >
         ozzy osbourne
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStylesNone
         key="2"
       >
         none
-      </Styled(td)>
-    </Styled(tr)>
-    <Styled(tr)
+      </BodyCellStylesNone>
+    </BodyRowStyles>
+    <BodyRowStyles
       key="3"
     >
-      <Styled(td)
+      <BodyCellStyles
         key="0"
       >
         queen
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="1"
       >
         freddy mercury
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStylesNone
         key="2"
       >
         none
-      </Styled(td)>
-    </Styled(tr)>
-    <Styled(tr)
+      </BodyCellStylesNone>
+    </BodyRowStyles>
+    <BodyRowStyles
       key="4"
     >
-      <Styled(td)
+      <BodyCellStyles
         key="0"
       >
         led zeppelin
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="1"
       >
         robert plant
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStylesNone
         key="2"
       >
         none
-      </Styled(td)>
-    </Styled(tr)>
-    <Styled(tr)
+      </BodyCellStylesNone>
+    </BodyRowStyles>
+    <BodyRowStyles
       key="5"
     >
-      <Styled(td)
+      <BodyCellStyles
         key="0"
       >
         deep purple
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="1"
       >
         ian gillan
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStylesNone
         key="2"
       >
         none
-      </Styled(td)>
-    </Styled(tr)>
+      </BodyCellStylesNone>
+    </BodyRowStyles>
   </tbody>
-</Styled(table)>
+</TableStyles>
 `;
 
 exports[`renders table with width auto correctly: enzyme.shallow 1`] = `
-<Styled(table)
+<TableStyles
   data={
     Object {
       "body": Array [
@@ -372,13 +372,13 @@ exports[`renders table with width auto correctly: enzyme.shallow 1`] = `
   width="auto"
 >
   <thead>
-    <Styled(tr)>
-      <Styled(th)
+    <HeaderRowStyles>
+      <HeaderCellStyles
         key="0"
       >
-        <Styled(div)>
+        <HeaderCellWrapper>
           band
-          <Styled(div)>
+          <SortingStyles>
             <Button
               disabled={false}
               icon={
@@ -410,15 +410,15 @@ exports[`renders table with width auto correctly: enzyme.shallow 1`] = `
               stretched={false}
               type="secondary"
             />
-          </Styled(div)>
-        </Styled(div)>
-      </Styled(th)>
-      <Styled(th)
+          </SortingStyles>
+        </HeaderCellWrapper>
+      </HeaderCellStyles>
+      <HeaderCellStyles
         key="1"
       >
-        <Styled(div)>
+        <HeaderCellWrapper>
           singer
-          <Styled(div)>
+          <SortingStyles>
             <Button
               disabled={false}
               icon={
@@ -450,15 +450,15 @@ exports[`renders table with width auto correctly: enzyme.shallow 1`] = `
               stretched={false}
               type="secondary"
             />
-          </Styled(div)>
-        </Styled(div)>
-      </Styled(th)>
-      <Styled(th)
+          </SortingStyles>
+        </HeaderCellWrapper>
+      </HeaderCellStyles>
+      <HeaderCellStyles
         key="2"
       >
-        <Styled(div)>
+        <HeaderCellWrapper>
           rhythm guitar
-          <Styled(div)>
+          <SortingStyles>
             <Button
               disabled={false}
               icon={
@@ -490,15 +490,15 @@ exports[`renders table with width auto correctly: enzyme.shallow 1`] = `
               stretched={false}
               type="secondary"
             />
-          </Styled(div)>
-        </Styled(div)>
-      </Styled(th)>
-      <Styled(th)
+          </SortingStyles>
+        </HeaderCellWrapper>
+      </HeaderCellStyles>
+      <HeaderCellStyles
         key="3"
       >
-        <Styled(div)>
+        <HeaderCellWrapper>
           lead guitar
-          <Styled(div)>
+          <SortingStyles>
             <Button
               disabled={false}
               icon={
@@ -530,15 +530,15 @@ exports[`renders table with width auto correctly: enzyme.shallow 1`] = `
               stretched={false}
               type="secondary"
             />
-          </Styled(div)>
-        </Styled(div)>
-      </Styled(th)>
-      <Styled(th)
+          </SortingStyles>
+        </HeaderCellWrapper>
+      </HeaderCellStyles>
+      <HeaderCellStyles
         key="4"
       >
-        <Styled(div)>
+        <HeaderCellWrapper>
           bass
-          <Styled(div)>
+          <SortingStyles>
             <Button
               disabled={false}
               icon={
@@ -570,15 +570,15 @@ exports[`renders table with width auto correctly: enzyme.shallow 1`] = `
               stretched={false}
               type="secondary"
             />
-          </Styled(div)>
-        </Styled(div)>
-      </Styled(th)>
-      <Styled(th)
+          </SortingStyles>
+        </HeaderCellWrapper>
+      </HeaderCellStyles>
+      <HeaderCellStyles
         key="5"
       >
-        <Styled(div)>
+        <HeaderCellWrapper>
           drums
-          <Styled(div)>
+          <SortingStyles>
             <Button
               disabled={false}
               icon={
@@ -610,15 +610,15 @@ exports[`renders table with width auto correctly: enzyme.shallow 1`] = `
               stretched={false}
               type="secondary"
             />
-          </Styled(div)>
-        </Styled(div)>
-      </Styled(th)>
-      <Styled(th)
+          </SortingStyles>
+        </HeaderCellWrapper>
+      </HeaderCellStyles>
+      <HeaderCellStyles
         key="6"
       >
-        <Styled(div)>
+        <HeaderCellWrapper>
           keyboard
-          <Styled(div)>
+          <SortingStyles>
             <Button
               disabled={false}
               icon={
@@ -650,252 +650,252 @@ exports[`renders table with width auto correctly: enzyme.shallow 1`] = `
               stretched={false}
               type="secondary"
             />
-          </Styled(div)>
-        </Styled(div)>
-      </Styled(th)>
-    </Styled(tr)>
+          </SortingStyles>
+        </HeaderCellWrapper>
+      </HeaderCellStyles>
+    </HeaderRowStyles>
   </thead>
   <tbody>
-    <Styled(tr)
+    <BodyRowStyles
       key="0"
     >
-      <Styled(td)
+      <BodyCellStyles
         key="0"
       >
         metallica
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="1"
       >
         james hatfield
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="2"
       >
         james hatfield
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="3"
       >
         kirk hammet
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="4"
       >
         robert trujillo
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="5"
       >
         lars ulrich
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStylesNone
         key="6"
       >
         none
-      </Styled(td)>
-    </Styled(tr)>
-    <Styled(tr)
+      </BodyCellStylesNone>
+    </BodyRowStyles>
+    <BodyRowStyles
       key="1"
     >
-      <Styled(td)
+      <BodyCellStyles
         key="0"
       >
         slayer
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="1"
       >
         tom araya
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="2"
       >
         kerry king
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="3"
       >
         gary holt
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="4"
       >
         tom araya
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="5"
       >
         paul bostaph
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStylesNone
         key="6"
       >
         none
-      </Styled(td)>
-    </Styled(tr)>
-    <Styled(tr)
+      </BodyCellStylesNone>
+    </BodyRowStyles>
+    <BodyRowStyles
       key="2"
     >
-      <Styled(td)
+      <BodyCellStyles
         key="0"
       >
         black sabbath
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="1"
       >
         ozzy osbourne
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStylesNone
         key="2"
       >
         none
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStylesNone>
+      <BodyCellStyles
         key="3"
       >
         tommy iommi
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="4"
       >
         geezer butler
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="5"
       >
         bill ward
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStylesNone
         key="6"
       >
         none
-      </Styled(td)>
-    </Styled(tr)>
-    <Styled(tr)
+      </BodyCellStylesNone>
+    </BodyRowStyles>
+    <BodyRowStyles
       key="3"
     >
-      <Styled(td)
+      <BodyCellStyles
         key="0"
       >
         queen
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="1"
       >
         freddy mercury
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStylesNone
         key="2"
       >
         none
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStylesNone>
+      <BodyCellStyles
         key="3"
       >
         brian may
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="4"
       >
         john deacon
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="5"
       >
         roger taylor
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="6"
       >
         freddy mercury
-      </Styled(td)>
-    </Styled(tr)>
-    <Styled(tr)
+      </BodyCellStyles>
+    </BodyRowStyles>
+    <BodyRowStyles
       key="4"
     >
-      <Styled(td)
+      <BodyCellStyles
         key="0"
       >
         led zeppelin
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="1"
       >
         robert plant
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStylesNone
         key="2"
       >
         none
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStylesNone>
+      <BodyCellStyles
         key="3"
       >
         jimmy page
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="4"
       >
         john paul johns
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="5"
       >
         bonzo bonham
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="6"
       >
         john paul johns
-      </Styled(td)>
-    </Styled(tr)>
-    <Styled(tr)
+      </BodyCellStyles>
+    </BodyRowStyles>
+    <BodyRowStyles
       key="5"
     >
-      <Styled(td)
+      <BodyCellStyles
         key="0"
       >
         deep purple
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="1"
       >
         ian gillan
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStylesNone
         key="2"
       >
         none
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStylesNone>
+      <BodyCellStyles
         key="3"
       >
         ritchie blackmore
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="4"
       >
         roger glover
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="5"
       >
         ian paice
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="6"
       >
         jon lord
-      </Styled(td)>
-    </Styled(tr)>
+      </BodyCellStyles>
+    </BodyRowStyles>
   </tbody>
-</Styled(table)>
+</TableStyles>
 `;
 
 exports[`renders table with width stretched correctly: enzyme.shallow 1`] = `
-<Styled(table)
+<TableStyles
   data={
     Object {
       "body": Array [
@@ -961,13 +961,13 @@ exports[`renders table with width stretched correctly: enzyme.shallow 1`] = `
   width="stretched"
 >
   <thead>
-    <Styled(tr)>
-      <Styled(th)
+    <HeaderRowStyles>
+      <HeaderCellStyles
         key="0"
       >
-        <Styled(div)>
+        <HeaderCellWrapper>
           band
-          <Styled(div)>
+          <SortingStyles>
             <Button
               disabled={false}
               icon={
@@ -999,15 +999,15 @@ exports[`renders table with width stretched correctly: enzyme.shallow 1`] = `
               stretched={false}
               type="secondary"
             />
-          </Styled(div)>
-        </Styled(div)>
-      </Styled(th)>
-      <Styled(th)
+          </SortingStyles>
+        </HeaderCellWrapper>
+      </HeaderCellStyles>
+      <HeaderCellStyles
         key="1"
       >
-        <Styled(div)>
+        <HeaderCellWrapper>
           singer
-          <Styled(div)>
+          <SortingStyles>
             <Button
               disabled={false}
               icon={
@@ -1039,15 +1039,15 @@ exports[`renders table with width stretched correctly: enzyme.shallow 1`] = `
               stretched={false}
               type="secondary"
             />
-          </Styled(div)>
-        </Styled(div)>
-      </Styled(th)>
-      <Styled(th)
+          </SortingStyles>
+        </HeaderCellWrapper>
+      </HeaderCellStyles>
+      <HeaderCellStyles
         key="2"
       >
-        <Styled(div)>
+        <HeaderCellWrapper>
           rhythm guitar
-          <Styled(div)>
+          <SortingStyles>
             <Button
               disabled={false}
               icon={
@@ -1079,15 +1079,15 @@ exports[`renders table with width stretched correctly: enzyme.shallow 1`] = `
               stretched={false}
               type="secondary"
             />
-          </Styled(div)>
-        </Styled(div)>
-      </Styled(th)>
-      <Styled(th)
+          </SortingStyles>
+        </HeaderCellWrapper>
+      </HeaderCellStyles>
+      <HeaderCellStyles
         key="3"
       >
-        <Styled(div)>
+        <HeaderCellWrapper>
           lead guitar
-          <Styled(div)>
+          <SortingStyles>
             <Button
               disabled={false}
               icon={
@@ -1119,15 +1119,15 @@ exports[`renders table with width stretched correctly: enzyme.shallow 1`] = `
               stretched={false}
               type="secondary"
             />
-          </Styled(div)>
-        </Styled(div)>
-      </Styled(th)>
-      <Styled(th)
+          </SortingStyles>
+        </HeaderCellWrapper>
+      </HeaderCellStyles>
+      <HeaderCellStyles
         key="4"
       >
-        <Styled(div)>
+        <HeaderCellWrapper>
           bass
-          <Styled(div)>
+          <SortingStyles>
             <Button
               disabled={false}
               icon={
@@ -1159,15 +1159,15 @@ exports[`renders table with width stretched correctly: enzyme.shallow 1`] = `
               stretched={false}
               type="secondary"
             />
-          </Styled(div)>
-        </Styled(div)>
-      </Styled(th)>
-      <Styled(th)
+          </SortingStyles>
+        </HeaderCellWrapper>
+      </HeaderCellStyles>
+      <HeaderCellStyles
         key="5"
       >
-        <Styled(div)>
+        <HeaderCellWrapper>
           drums
-          <Styled(div)>
+          <SortingStyles>
             <Button
               disabled={false}
               icon={
@@ -1199,15 +1199,15 @@ exports[`renders table with width stretched correctly: enzyme.shallow 1`] = `
               stretched={false}
               type="secondary"
             />
-          </Styled(div)>
-        </Styled(div)>
-      </Styled(th)>
-      <Styled(th)
+          </SortingStyles>
+        </HeaderCellWrapper>
+      </HeaderCellStyles>
+      <HeaderCellStyles
         key="6"
       >
-        <Styled(div)>
+        <HeaderCellWrapper>
           keyboard
-          <Styled(div)>
+          <SortingStyles>
             <Button
               disabled={false}
               icon={
@@ -1239,246 +1239,246 @@ exports[`renders table with width stretched correctly: enzyme.shallow 1`] = `
               stretched={false}
               type="secondary"
             />
-          </Styled(div)>
-        </Styled(div)>
-      </Styled(th)>
-    </Styled(tr)>
+          </SortingStyles>
+        </HeaderCellWrapper>
+      </HeaderCellStyles>
+    </HeaderRowStyles>
   </thead>
   <tbody>
-    <Styled(tr)
+    <BodyRowStyles
       key="0"
     >
-      <Styled(td)
+      <BodyCellStyles
         key="0"
       >
         metallica
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="1"
       >
         james hatfield
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="2"
       >
         james hatfield
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="3"
       >
         kirk hammet
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="4"
       >
         robert trujillo
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="5"
       >
         lars ulrich
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStylesNone
         key="6"
       >
         none
-      </Styled(td)>
-    </Styled(tr)>
-    <Styled(tr)
+      </BodyCellStylesNone>
+    </BodyRowStyles>
+    <BodyRowStyles
       key="1"
     >
-      <Styled(td)
+      <BodyCellStyles
         key="0"
       >
         slayer
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="1"
       >
         tom araya
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="2"
       >
         kerry king
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="3"
       >
         gary holt
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="4"
       >
         tom araya
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="5"
       >
         paul bostaph
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStylesNone
         key="6"
       >
         none
-      </Styled(td)>
-    </Styled(tr)>
-    <Styled(tr)
+      </BodyCellStylesNone>
+    </BodyRowStyles>
+    <BodyRowStyles
       key="2"
     >
-      <Styled(td)
+      <BodyCellStyles
         key="0"
       >
         black sabbath
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="1"
       >
         ozzy osbourne
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStylesNone
         key="2"
       >
         none
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStylesNone>
+      <BodyCellStyles
         key="3"
       >
         tommy iommi
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="4"
       >
         geezer butler
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="5"
       >
         bill ward
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStylesNone
         key="6"
       >
         none
-      </Styled(td)>
-    </Styled(tr)>
-    <Styled(tr)
+      </BodyCellStylesNone>
+    </BodyRowStyles>
+    <BodyRowStyles
       key="3"
     >
-      <Styled(td)
+      <BodyCellStyles
         key="0"
       >
         queen
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="1"
       >
         freddy mercury
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStylesNone
         key="2"
       >
         none
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStylesNone>
+      <BodyCellStyles
         key="3"
       >
         brian may
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="4"
       >
         john deacon
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="5"
       >
         roger taylor
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="6"
       >
         freddy mercury
-      </Styled(td)>
-    </Styled(tr)>
-    <Styled(tr)
+      </BodyCellStyles>
+    </BodyRowStyles>
+    <BodyRowStyles
       key="4"
     >
-      <Styled(td)
+      <BodyCellStyles
         key="0"
       >
         led zeppelin
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="1"
       >
         robert plant
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStylesNone
         key="2"
       >
         none
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStylesNone>
+      <BodyCellStyles
         key="3"
       >
         jimmy page
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="4"
       >
         john paul johns
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="5"
       >
         bonzo bonham
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="6"
       >
         john paul johns
-      </Styled(td)>
-    </Styled(tr)>
-    <Styled(tr)
+      </BodyCellStyles>
+    </BodyRowStyles>
+    <BodyRowStyles
       key="5"
     >
-      <Styled(td)
+      <BodyCellStyles
         key="0"
       >
         deep purple
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="1"
       >
         ian gillan
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStylesNone
         key="2"
       >
         none
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStylesNone>
+      <BodyCellStyles
         key="3"
       >
         ritchie blackmore
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="4"
       >
         roger glover
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="5"
       >
         ian paice
-      </Styled(td)>
-      <Styled(td)
+      </BodyCellStyles>
+      <BodyCellStyles
         key="6"
       >
         jon lord
-      </Styled(td)>
-    </Styled(tr)>
+      </BodyCellStyles>
+    </BodyRowStyles>
   </tbody>
-</Styled(table)>
+</TableStyles>
 `;

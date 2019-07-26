@@ -1,47 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders Select with width auto correctly: enzyme.shallow 1`] = `
-<Styled(div)
+<SelectContainerStyles
   defaultOpen={false}
   placeholder="Select..."
   width="auto"
 >
-  <Styled(div)
+  <SelectStyles
     defaultOpen={false}
     onClick={[Function]}
     placeholder="Select..."
     width="auto"
   >
-    <Styled(div)>
+    <SelectContent>
       Select...
-    </Styled(div)>
+    </SelectContent>
     <Icon
       color="#444"
       icon="ChevronSvg"
     />
-  </Styled(div)>
-</Styled(div)>
+  </SelectStyles>
+</SelectContainerStyles>
 `;
 
 exports[`renders Select with width stretched correctly: enzyme.shallow 1`] = `
-<Styled(div)
+<SelectContainerStyles
   defaultOpen={false}
   placeholder="Select..."
   width="stretched"
 >
-  <Styled(div)
+  <SelectStyles
     defaultOpen={false}
     onClick={[Function]}
     placeholder="Select..."
     width="stretched"
   >
-    <Styled(div)>
+    <SelectContent>
       Select...
-    </Styled(div)>
+    </SelectContent>
     <Icon
       color="#444"
       icon="ChevronSvg"
     />
-  </Styled(div)>
-</Styled(div)>
+  </SelectStyles>
+</SelectContainerStyles>
 `;

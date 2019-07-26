@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders Button with icon correctly: enzyme.shallow 1`] = `
-<Styled(withProps(Styled(button)))
+<ButtonStyles
   disabled={false}
   icon={
     <Icon
@@ -20,7 +20,7 @@ exports[`renders Button with icon correctly: enzyme.shallow 1`] = `
     size="s"
   />
   Test
-</Styled(withProps(Styled(button)))>
+</ButtonStyles>
 `;
 
 exports[`renders error Button correctly: enzyme.mount 1`] = `
@@ -98,7 +98,7 @@ exports[`renders error Button correctly: enzyme.mount 1`] = `
   stretched={false}
   type="error"
 >
-  <Styled(withProps(Styled(button)))
+  <ButtonStyles
     disabled={false}
     iconDirection="left"
     mode="filled"
@@ -106,7 +106,7 @@ exports[`renders error Button correctly: enzyme.mount 1`] = `
     stretched={false}
     type="error"
   >
-    <withProps(Styled(button))
+    <withProps(ButtonCommon)
       className="emotion-3 emotion-0"
       disabled={false}
       iconDirection="left"
@@ -115,7 +115,7 @@ exports[`renders error Button correctly: enzyme.mount 1`] = `
       stretched={false}
       type="error"
     >
-      <Styled(button)
+      <ButtonCommon
         className="emotion-3 emotion-0"
         createProps={[Function]}
         disabled={false}
@@ -134,14 +134,14 @@ exports[`renders error Button correctly: enzyme.mount 1`] = `
         >
           Test
         </button>
-      </Styled(button)>
-    </withProps(Styled(button))>
-  </Styled(withProps(Styled(button)))>
+      </ButtonCommon>
+    </withProps(ButtonCommon)>
+  </ButtonStyles>
 </Button>
 `;
 
 exports[`renders icon Button correctly: enzyme.shallow 1`] = `
-<Styled(withProps(Styled(button)))
+<ButtonStyles
   disabled={false}
   icon={
     <Icon
@@ -159,7 +159,7 @@ exports[`renders icon Button correctly: enzyme.shallow 1`] = `
     icon="TickerSvg"
     size="s"
   />
-</Styled(withProps(Styled(button)))>
+</ButtonStyles>
 `;
 
 exports[`renders primary Button correctly: enzyme.mount 1`] = `
@@ -237,7 +237,7 @@ exports[`renders primary Button correctly: enzyme.mount 1`] = `
   stretched={false}
   type="primary"
 >
-  <Styled(withProps(Styled(button)))
+  <ButtonStyles
     disabled={false}
     iconDirection="left"
     mode="filled"
@@ -245,7 +245,7 @@ exports[`renders primary Button correctly: enzyme.mount 1`] = `
     stretched={false}
     type="primary"
   >
-    <withProps(Styled(button))
+    <withProps(ButtonCommon)
       className="emotion-3 emotion-0"
       disabled={false}
       iconDirection="left"
@@ -254,7 +254,7 @@ exports[`renders primary Button correctly: enzyme.mount 1`] = `
       stretched={false}
       type="primary"
     >
-      <Styled(button)
+      <ButtonCommon
         className="emotion-3 emotion-0"
         createProps={[Function]}
         disabled={false}
@@ -273,9 +273,9 @@ exports[`renders primary Button correctly: enzyme.mount 1`] = `
         >
           Test
         </button>
-      </Styled(button)>
-    </withProps(Styled(button))>
-  </Styled(withProps(Styled(button)))>
+      </ButtonCommon>
+    </withProps(ButtonCommon)>
+  </ButtonStyles>
 </Button>
 `;
 
@@ -386,7 +386,7 @@ exports[`renders primary ghost Button correctly: enzyme.mount 1`] = `
   stretched={false}
   type="primary"
 >
-  <Styled(withProps(Styled(button)))
+  <ButtonStyles
     disabled={false}
     iconDirection="left"
     mode="ghost"
@@ -394,7 +394,7 @@ exports[`renders primary ghost Button correctly: enzyme.mount 1`] = `
     stretched={false}
     type="primary"
   >
-    <withProps(Styled(button))
+    <withProps(ButtonCommon)
       className="emotion-3 emotion-0"
       disabled={false}
       iconDirection="left"
@@ -403,7 +403,7 @@ exports[`renders primary ghost Button correctly: enzyme.mount 1`] = `
       stretched={false}
       type="primary"
     >
-      <Styled(button)
+      <ButtonCommon
         className="emotion-3 emotion-0"
         createProps={[Function]}
         disabled={false}
@@ -422,9 +422,9 @@ exports[`renders primary ghost Button correctly: enzyme.mount 1`] = `
         >
           Test
         </button>
-      </Styled(button)>
-    </withProps(Styled(button))>
-  </Styled(withProps(Styled(button)))>
+      </ButtonCommon>
+    </withProps(ButtonCommon)>
+  </ButtonStyles>
 </Button>
 `;
 
@@ -503,7 +503,7 @@ exports[`renders secondary Button correctly: enzyme.mount 1`] = `
   stretched={false}
   type="secondary"
 >
-  <Styled(withProps(Styled(button)))
+  <ButtonStyles
     disabled={false}
     iconDirection="left"
     mode="filled"
@@ -511,7 +511,7 @@ exports[`renders secondary Button correctly: enzyme.mount 1`] = `
     stretched={false}
     type="secondary"
   >
-    <withProps(Styled(button))
+    <withProps(ButtonCommon)
       className="emotion-3 emotion-0"
       disabled={false}
       iconDirection="left"
@@ -520,7 +520,7 @@ exports[`renders secondary Button correctly: enzyme.mount 1`] = `
       stretched={false}
       type="secondary"
     >
-      <Styled(button)
+      <ButtonCommon
         className="emotion-3 emotion-0"
         createProps={[Function]}
         disabled={false}
@@ -539,9 +539,9 @@ exports[`renders secondary Button correctly: enzyme.mount 1`] = `
         >
           Test
         </button>
-      </Styled(button)>
-    </withProps(Styled(button))>
-  </Styled(withProps(Styled(button)))>
+      </ButtonCommon>
+    </withProps(ButtonCommon)>
+  </ButtonStyles>
 </Button>
 `;
 
@@ -620,7 +620,7 @@ exports[`renders success Button correctly: enzyme.mount 1`] = `
   stretched={false}
   type="success"
 >
-  <Styled(withProps(Styled(button)))
+  <ButtonStyles
     disabled={false}
     iconDirection="left"
     mode="filled"
@@ -628,7 +628,7 @@ exports[`renders success Button correctly: enzyme.mount 1`] = `
     stretched={false}
     type="success"
   >
-    <withProps(Styled(button))
+    <withProps(ButtonCommon)
       className="emotion-3 emotion-0"
       disabled={false}
       iconDirection="left"
@@ -637,7 +637,7 @@ exports[`renders success Button correctly: enzyme.mount 1`] = `
       stretched={false}
       type="success"
     >
-      <Styled(button)
+      <ButtonCommon
         className="emotion-3 emotion-0"
         createProps={[Function]}
         disabled={false}
@@ -656,9 +656,9 @@ exports[`renders success Button correctly: enzyme.mount 1`] = `
         >
           Test
         </button>
-      </Styled(button)>
-    </withProps(Styled(button))>
-  </Styled(withProps(Styled(button)))>
+      </ButtonCommon>
+    </withProps(ButtonCommon)>
+  </ButtonStyles>
 </Button>
 `;
 
@@ -737,7 +737,7 @@ exports[`renders warning Button correctly: enzyme.mount 1`] = `
   stretched={false}
   type="warning"
 >
-  <Styled(withProps(Styled(button)))
+  <ButtonStyles
     disabled={false}
     iconDirection="left"
     mode="filled"
@@ -745,7 +745,7 @@ exports[`renders warning Button correctly: enzyme.mount 1`] = `
     stretched={false}
     type="warning"
   >
-    <withProps(Styled(button))
+    <withProps(ButtonCommon)
       className="emotion-3 emotion-0"
       disabled={false}
       iconDirection="left"
@@ -754,7 +754,7 @@ exports[`renders warning Button correctly: enzyme.mount 1`] = `
       stretched={false}
       type="warning"
     >
-      <Styled(button)
+      <ButtonCommon
         className="emotion-3 emotion-0"
         createProps={[Function]}
         disabled={false}
@@ -773,8 +773,8 @@ exports[`renders warning Button correctly: enzyme.mount 1`] = `
         >
           Test
         </button>
-      </Styled(button)>
-    </withProps(Styled(button))>
-  </Styled(withProps(Styled(button)))>
+      </ButtonCommon>
+    </withProps(ButtonCommon)>
+  </ButtonStyles>
 </Button>
 `;
