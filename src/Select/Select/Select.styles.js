@@ -1,4 +1,4 @@
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 import * as colors from '../../styles/colors.json';
 import * as shadow from '../../styles/shadows.json';
 import * as typography from '../../styles/typography.json';

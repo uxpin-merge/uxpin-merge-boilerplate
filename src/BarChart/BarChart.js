@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
@@ -59,7 +61,7 @@ export default class BarChart extends React.Component {
       <XYPlot
         height={this.props.height}
         width={this.props.width}
-        className={BarChartStyles}
+        css={BarChartStyles}
         onMouseLeave={() => this.restartCrosshair()}
         xType={this.props.xScaleType}
         yType={this.props.yScaleType}

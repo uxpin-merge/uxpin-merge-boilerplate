@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
@@ -44,7 +46,7 @@ export default class PieChart extends React.Component {
     return (
       <RadialChart
         getAngle={(d) => d.theta}
-        className={ChartStyles}
+        css={ChartStyles}
         radius={this.props.radius}
         innerRadius={this.props.innerRadius}
         padAngle={parseFloat(this.props.padAngle)}

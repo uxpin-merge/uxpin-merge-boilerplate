@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
@@ -112,7 +114,7 @@ export default class LineChart extends React.Component {
       <XYPlot
         height={this.props.height}
         width={this.props.width}
-        className={ChartStyles}
+        css={ChartStyles}
         onMouseLeave={() => this.restartCrosshair()}
         margin={this.props.margin}>
         {this.props.verticalGridLines ? <VerticalGridLines /> : undefined}

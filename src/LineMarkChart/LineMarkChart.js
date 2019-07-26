@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
@@ -121,7 +123,7 @@ export default class LineMarkChart extends React.Component {
       <XYPlot
         height={this.props.height}
         width={this.props.width}
-        className={ChartStyles}
+        css={ChartStyles}
         onMouseLeave={() => this.restartCrosshair()}
         xType={this.props.xScaleType}
         yType={this.props.yScaleType}
