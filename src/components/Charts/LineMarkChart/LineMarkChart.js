@@ -1,25 +1,25 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import React from 'react';
-import PropTypes from 'prop-types';
 import {
+  curveBundle,
+  curveCardinal,
+  curveCardinalClosed,
+  curveCardinalOpen,
   curveCatmullRom,
   curveCatmullRomClosed,
   curveCatmullRomOpen,
-  curveBundle,
-  curveCardinal,
-  curveCardinalOpen,
-  curveCardinalClosed,
 } from 'd3-shape';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {
-  XYPlot,
-  XAxis,
-  YAxis,
-  HorizontalGridLines,
-  VerticalGridLines,
-  LineMarkSeries,
   Crosshair,
   Hint,
+  HorizontalGridLines,
+  LineMarkSeries,
+  VerticalGridLines,
+  XAxis,
+  XYPlot,
+  YAxis,
 } from 'react-vis';
 import ChartStyles from '../chartStyles/chart.styles';
 

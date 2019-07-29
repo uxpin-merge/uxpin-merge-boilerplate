@@ -1,9 +1,13 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import Button from '../../Button/Button';
 import Icon from '../../Icon/Icon';
 import {
-  ItemStyles, MenuStyles, SelectContainerStyles, SelectContent, SelectStyles,
+  ItemStyles,
+  MenuStyles,
+  SelectContainerStyles,
+  SelectContent,
+  SelectStyles,
 } from './Select.styles';
 
 export default class Select extends React.Component {

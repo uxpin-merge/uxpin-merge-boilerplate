@@ -1,16 +1,16 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import {
-  XYPlot,
-  XAxis,
-  YAxis,
-  HorizontalGridLines,
-  VerticalGridLines,
-  MarkSeries,
   Crosshair,
   Hint,
+  HorizontalGridLines,
+  MarkSeries,
+  VerticalGridLines,
+  XAxis,
+  XYPlot,
+  YAxis,
 } from 'react-vis';
 import ChartStyles from '../chartStyles/chart.styles';
 

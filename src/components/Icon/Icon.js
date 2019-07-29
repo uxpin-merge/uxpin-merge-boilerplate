@@ -1,5 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import sizes from '../../styles/sizes';
 import * as Icons from './icons';
 

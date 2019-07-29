@@ -1,10 +1,10 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import {
-  RadialChart,
   Hint,
+  RadialChart,
 } from 'react-vis';
 import ChartStyles from '../chartStyles/chart.styles';
 

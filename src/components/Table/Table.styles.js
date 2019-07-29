@@ -2,8 +2,8 @@ import styled from '@emotion/styled';
 import colors from '../../styles/colors';
 import borders from '../../styles/borders';
 import shadows from '../../styles/shadows';
-import typography from '../../styles/typography';
 import sizes from '../../styles/sizes';
+import typography from '../../styles/typography';
 
 const TableStyles = styled('table')`
     display: table;

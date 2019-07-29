@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from '../Button';
 import Icon from '../../Icon/Icon';
+import Button from '../Button';
 
 export default (
   <Button
