@@ -170,7 +170,10 @@ MarkChart.propTypes = {
   color: PropTypes.string,
   /** Array with colors to be used across all chart lines. If array doesn't specify color for all the chart lines, color property is used. */
   colorRange: PropTypes.arrayOf(PropTypes.string),
-  /** Turns on/off crossHair */
+  /**
+   * Turns on/off crossHair
+   * @uxpindescription Turns on/off crossHair (only in prototype preview)
+   */
   crossHair: PropTypes.bool,
   /** Data Array. Structure: [[{"x": 0, "y": 1}, {"x": 1, "y": 3}], [{"x: 0", "y": 2}, {"x": 1, "y": 3]].  */
   data: PropTypes.array,
@@ -190,11 +193,26 @@ MarkChart.propTypes = {
     right: PropTypes.number,
     top: PropTypes.number,
   }),
+  /**
+   * @uxpinignoreprop
+   */
   onNearestXY: PropTypes.func,
+  /**
+   * @uxpinignoreprop
+   */
   onSeriesClick: PropTypes.func,
+  /**
+   * @uxpinignoreprop
+   */
   // eslint-disable-next-line react/no-unused-prop-types
   onSeriesMouseOut: PropTypes.func,
+  /**
+   * @uxpinignoreprop
+   */
   onSeriesMouseOver: PropTypes.func,
+  /**
+   * @uxpinignoreprop
+   */
   onSeriesRightClick: PropTypes.func,
   /** Specifies opacity for all the chart lines, unless styles array is provided */
   opacity: PropTypes.string,

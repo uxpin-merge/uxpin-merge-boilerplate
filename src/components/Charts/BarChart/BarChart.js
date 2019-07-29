@@ -171,12 +171,15 @@ BarChart.propTypes = {
   /** Turns, on/off animation and allows for selection of different types of animations. */
   animation: PropTypes.oneOf([false, 'noWobble', 'gentle', 'wobbly', 'stiff']),
   /** Width of every bar in %. 1.0 means the full width.  */
-  barWidth: PropTypes.string,
+  barWidth: PropTypes.number,
   /** Color to be used on all chart lines, unless colorRange is provided */
   color: PropTypes.string,
   /** Array with colors to be used across all chart lines. If array doesn't specify color for all the chart lines, color property is used. */
   colorRange: PropTypes.arrayOf(PropTypes.string),
-  /** Turns on/off crossHair */
+  /**
+   * Turns on/off crossHair
+   * @uxpindescription Turns on/off crossHair (only in prototype preview)
+   */
   crossHair: PropTypes.bool,
   /** Data Array. Structure: [[{"x": 0, "y": 1}, {"x": 1, "y": 3}], [{"x: 0", "y": 2}, {"x": 1, "y": 3]].  */
   data: PropTypes.array,
@@ -196,11 +199,26 @@ BarChart.propTypes = {
     right: PropTypes.number,
     top: PropTypes.number,
   }),
+  /**
+   * @uxpinignoreprop
+   */
   onNearestXY: PropTypes.func,
+  /**
+   * @uxpinignoreprop
+   */
   onSeriesClick: PropTypes.func,
+  /**
+   * @uxpinignoreprop
+   */
   // eslint-disable-next-line react/no-unused-prop-types
   onSeriesMouseOut: PropTypes.func,
+  /**
+   * @uxpinignoreprop
+   */
   onSeriesMouseOver: PropTypes.func,
+  /**
+   * @uxpinignoreprop
+   */
   onSeriesRightClick: PropTypes.func,
   /** Specifies opacity for all the chart lines, unless styles array is provided */
   opacity: PropTypes.string,
@@ -216,13 +234,19 @@ BarChart.propTypes = {
   width: PropTypes.number,
   /** Title for the horizontal label. */
   xAxisTitle: PropTypes.string,
-  /** Turns on/off horizontal labels. */
+  /**
+   * Turns on/off horizontal labels.
+   * @uxpinpropname Show X labels
+   */
   xLabels: PropTypes.bool,
   /** Type of the scale for X axis. Linear allows only for numbers, Ordinal let's you specify x axis as text e.g. "Q1" */
   xScaleType: PropTypes.oneOf(['linear', 'ordinal']),
   /** Title for the vertical label. */
   yAxisTitle: PropTypes.string,
-  /** Turns on/off vertical labels. */
+  /**
+   * Turns on/off vertical labels.
+   * @uxpinpropname Show Y labels
+   */
   yLabels: PropTypes.bool,
   /** Type of the scale for Y axis. Linear allows only for numbers, Ordinal let's you specify x axis as text e.g. "Q1" */
   yScaleType: PropTypes.oneOf(['linear', 'ordinal']),

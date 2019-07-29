@@ -10,5 +10,6 @@ export default function SelectItem(props) {
 }
 
 SelectItem.propTypes = {
+  /** @uxpinpropname Label */
   children: PropTypes.string,
 };

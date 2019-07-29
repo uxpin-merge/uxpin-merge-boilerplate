@@ -91,6 +91,7 @@ export default class Select extends React.Component {
 Select.propTypes = {
   children: PropTypes.node,
   defaultOpen: PropTypes.bool,
+  /** @uxpinignore */
   onRestart: PropTypes.func,
   onSelect: PropTypes.func,
   placeholder: PropTypes.string,

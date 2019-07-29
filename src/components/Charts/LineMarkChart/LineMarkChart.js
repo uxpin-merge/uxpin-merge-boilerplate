@@ -250,7 +250,10 @@ LineMarkChart.propTypes = {
   color: PropTypes.string,
   /** Array with colors to be used across all chart lines. If array doesn't specify color for all the chart lines, color property is used. */
   colorRange: PropTypes.arrayOf(PropTypes.string),
-  /** Turns on/off crossHair */
+  /**
+   * Turns on/off crossHair
+   * @uxpindescription Turns on/off crossHair (only in prototype preview)
+   */
   crossHair: PropTypes.bool,
   /** Select the kind of curve for all the chart lines */
   curve: PropTypes.oneOf([
@@ -273,11 +276,20 @@ LineMarkChart.propTypes = {
     'curveCardinalOpen',
     'curveCardinalClosed',
   ]),
-  /** Additional param to modify the curvature of curveBundleBeta */
+  /**
+   * Additional param to modify the curvature of curveBundleBeta
+   * @uxpinignoreprop
+   */
   curveBundleBeta: PropTypes.string,
-  /** Additional param to modify the curvature of curveCardinal, curveCardinalOpen, curveCardinalClosed */
+  /**
+   * Additional param to modify the curvature of curveCardinal, curveCardinalOpen, curveCardinalClosed
+   * @uxpinignoreprop
+   */
   curveCardinalTension: PropTypes.string,
-  /** Additional param to modify the curvature of curveCatmullRom, curveCatmullRomOpen and curveCatmullRomClosed  */
+  /**
+   * Additional param to modify the curvature of curveCatmullRom, curveCatmullRomOpen and curveCatmullRomClosed 
+   * @uxpinignoreprop
+   */
   curveCatmullRomAlpha: PropTypes.string,
   /** Data Array. Structure: [[{"x": 0, "y": 1}, {"x": 1, "y": 3}], [{"x: 0", "y": 2}, {"x": 1, "y": 3]].  */
   data: PropTypes.array,
@@ -297,11 +309,26 @@ LineMarkChart.propTypes = {
     right: PropTypes.number,
     top: PropTypes.number,
   }),
+  /**
+   * @uxpinignoreprop
+   */
   onNearestXY: PropTypes.func,
+  /**
+   * @uxpinignoreprop
+   */
   onSeriesClick: PropTypes.func,
+  /**
+   * @uxpinignoreprop
+   */
   // eslint-disable-next-line react/no-unused-prop-types
   onSeriesMouseOut: PropTypes.func,
+  /**
+   * @uxpinignoreprop
+   */
   onSeriesMouseOver: PropTypes.func,
+  /**
+   * @uxpinignoreprop
+   */
   onSeriesRightClick: PropTypes.func,
   /** Specifies opacity for all the chart lines, unless styles array is provided */
   opacity: PropTypes.string,
@@ -321,13 +348,19 @@ LineMarkChart.propTypes = {
   width: PropTypes.number,
   /** Horizontal label (x axis) */
   xAxisTitle: PropTypes.string,
-  /** Turns on/off horizontal labels. */
+  /**
+   * Turns on/off horizontal labels.
+   * @uxpinpropname Show X labels
+   */
   xLabels: PropTypes.bool,
   /** Type of the scale for X axis. Linear allows only for numbers, Ordinal let's you specify x axis as text e.g. "Q1" */
   xScaleType: PropTypes.oneOf(['linear', 'ordinal']),
   /** Vertical label (y axis) */
   yAxisTitle: PropTypes.string,
-  /** Turns on/off vertical labels. */
+  /**
+   * Turns on/off vertical labels.
+   * @uxpinpropname Show Y labels
+   */
   yLabels: PropTypes.bool,
   /** Type of the scale for Y axis. Linear allows only for numbers, Ordinal let's you specify x axis as text e.g. "Q1" */
   yScaleType: PropTypes.oneOf(['linear', 'ordinal']),

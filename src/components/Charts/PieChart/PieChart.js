@@ -95,11 +95,26 @@ PieChart.propTypes = {
   labelsRadiusMultiplier: PropTypes.string,
   /** Styles object that let's you style labels on the chart */
   labelsStyle: PropTypes.object,
+  /**
+   * @uxpinignoreprop
+   */
   onNearestXY: PropTypes.func,
+  /**
+   * @uxpinignoreprop
+   */
   onSeriesClick: PropTypes.func,
+  /**
+   * @uxpinignoreprop
+   */
   // eslint-disable-next-line react/no-unused-prop-types
   onSeriesMouseOut: PropTypes.func,
+  /**
+   * @uxpinignoreprop
+   */
   onSeriesMouseOver: PropTypes.func,
+  /**
+   * @uxpinignoreprop
+   */
   onSeriesRightClick: PropTypes.func,
   /** Color filling inside of every circle on the chart. */
   opacity: PropTypes.string,

@@ -121,7 +121,7 @@ const setIconMargin = (direction, buttonSize, label) => {
   ** there's no label
   */
   if (label[1] && label[1].length > 0) {
-    if (direction === 'left') {
+    if (!direction || direction === 'left') {
       switch (buttonSize) {
         case 'xs':
           return `2px ${sizes.xs}px 0 0`;
@@ -201,7 +201,7 @@ const ButtonCommon = withProps({
   createProps: (props) => props.disabled,
 })(styled('button')`
   display: flex;
-  flex-direction: ${(props) => (props.iconDirection === 'left' ? 'row' : 'row-reverse')};
+  flex-direction: ${(props) => (!props.iconDirection || props.iconDirection === 'left' ? 'row' : 'row-reverse')};
   align-items: center;
   justify-content: center;
   width: ${(props) => (props.stretched ? '100%' : 'auto')};
