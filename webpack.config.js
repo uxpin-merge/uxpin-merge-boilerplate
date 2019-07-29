@@ -9,7 +9,7 @@ module.exports = {
     },
     resolve: {
       modules: [__dirname, 'node_modules'],
-      extensions: ['*', '.js', '.jsx'],
+      extensions: ['*', '.js', '.jsx', '.json'],
     },
     devtool: 'source-map',
     module: {

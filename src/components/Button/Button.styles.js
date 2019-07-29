@@ -1,11 +1,11 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import withProps from 'recompose/withProps';
-import * as colors from '../../styles/colors.json';
-import * as borders from '../../styles/borders.json';
-import * as shadow from '../../styles/shadows.json';
-import * as typography from '../../styles/typography.json';
-import * as size from '../../styles/sizes.json';
+import colors from '../../styles/colors';
+import borders from '../../styles/borders';
+import shadow from '../../styles/shadows';
+import typography from '../../styles/typography';
+import sizes from '../../styles/sizes';
 
 /* Selects the right background color based on passed props */
 const backgroundSelector = (type, mode) => {
@@ -124,38 +124,38 @@ const setIconMargin = (direction, buttonSize, label) => {
     if (direction === 'left') {
       switch (buttonSize) {
         case 'xs':
-          return `2px ${size.xs}px 0 0`;
+          return `2px ${sizes.xs}px 0 0`;
         case 's':
-          return `2px ${size.xs}px 0 0`;
+          return `2px ${sizes.xs}px 0 0`;
         case 'l':
-          return `0 ${size.xs}px 0 0`;
+          return `0 ${sizes.xs}px 0 0`;
         case 'xl':
-          return `${size.xs}px ${size.xs}px 0 0 `;
+          return `${sizes.xs}px ${sizes.xs}px 0 0 `;
         case 'xxl':
-          return `${size.xs}px ${size.s}px 0 0 `;
+          return `${sizes.xs}px ${sizes.s}px 0 0 `;
         case 'xxxl':
-          return `${size.s}px ${size.s}px 0 0 `;
+          return `${sizes.s}px ${sizes.s}px 0 0 `;
         case 'm':
         default:
-          return `0 ${size.xs}px 0 0`;
+          return `0 ${sizes.xs}px 0 0`;
       }
     } else {
       switch (buttonSize) {
         case 'xs':
-          return `2px 0 0 ${size.xs}px`;
+          return `2px 0 0 ${sizes.xs}px`;
         case 's':
-          return `2px 0 0 ${size.xs}px`;
+          return `2px 0 0 ${sizes.xs}px`;
         case 'l':
-          return `0 0 0 ${size.xs}px`;
+          return `0 0 0 ${sizes.xs}px`;
         case 'xl':
-          return `${size.xs}px 0 0 ${size.xs}px`;
+          return `${sizes.xs}px 0 0 ${sizes.xs}px`;
         case 'xxl':
-          return `${size.xs}px 0 0 ${size.s}px`;
+          return `${sizes.xs}px 0 0 ${sizes.s}px`;
         case 'xxxl':
-          return `${size.s}px 0 0 ${size.m}px`;
+          return `${sizes.s}px 0 0 ${sizes.m}px`;
         case 'm':
         default:
-          return `0 0 0 ${size.xs}px`;
+          return `0 0 0 ${sizes.xs}px`;
       }
     }
   } else if (!label[1] || label[1].length === 0) {
@@ -165,16 +165,16 @@ const setIconMargin = (direction, buttonSize, label) => {
       case 's':
         return '2px';
       case 'l':
-        return `${size.xs / 1.33}px`;
+        return `${sizes.xs / 1.33}px`;
       case 'xl':
-        return `${size.m}px`;
+        return `${sizes.m}px`;
       case 'xxl':
-        return `${size.xl}px`;
+        return `${sizes.xl}px`;
       case 'xxxl':
-        return `${size.xl * 1.33}px`;
+        return `${sizes.xl * 1.33}px`;
       case 'm':
       default:
-        return `${size.xs / 3}px`;
+        return `${sizes.xs / 3}px`;
     }
   }
 };
@@ -182,18 +182,18 @@ const setIconMargin = (direction, buttonSize, label) => {
 const setPadding = (buttonSize, label) => {
   if (label[1]) {
     if (label[1].length > 0 && buttonSize === 'm' || label[1].length > 0 && buttonSize === 's' || label[1].length > 0 && buttonSize === 'xs') {
-      return `0 ${size.l}px 0 ${size.l}px`;
+      return `0 ${sizes.l}px 0 ${sizes.l}px`;
     } if (label[1].length > 0 && buttonSize === 'l') {
-      return `0 ${size.xl}px 0 ${size.xl}px`;
+      return `0 ${sizes.xl}px 0 ${sizes.xl}px`;
     } if (label[1].length > 0 && buttonSize === 'xl') {
-      return `0 ${size.xxl * 1.5}px 0 ${size.xxl * 1.5}px`;
+      return `0 ${sizes.xxl * 1.5}px 0 ${sizes.xxl * 1.5}px`;
     } if (label[1].length > 0 && buttonSize === 'xxl' || label[1].length > 0 && buttonSize === 'xxxl') {
-      return `0 ${size.xxxl * 2}px 0 ${size.xxxl * 2}px`;
+      return `0 ${sizes.xxxl * 2}px 0 ${sizes.xxxl * 2}px`;
     }
   } else if (!label[1] || label[1].length === 0) {
-    return `${size.xs}px ${size.xs}px`;
+    return `${sizes.xs}px ${sizes.xs}px`;
   } else {
-    return `${size.s}px ${size.m}px`;
+    return `${sizes.s}px ${sizes.m}px`;
   }
 };
 
@@ -285,8 +285,8 @@ const modes = (mode, type) => {
     return css`
       background-color: transparent;
       border: none;
-      height: ${size.m};
-      padding: 0 ${size.xs}px;
+      height: ${sizes.m};
+      padding: 0 ${sizes.xs}px;
       color: ${type !== 'secondary' ? backgroundSelector(type) : colors.gray.base};
       svg {
         fill: ${type !== 'secondary' ? backgroundSelector(type) : colors.gray.base};

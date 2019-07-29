@@ -1,19 +1,19 @@
 import styled from '@emotion/styled';
-import * as colors from '../../../styles/colors.json';
-import * as shadow from '../../../styles/shadows.json';
-import * as typography from '../../../styles/typography.json';
-import * as size from '../../../styles/sizes.json';
+import colors from '../../../styles/colors';
+import shadows from '../../../styles/shadows';
+import sizes from '../../../styles/sizes';
+import typography from '../../../styles/typography';
 
-const getWidth = (props) => {
-  if (props.width === 'stretched') {
+const getWidth = (width) => {
+  if (width === 'stretched') {
     return '100%';
   }
 
-  if (props.width === 'auto') {
+  if (width === 'auto') {
     return 'auto';
   }
 
-  return `${props.width}px`;
+  return `${width}px`;
 };
 
 const SelectContainerStyles = styled('div')`
@@ -21,7 +21,7 @@ const SelectContainerStyles = styled('div')`
     font-family: ${typography.fontFamily};
     font-weight: normal;
     font-size: ${typography.size.l}px;
-    line-height: ${size.m * typography.lineHeightMultiplier}px;
+    line-height: ${sizes.m * typography.lineHeightMultiplier}px;
     color: ${colors.gray.base};
 `;
 
@@ -30,9 +30,9 @@ const SelectStyles = styled('div')`
     flex: 1 0 auto;
     align-items: center;
     justify-content: space-between;
-    width: ${(props) => getWidth(props)};
+    width: ${(props) => getWidth(props.width)};
     min-width: 250px;
-    height: ${size.xxl}px;
+    height: ${sizes.xxl}px;
     margin-bottom: 3px;
     border-bottom: 1px solid ${colors.silver.dark20};
 
@@ -56,12 +56,12 @@ const MenuStyles = styled('ul')`
     display: flex;
     flex-direction: column;
     left: 0;
-    width: ${(props) => getWidth(props)};
+    width: ${(props) => getWidth(props.width)};
     min-width: 250px;
     margin: 1px 0;
-    padding: ${size.s}px 0 ${size.s}px 0;
+    padding: ${sizes.s}px 0 ${sizes.s}px 0;
     background: white;
-    box-shadow: ${shadow.box};
+    box-shadow: ${shadows.box};
     list-style: none;
 `;
 
@@ -72,8 +72,8 @@ const ItemStyles = styled('li')`
     justify-content: flex-start;
     position: relative;
     width: inherit;
-    height: ${size.xxl}px;
-    padding: 0 ${size.m}px;
+    height: ${sizes.xxl}px;
+    padding: 0 ${sizes.m}px;
     background-color: ${(props) => (props.id === `${props.active}listItem` ? colors.silver.light1 : 'white')};
     cursor: pointer;
     &:hover {

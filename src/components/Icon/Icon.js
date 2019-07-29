@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import * as sizes from '../../styles/sizes.json';
+import sizes from '../../styles/sizes';
 import * as Icons from './icons';
 
 const getIconSize = (size) => {
