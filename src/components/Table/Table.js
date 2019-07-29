@@ -100,8 +100,11 @@ export default class Table extends React.Component {
 
 
 Table.propTypes = {
+  data: PropTypes.shape({
+    body: PropTypes.array,
+    header: PropTypes.arrayOf(PropTypes.string),
+  }),
   width: PropTypes.oneOf(['stretched', 'auto']),
-  data: PropTypes.shape({ header: PropTypes.arrayOf(PropTypes.string), body: PropTypes.array }),
 };
 
 Table.defaultProps = {

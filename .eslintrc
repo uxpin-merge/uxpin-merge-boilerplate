@@ -167,6 +167,9 @@
       "ignoreDeclarationSort": true,
       "ignoreMemberSort": false
     }],
+    "sort-keys": [2, "asc", {
+      "caseSensitive": false
+    }],
     "react/forbid-prop-types": 0,
     "react/jsx-closing-bracket-location": [
       2,

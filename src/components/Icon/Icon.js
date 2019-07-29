@@ -30,7 +30,6 @@ export default function Icon({ color, icon, size }) {
 }
 
 Icon.propTypes = {
-  size: PropTypes.oneOf(['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl']),
   color: PropTypes.string,
   icon: PropTypes.oneOf([
     'ActionAddToFavoritesSvg',
@@ -263,4 +262,5 @@ Icon.propTypes = {
     'VisibilitySolidHiddenSvg',
     'VisibilitySolidVisibleSvg',
   ]),
+  size: PropTypes.oneOf(['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl']),
 };

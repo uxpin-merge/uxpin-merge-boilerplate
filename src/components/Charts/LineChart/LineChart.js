@@ -37,8 +37,8 @@ export default class LineChart extends React.Component {
     };
 
     this.state = {
-      data: this.props.startData ? getStartData() : this.props.data,
       crosshairValues: [],
+      data: this.props.startData ? getStartData() : this.props.data,
       // eslint-disable-next-line react/no-unused-state
       hintValue: {},
     };
@@ -210,38 +210,14 @@ export default class LineChart extends React.Component {
 }
 
 LineChart.propTypes = {
-  /** Width of the Chart in px. Accepts only numbers. */
-  width: PropTypes.number,
-  /** Height of the Chart in px. Accepts only numbers. */
-  height: PropTypes.number,
-  /** Sets margin for the chart inside of the container. Format: {"top": 0, "right": 0, "bottom": 0, "left": 0 } */
-  margin: PropTypes.shape({
-    left: PropTypes.number, right: PropTypes.number, top: PropTypes.number, bottom: PropTypes.number,
-  }),
-  /** Turns on/off horizontal labels. */
-  xLabels: PropTypes.bool,
-  /** Turns on/off vertical labels. */
-  yLabels: PropTypes.bool,
-  /** Turns on/off horizontal grid lines. */
-  horizontalGridLines: PropTypes.bool,
-  /** Turns on/off vertical grid lines. */
-  verticalGridLines: PropTypes.bool,
-  /** Data Array. Structure: [[{"x": 0, "y": 1}, {"x": 1, "y": 3}], [{"x: 0", "y": 2}, {"x": 1, "y": 3]].  */
-  data: PropTypes.array,
-  /** Starting point for data set. Used for triggering animation. Same data structure as data property. */
-  startData: PropTypes.array,
   /** Turns, on/off animation and allows for selection of different types of animations. */
   animation: PropTypes.oneOf([false, 'noWobble', 'gentle', 'wobbly', 'stiff']),
   /** Color to be used on all chart lines, unless colorRange is provided */
   color: PropTypes.string,
   /** Array with colors to be used across all chart lines. If array doesn't specify color for all the chart lines, color property is used. */
   colorRange: PropTypes.arrayOf(PropTypes.string),
-  /** Specifies opacity for all the chart lines, unless styles array is provided */
-  opacity: PropTypes.string,
-  /** Specifies width of the line for all the chart lines, unless styles array is provided */
-  strokeWidth: PropTypes.number,
-  /** Specifies style of the line for all the chart lines, unless styles array is provided */
-  strokeStyle: PropTypes.oneOf(['solid', 'dashed']),
+  /** Turns on/off crossHair */
+  crossHair: PropTypes.bool,
   /** Select the kind of curve for all the chart lines */
   curve: PropTypes.oneOf([
     'no curve',
@@ -263,32 +239,59 @@ LineChart.propTypes = {
     'curveCardinalOpen',
     'curveCardinalClosed',
   ]),
-  /** Additional param to modify the curvature of curveCatmullRom, curveCatmullRomOpen and curveCatmullRomClosed  */
-  curveCatmullRomAlpha: PropTypes.string,
   /** Additional param to modify the curvature of curveBundleBeta */
   curveBundleBeta: PropTypes.string,
   /** Additional param to modify the curvature of curveCardinal, curveCardinalOpen, curveCardinalClosed */
   curveCardinalTension: PropTypes.string,
-  /** Object with styles that allows for specifying styles for every line separtely. Accepts: StrokeStyle, StrokeWidth and Opacity. Format: [{"strokeStyle": "solid"}] */
-  styles: PropTypes.arrayOf(PropTypes.object),
-  /** Turns on/off crossHair */
-  crossHair: PropTypes.bool,
+  /** Additional param to modify the curvature of curveCatmullRom, curveCatmullRomOpen and curveCatmullRomClosed  */
+  curveCatmullRomAlpha: PropTypes.string,
+  /** Data Array. Structure: [[{"x": 0, "y": 1}, {"x": 1, "y": 3}], [{"x: 0", "y": 2}, {"x": 1, "y": 3]].  */
+  data: PropTypes.array,
+  /** Height of the Chart in px. Accepts only numbers. */
+  height: PropTypes.number,
+  /** Turns on/off horizontal grid lines. */
+  horizontalGridLines: PropTypes.bool,
+  /** Sets margin for the chart inside of the container. Format: {"top": 0, "right": 0, "bottom": 0, "left": 0 } */
+  margin: PropTypes.shape({
+    bottom: PropTypes.number,
+    left: PropTypes.number,
+    right: PropTypes.number,
+    top: PropTypes.number,
+  }),
   onNearestXY: PropTypes.func,
   onSeriesClick: PropTypes.func,
-  onSeriesMouseOver: PropTypes.func,
   // eslint-disable-next-line react/no-unused-prop-types
   onSeriesMouseOut: PropTypes.func,
+  onSeriesMouseOver: PropTypes.func,
   onSeriesRightClick: PropTypes.func,
+  /** Specifies opacity for all the chart lines, unless styles array is provided */
+  opacity: PropTypes.string,
+  /** Starting point for data set. Used for triggering animation. Same data structure as data property. */
+  startData: PropTypes.array,
+  /** Specifies style of the line for all the chart lines, unless styles array is provided */
+  strokeStyle: PropTypes.oneOf(['solid', 'dashed']),
+  /** Specifies width of the line for all the chart lines, unless styles array is provided */
+  strokeWidth: PropTypes.number,
+  /** Object with styles that allows for specifying styles for every line separtely. Accepts: StrokeStyle, StrokeWidth and Opacity. Format: [{"strokeStyle": "solid"}] */
+  styles: PropTypes.arrayOf(PropTypes.object),
+  /** Turns on/off vertical grid lines. */
+  verticalGridLines: PropTypes.bool,
+  /** Width of the Chart in px. Accepts only numbers. */
+  width: PropTypes.number,
+  /** Turns on/off horizontal labels. */
+  xLabels: PropTypes.bool,
+  /** Turns on/off vertical labels. */
+  yLabels: PropTypes.bool,
 };
 
 LineChart.defaultProps = {
-  width: 300,
+  crossHair: false,
   height: 300,
+  horizontalGridLines: true,
+  strokeStyle: 'solid',
+  strokeWidth: 3,
+  verticalGridLines: true,
+  width: 300,
   xLabels: true,
   yLabels: true,
-  verticalGridLines: true,
-  horizontalGridLines: true,
-  strokeWidth: 3,
-  strokeStyle: 'solid',
-  crossHair: false,
 };

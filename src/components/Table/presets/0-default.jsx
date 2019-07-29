@@ -2,56 +2,56 @@ import React from 'react';
 import Table from '../Table';
 
 const tableData = {
-  header: ['band', 'singer', 'rhythm guitar', 'lead guitar', 'bass', 'drums', 'keyboard'],
   body: [
     {
       band: 'metallica',
-      singer: 'james hetfield',
-      'rhythm guitar': 'james hetfield',
-      'lead guitar': 'kirk hammet',
       bass: 'robert trujillo',
       drums: 'lars ulrich',
+      'lead guitar': 'kirk hammet',
+      'rhythm guitar': 'james hetfield',
+      singer: 'james hetfield',
     },
     {
       band: 'slayer',
-      singer: 'tom araya',
-      'rhythm guitar': 'kerry king',
-      'lead guitar': 'gary holt',
       bass: 'tom araya',
       drums: 'paul bostaph',
+      'lead guitar': 'gary holt',
+      'rhythm guitar': 'kerry king',
+      singer: 'tom araya',
     },
     {
       band: 'black sabbath',
-      singer: 'ozzy osbourne',
-      'lead guitar': 'tommy iommi',
       bass: 'geezer butler',
       drums: 'bill ward',
+      'lead guitar': 'tommy iommi',
+      singer: 'ozzy osbourne',
     },
     {
       band: 'queen',
-      singer: 'freddy mercury',
-      'lead guitar': 'brian may',
       bass: 'john deacon',
       drums: 'roger taylor',
       keyboard: 'freddy mercury',
+      'lead guitar': 'brian may',
+      singer: 'freddy mercury',
     },
     {
       band: 'led zeppelin',
-      singer: 'robert plant',
-      'lead guitar': 'jimmy page',
       bass: 'john paul johns',
       drums: 'bonzo bonham',
       keyboard: 'john paul johns',
+      'lead guitar': 'jimmy page',
+      singer: 'robert plant',
     },
     {
       band: 'deep purple',
-      singer: 'ian gillan',
-      'lead guitar': 'ritchie blackmore',
       bass: 'roger glover',
       drums: 'ian paice',
       keyboard: 'jon lord',
+      'lead guitar': 'ritchie blackmore',
+      singer: 'ian gillan',
     },
   ],
+  header: ['band', 'singer', 'rhythm guitar', 'lead guitar', 'bass', 'drums', 'keyboard'],
 };
 
 export default (

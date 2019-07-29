@@ -13,7 +13,10 @@ import {
 export default class Select extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { open: this.props.defaultOpen, content: this.props.placeholder };
+    this.state = {
+      content: this.props.placeholder,
+      open: this.props.defaultOpen,
+    };
     this.toggleList = this.toggleList.bind(this);
   }
 
@@ -87,15 +90,15 @@ export default class Select extends React.Component {
 
 Select.propTypes = {
   children: PropTypes.node,
-  width: PropTypes.oneOf(['stretched', 'auto']),
   defaultOpen: PropTypes.bool,
-  placeholder: PropTypes.string,
-  onSelect: PropTypes.func,
   onRestart: PropTypes.func,
+  onSelect: PropTypes.func,
+  placeholder: PropTypes.string,
+  width: PropTypes.oneOf(['stretched', 'auto']),
 };
 
 Select.defaultProps = {
-  placeholder: 'Select...',
   defaultOpen: false,
+  placeholder: 'Select...',
   width: 'stretched',
 };

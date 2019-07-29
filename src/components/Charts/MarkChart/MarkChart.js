@@ -29,8 +29,8 @@ export default class MarkChart extends React.Component {
     };
 
     this.state = {
-      data: this.props.startData ? getStartData() : this.props.data,
       crosshairValues: [],
+      data: this.props.startData ? getStartData() : this.props.data,
       hintValue: '',
       showHint: false,
     };
@@ -50,9 +50,9 @@ export default class MarkChart extends React.Component {
 
   getHint(value) {
     if (!this.state.showHint) {
-      this.setState({ showHint: true, hintValue: value });
+      this.setState({ hintValue: value, showHint: true });
     } else {
-      this.setState({ showHint: false, hintValue: '' });
+      this.setState({ hintValue: '', showHint: false });
     }
   }
 
@@ -164,69 +164,72 @@ export default class MarkChart extends React.Component {
 }
 
 MarkChart.propTypes = {
-  /** Width of the Chart in px. Accepts only numbers. */
-  width: PropTypes.number,
-  /** Height of the Chart in px. Accepts only numbers. */
-  height: PropTypes.number,
-  /** Sets margin for the chart inside of the container. Format: {"top": 0, "right": 0, "bottom": 0, "left": 0 } */
-  margin: PropTypes.shape({
-    left: PropTypes.number, right: PropTypes.number, top: PropTypes.number, bottom: PropTypes.number,
-  }),
-  /** Turns on/off horizontal labels. */
-  xLabels: PropTypes.bool,
-  /** Title for the horizontal label. */
-  xAxisTitle: PropTypes.string,
-  /** Turns on/off vertical labels. */
-  yLabels: PropTypes.bool,
-  /** Title for the vertical label. */
-  yAxisTitle: PropTypes.string,
-  /** Turns on/off horizontal grid lines. */
-  horizontalGridLines: PropTypes.bool,
-  /** Turns on/off vertical grid lines. */
-  verticalGridLines: PropTypes.bool,
-  /** Data Array. Structure: [[{"x": 0, "y": 1}, {"x": 1, "y": 3}], [{"x: 0", "y": 2}, {"x": 1, "y": 3]].  */
-  data: PropTypes.array,
-  /** Type of the scale for X axis. Linear allows only for numbers, Ordinal let's you specify x axis as text e.g. "Q1" */
-  xScaleType: PropTypes.oneOf(['linear', 'ordinal']),
-  /** Type of the scale for Y axis. Linear allows only for numbers, Ordinal let's you specify x axis as text e.g. "Q1" */
-  yScaleType: PropTypes.oneOf(['linear', 'ordinal']),
-  /** Starting point for data set. Used for triggering animation. Same data structure as data property. */
-  startData: PropTypes.array,
   /** Turns, on/off animation and allows for selection of different types of animations. */
   animation: PropTypes.oneOf([false, 'noWobble', 'gentle', 'wobbly', 'stiff']),
   /** Color to be used on all chart lines, unless colorRange is provided */
   color: PropTypes.string,
   /** Array with colors to be used across all chart lines. If array doesn't specify color for all the chart lines, color property is used. */
   colorRange: PropTypes.arrayOf(PropTypes.string),
+  /** Turns on/off crossHair */
+  crossHair: PropTypes.bool,
+  /** Data Array. Structure: [[{"x": 0, "y": 1}, {"x": 1, "y": 3}], [{"x: 0", "y": 2}, {"x": 1, "y": 3]].  */
+  data: PropTypes.array,
   /** Color filling inside of every circle on the chart */
   fill: PropTypes.string,
   /** Range of colors to be used as a filling  */
   fillRange: PropTypes.arrayOf(PropTypes.string),
+  /** Height of the Chart in px. Accepts only numbers. */
+  height: PropTypes.number,
+  hint: PropTypes.bool,
+  /** Turns on/off horizontal grid lines. */
+  horizontalGridLines: PropTypes.bool,
+  /** Sets margin for the chart inside of the container. Format: {"top": 0, "right": 0, "bottom": 0, "left": 0 } */
+  margin: PropTypes.shape({
+    bottom: PropTypes.number,
+    left: PropTypes.number,
+    right: PropTypes.number,
+    top: PropTypes.number,
+  }),
+  onNearestXY: PropTypes.func,
+  onSeriesClick: PropTypes.func,
+  // eslint-disable-next-line react/no-unused-prop-types
+  onSeriesMouseOut: PropTypes.func,
+  onSeriesMouseOver: PropTypes.func,
+  onSeriesRightClick: PropTypes.func,
   /** Specifies opacity for all the chart lines, unless styles array is provided */
   opacity: PropTypes.string,
+  /** Starting point for data set. Used for triggering animation. Same data structure as data property. */
+  startData: PropTypes.array,
   /** Specifies width of the line for all the chart lines, unless styles array is provided */
   strokeWidth: PropTypes.number,
   /** Object with styles that allows for specifying styles for every line separtely. Accepts: StrokeStyle, StrokeWidth and Opacity. Format: [{"strokeStyle": "solid"}] */
   styles: PropTypes.arrayOf(PropTypes.object),
-  /** Turns on/off crossHair */
-  crossHair: PropTypes.bool,
-  hint: PropTypes.bool,
-  onNearestXY: PropTypes.func,
-  onSeriesClick: PropTypes.func,
-  onSeriesMouseOver: PropTypes.func,
-  // eslint-disable-next-line react/no-unused-prop-types
-  onSeriesMouseOut: PropTypes.func,
-  onSeriesRightClick: PropTypes.func,
+  /** Turns on/off vertical grid lines. */
+  verticalGridLines: PropTypes.bool,
+  /** Width of the Chart in px. Accepts only numbers. */
+  width: PropTypes.number,
+  /** Title for the horizontal label. */
+  xAxisTitle: PropTypes.string,
+  /** Turns on/off horizontal labels. */
+  xLabels: PropTypes.bool,
+  /** Type of the scale for X axis. Linear allows only for numbers, Ordinal let's you specify x axis as text e.g. "Q1" */
+  xScaleType: PropTypes.oneOf(['linear', 'ordinal']),
+  /** Title for the vertical label. */
+  yAxisTitle: PropTypes.string,
+  /** Turns on/off vertical labels. */
+  yLabels: PropTypes.bool,
+  /** Type of the scale for Y axis. Linear allows only for numbers, Ordinal let's you specify x axis as text e.g. "Q1" */
+  yScaleType: PropTypes.oneOf(['linear', 'ordinal']),
 };
 
 MarkChart.defaultProps = {
-  width: 300,
+  crossHair: false,
   height: 300,
+  hint: false,
+  horizontalGridLines: true,
+  opacity: '0.6',
+  verticalGridLines: true,
+  width: 300,
   xLabels: true,
   yLabels: true,
-  verticalGridLines: true,
-  horizontalGridLines: true,
-  crossHair: false,
-  hint: false,
-  opacity: '0.6',
 };
