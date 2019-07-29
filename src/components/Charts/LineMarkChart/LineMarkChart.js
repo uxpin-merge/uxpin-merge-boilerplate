@@ -287,7 +287,7 @@ LineMarkChart.propTypes = {
    */
   curveCardinalTension: PropTypes.string,
   /**
-   * Additional param to modify the curvature of curveCatmullRom, curveCatmullRomOpen and curveCatmullRomClosed 
+   * Additional param to modify the curvature of curveCatmullRom, curveCatmullRomOpen and curveCatmullRomClosed
    * @uxpinignoreprop
    */
   curveCatmullRomAlpha: PropTypes.string,

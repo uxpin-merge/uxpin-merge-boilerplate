@@ -5,6 +5,7 @@ module.exports = {
         name: 'General',
         include: [
           'src/components/Button/Button.js',
+          'src/components/Greeting/Greeting.js',
           'src/components/Icon/Icon.js',
           'src/components/Select/Select/Select.js',
           'src/components/Select/SelectItem/SelectItem.js',
