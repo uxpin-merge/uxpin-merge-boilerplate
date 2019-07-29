@@ -7,8 +7,8 @@ module.exports = {
           'src/components/Button/Button.js',
           'src/components/Greeting/Greeting.js',
           'src/components/Icon/Icon.js',
-          'src/components/Select/Select/Select.js',
-          'src/components/Select/SelectItem/SelectItem.js',
+          'src/components/Select/Select.js',
+          'src/components/Select/components/SelectItem/SelectItem.js',
           'src/components/Table/Table.js'
         ]
       },
@@ -22,7 +22,7 @@ module.exports = {
           'src/components/Charts/BarChart/BarChart.js',
           'src/components/Charts/PieChart/PieChart.js'
         ]
-      }
+      },
     ]
   },
   name: 'UXPin Merge Boilerplate'

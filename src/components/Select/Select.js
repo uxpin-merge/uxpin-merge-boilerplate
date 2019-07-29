@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import Button from '../../Button/Button';
-import Icon from '../../Icon/Icon';
+import Button from '../Button/Button';
+import Icon from '../Icon/Icon';
+import SelectItem from './components/SelectItem/SelectItem';
 import {
   ItemStyles,
   MenuStyles,
@@ -87,6 +88,8 @@ export default class Select extends React.Component {
     );
   }
 }
+
+Select.SelectItem = SelectItem;
 
 Select.propTypes = {
   children: PropTypes.node,
