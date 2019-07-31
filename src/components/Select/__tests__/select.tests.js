@@ -1,8 +1,8 @@
 import React from "react";
 import * as enzyme from "enzyme";
 import toJson from "enzyme-to-json";
+import SelectItem from "../components/SelectItem/SelectItem";
 import Select from "../Select";
-import SelectItem from "../../SelectItem/SelectItem";
 
 test("renders Select with width stretched correctly", () => {
     const select = (
