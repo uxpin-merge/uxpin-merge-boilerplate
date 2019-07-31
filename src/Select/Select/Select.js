@@ -82,6 +82,7 @@ export default class Select extends React.Component {
 }
 
 Select.propTypes = {
+  /** @uxpinignoreprop */
   children: PropTypes.node,
   width: PropTypes.oneOf(['stretched', 'auto']),
   defaultOpen: PropTypes.bool,

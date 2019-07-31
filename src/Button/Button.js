@@ -14,7 +14,9 @@ Button.propTypes = {
   disabled: PropTypes.bool,
   type: PropTypes.oneOf(['primary', 'secondary', 'success', 'error', 'warning']),
   mode: PropTypes.oneOf(['filled', 'ghost', 'minimal', 'flat']),
-  title: PropTypes.string,
+   /** @uxpinignoreprop */
+  itle: PropTypes.string,
+    /** @uxpinignoreprop */
   background: PropTypes.string,
   size: PropTypes.oneOf(['xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl']),
   stretched: PropTypes.bool,
