@@ -29,10 +29,12 @@ const chartStartData = [
 export default (
   <BarChart
     animation="wobbly"
+    color="black"
+    fill="blue"
     data={chartData}
     height={300}
     hint
-    opacity="0.3"
+    opacity="1"
     startData={chartStartData}
     uxpId="barChart1"
     width={500}

@@ -210,9 +210,15 @@ export default class LineChart extends React.Component {
 }
 
 LineChart.propTypes = {
+  /** Height of the Chart in px. Accepts only numbers. */
+  height: PropTypes.number,
+  /** Width of the Chart in px. Accepts only numbers. */
+  width: PropTypes.number,
   /** Turns, on/off animation and allows for selection of different types of animations. */
   animation: PropTypes.oneOf([false, 'noWobble', 'gentle', 'wobbly', 'stiff']),
-  /** Color to be used on all chart lines, unless colorRange is provided */
+  /** Color to be used on all chart lines, unles colorRange is provided 
+   * @uxpinignoreprop
+  */
   color: PropTypes.string,
   /** Array with colors to be used across all chart lines. If array doesn't specify color for all the chart lines, color property is used. */
   colorRange: PropTypes.arrayOf(PropTypes.string),
@@ -259,11 +265,11 @@ LineChart.propTypes = {
   curveCatmullRomAlpha: PropTypes.string,
   /** Data Array. Structure: [[{"x": 0, "y": 1}, {"x": 1, "y": 3}], [{"x: 0", "y": 2}, {"x": 1, "y": 3]].  */
   data: PropTypes.array,
-  /** Height of the Chart in px. Accepts only numbers. */
-  height: PropTypes.number,
   /** Turns on/off horizontal grid lines. */
   horizontalGridLines: PropTypes.bool,
-  /** Sets margin for the chart inside of the container. Format: {"top": 0, "right": 0, "bottom": 0, "left": 0 } */
+  /** Sets margin for the chart inside of the container. Format: {"top": 0, "right": 0, "bottom": 0, "left": 0 } 
+   * @uxpinignoreprop
+  */
   margin: PropTypes.shape({
     bottom: PropTypes.number,
     left: PropTypes.number,
@@ -303,8 +309,6 @@ LineChart.propTypes = {
   styles: PropTypes.arrayOf(PropTypes.object),
   /** Turns on/off vertical grid lines. */
   verticalGridLines: PropTypes.bool,
-  /** Width of the Chart in px. Accepts only numbers. */
-  width: PropTypes.number,
   /**
    * Turns on/off horizontal labels.
    * @uxpinpropname Show X labels

@@ -3,8 +3,8 @@ import Icon from '../Icon';
 
 export default (
   <Icon
-    icon="PinMapSolidSvg"
-    size="l"
+    icon="ChangelogSvg"
+    size="xxl"
     uxpId="icon1"
   />
 );

@@ -10,6 +10,7 @@ const Button = (props) => (
 );
 
 Button.propTypes = {
+  /** @uxpinignoreprop */
   background: PropTypes.string,
   /**
    * @uxpinpropname Label

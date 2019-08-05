@@ -164,11 +164,26 @@ export default class MarkChart extends React.Component {
 }
 
 MarkChart.propTypes = {
+  /** Height of the Chart in px. Accepts only numbers. */
+  height: PropTypes.number,
+  /** Width of the Chart in px. Accepts only numbers. */
+  width: PropTypes.number,
   /** Turns, on/off animation and allows for selection of different types of animations. */
   animation: PropTypes.oneOf([false, 'noWobble', 'gentle', 'wobbly', 'stiff']),
-  /** Color to be used on all chart lines, unless colorRange is provided */
+  /** Color to be used on all chart lines, unless colorRange is provided 
+  * @uxpinpropname Stroke color
+  */
   color: PropTypes.string,
-  /** Array with colors to be used across all chart lines. If array doesn't specify color for all the chart lines, color property is used. */
+  /** Specifies opacity for all the chart lines, unless styles array is provided 
+   * @uxpinpropname Stroke opacity
+  */
+  opacity: PropTypes.string,
+  /** Array with colors to be used across all chart lines. If array doesn't specify color for all the chart lines, color property is used. 
+   * @uxpinignoreprop
+  */
+  /** Specifies width of the line for all the chart lines, unless styles array is provided */
+  strokeWidth: PropTypes.number,
+  /** @uxpinignoreprop */
   colorRange: PropTypes.arrayOf(PropTypes.string),
   /**
    * Turns on/off crossHair
@@ -179,13 +194,16 @@ MarkChart.propTypes = {
   data: PropTypes.array,
   /** Color filling inside of every circle on the chart */
   fill: PropTypes.string,
-  /** Range of colors to be used as a filling  */
+  /** Range of colors to be used as a filling  
+   * @uxpinpropignore
+  */
+  /** @uxpinignoreprop */
   fillRange: PropTypes.arrayOf(PropTypes.string),
-  /** Height of the Chart in px. Accepts only numbers. */
-  height: PropTypes.number,
   hint: PropTypes.bool,
   /** Turns on/off horizontal grid lines. */
   horizontalGridLines: PropTypes.bool,
+  /** Turns on/off vertical grid lines. */
+  verticalGridLines: PropTypes.bool,
   /** Sets margin for the chart inside of the container. Format: {"top": 0, "right": 0, "bottom": 0, "left": 0 } */
   margin: PropTypes.shape({
     bottom: PropTypes.number,
@@ -214,18 +232,10 @@ MarkChart.propTypes = {
    * @uxpinignoreprop
    */
   onSeriesRightClick: PropTypes.func,
-  /** Specifies opacity for all the chart lines, unless styles array is provided */
-  opacity: PropTypes.string,
   /** Starting point for data set. Used for triggering animation. Same data structure as data property. */
   startData: PropTypes.array,
-  /** Specifies width of the line for all the chart lines, unless styles array is provided */
-  strokeWidth: PropTypes.number,
   /** Object with styles that allows for specifying styles for every line separtely. Accepts: StrokeStyle, StrokeWidth and Opacity. Format: [{"strokeStyle": "solid"}] */
   styles: PropTypes.arrayOf(PropTypes.object),
-  /** Turns on/off vertical grid lines. */
-  verticalGridLines: PropTypes.bool,
-  /** Width of the Chart in px. Accepts only numbers. */
-  width: PropTypes.number,
   /** Title for the horizontal label. */
   xAxisTitle: PropTypes.string,
   /** Turns on/off horizontal labels. */

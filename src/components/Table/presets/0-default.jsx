@@ -58,6 +58,6 @@ export default (
   <Table
     data={tableData}
     uxpId="table1"
-    width="stretched"
+    width="auto"
   />
 );

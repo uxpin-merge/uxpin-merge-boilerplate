@@ -16,6 +16,7 @@ const chartStartData = [
 export default (
   <PieChart
     animation="gentle"
+    colorRange={['teal', 'red', 'blue']}
     data={chartData}
     height={300}
     hint
