@@ -1,21 +1,25 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core';
-import PropTypes from 'prop-types';
-import React from 'react';
-import {
-  Hint,
-  RadialChart,
-} from 'react-vis';
-import ChartStyles from '../chartStyles/chart.styles';
+import { jsx } from "@emotion/core";
+import PropTypes from "prop-types";
+import React from "react";
+import { Hint, RadialChart } from "react-vis";
+import ChartStyles from "../chartStyles/chart.styles";
 
 export default class PieChart extends React.Component {
   constructor(props) {
     super(props);
 
     const getStartData = () => {
-      if (Array.isArray(this.props.startData[0]) && this.props.startData.length === this.props.data.length) {
+      if (
+        Array.isArray(this.props.startData[0]) &&
+        this.props.startData.length === this.props.data.length
+      ) {
         return this.props.startData;
-      } if (!Array.isArray(this.props.startData[0]) && this.props.startData.length === this.props.data.length) {
+      }
+      if (
+        !Array.isArray(this.props.startData[0]) &&
+        this.props.startData.length === this.props.data.length
+      ) {
         return this.props.startData;
       }
 
@@ -24,8 +28,8 @@ export default class PieChart extends React.Component {
 
     this.state = {
       data: this.props.startData ? getStartData() : this.props.data,
-      hintValue: '',
-      showHint: false,
+      hintValue: "",
+      showHint: false
     };
   }
 
@@ -35,17 +39,19 @@ export default class PieChart extends React.Component {
 
   getHint(value) {
     if (!this.state.showHint) {
-      const hintContent = value.label ? { Data: value.label, Value: `${value.theta * 10}%` } : { Value: `${value.theta * 10}%` };
+      const hintContent = value.label
+        ? { Data: value.label, Value: `${value.theta * 10}%` }
+        : { Value: `${value.theta * 10}%` };
       this.setState({ hintValue: hintContent, showHint: true });
     } else {
-      this.setState({ hintValue: '', showHint: false });
+      this.setState({ hintValue: "", showHint: false });
     }
   }
 
   render() {
     return (
       <RadialChart
-        getAngle={(d) => d.theta}
+        getAngle={d => d.theta}
         css={ChartStyles}
         radius={this.props.radius}
         innerRadius={this.props.innerRadius}
@@ -58,13 +64,14 @@ export default class PieChart extends React.Component {
         height={this.props.height}
         colorRange={this.props.colorRange}
         opacity={parseFloat(this.props.opacity)}
-        onValueClick={(value) => this.getHint(value)}
+        onValueClick={value => this.getHint(value)}
         onNearestXY={this.props.onNearestXY}
         onSeriesClick={this.props.onSeriesClick}
         onSeriesRightClick={this.props.onSeriesRightClick}
         onSeriesMouseOver={this.props.onSeriesMouseOver}
         onSeriesMouseOut={this.props.onSeriesMouseOver}
-        animation={this.props.animation}>
+        animation={this.props.animation}
+      >
         {this.props.hint && this.state.showHint ? (
           <Hint value={this.state.hintValue} />
         ) : (
@@ -75,16 +82,18 @@ export default class PieChart extends React.Component {
   }
 }
 
+/* eslint-disable sort-keys */
 PieChart.propTypes = {
   /** Height of the Chart in px. Accepts only numbers. */
   height: PropTypes.number,
   /** Width of the Chart in px. Accepts only numbers. */
   width: PropTypes.number,
   /** Turns, on/off animation and allows for selection of different types of animations. */
-  animation: PropTypes.oneOf([false, 'noWobble', 'gentle', 'wobbly', 'stiff']),
-  /** Color to be used on all chart lines, unless colorRange is provided 
+  animation: PropTypes.oneOf([false, "noWobble", "gentle", "wobbly", "stiff"]),
+  /** 
+   * Color to be used on all chart lines, unless colorRange is provided
    * @uxpinignoreprop
-  */
+   */
   // eslint-disable-next-line react/no-unused-prop-types
   color: PropTypes.string,
   /** Array with colors to be used across all chart lines. If array doesn't specify color for all the chart lines, color property is used. */
@@ -129,13 +138,14 @@ PieChart.propTypes = {
   /** Shows labels one the chart. Set up labels in the data object. Example: {"theta": 1, "label": "Apples"} */
   showLabels: PropTypes.bool,
   /** Starting point for data set. Used for triggering animation. Same data structure as data property. Place "0" in theta to animate. */
-  startData: PropTypes.array,
+  startData: PropTypes.array
 };
+/* eslint-disable sort-keys */
 
 PieChart.defaultProps = {
   height: 300,
   hint: false,
-  labelsRadiusMultiplier: '1.1',
-  opacity: '1',
-  width: 300,
+  labelsRadiusMultiplier: "1.1",
+  opacity: "1",
+  width: 300
 };
