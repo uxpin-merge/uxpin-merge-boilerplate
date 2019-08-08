@@ -83,8 +83,8 @@ PieChart.propTypes = {
   width: PropTypes.number,
   /** Turns, on/off animation and allows for selection of different types of animations. */
   animation: PropTypes.oneOf([false, 'noWobble', 'gentle', 'wobbly', 'stiff']),
-  /** 
-   * Color to be used on all chart lines, unless colorRange is provided 
+  /**
+   * Color to be used on all chart lines, unless colorRange is provided
    * @uxpinignoreprop
    */
   // eslint-disable-next-line react/no-unused-prop-types
