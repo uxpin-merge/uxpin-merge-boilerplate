@@ -6,8 +6,22 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Install dependencies"
+          name: 'Install dependencies'
           command: npm install
       - run:
-          name: 'Push to UXPin'
-          command: ./node_modules/@uxpin/merge-cli/bin/uxpin-merge push --webpack-config ./webpack.config.js --wrapper ./src/UXPinWrapper/UXPinWrapper.js
+          name: 'Check'
+          command: npm run check
+      - run:
+          name: 'Test'
+          command: npm run test
+      - run:
+          name: 'Push to UXPin if branch is master'
+          command: |
+            if [[ "${CIRCLE_BRANCH}" == "master" ]]
+            then
+            ./node_modules/.bin/uxpin-merge push \
+              --webpack-config ./webpack.config.js \
+              --wrapper ./src/UXPinWrapper/UXPinWrapper.js
+            else
+            echo "On '$CIRCLE_BRANCH' branch - not pushing"
+            fi
