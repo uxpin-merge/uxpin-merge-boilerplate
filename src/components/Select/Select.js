@@ -92,7 +92,7 @@ export default class Select extends React.Component {
 Select.SelectItem = SelectItem;
 
 Select.propTypes = {
-  /** @uxpinignore */
+  /** @uxpinignoreprop */
   children: PropTypes.node,
   defaultOpen: PropTypes.bool,
   /** @uxpinignore */

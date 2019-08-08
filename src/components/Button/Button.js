@@ -10,7 +10,17 @@ const Button = (props) => (
 );
 
 Button.propTypes = {
+<<<<<<< HEAD:src/components/Button/Button.js
   /** @uxpinignoreprop */
+=======
+  onClick: PropTypes.func,
+  disabled: PropTypes.bool,
+  type: PropTypes.oneOf(['primary', 'secondary', 'success', 'error', 'warning']),
+  mode: PropTypes.oneOf(['filled', 'ghost', 'minimal', 'flat']),
+   /** @uxpinignoreprop */
+  itle: PropTypes.string,
+    /** @uxpinignoreprop */
+>>>>>>> master:src/Button/Button.js
   background: PropTypes.string,
   /**
    * @uxpinpropname Label
