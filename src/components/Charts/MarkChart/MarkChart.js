@@ -163,6 +163,7 @@ export default class MarkChart extends React.Component {
   }
 }
 
+/* eslint-disable sort-keys */
 MarkChart.propTypes = {
   /** Height of the Chart in px. Accepts only numbers. */
   height: PropTypes.number,
@@ -170,17 +171,20 @@ MarkChart.propTypes = {
   width: PropTypes.number,
   /** Turns, on/off animation and allows for selection of different types of animations. */
   animation: PropTypes.oneOf([false, 'noWobble', 'gentle', 'wobbly', 'stiff']),
-  /** Color to be used on all chart lines, unless colorRange is provided 
-  * @uxpinpropname Stroke color
-  */
+  /**
+   * Color to be used on all chart lines, unless colorRange is provided
+   * @uxpinpropname Stroke color
+   */
   color: PropTypes.string,
-  /** Specifies opacity for all the chart lines, unless styles array is provided 
+  /**
+   * Specifies opacity for all the chart lines, unless styles array is provided
    * @uxpinpropname Stroke opacity
-  */
+   */
   opacity: PropTypes.string,
-  /** Array with colors to be used across all chart lines. If array doesn't specify color for all the chart lines, color property is used. 
+  /**
+   * Array with colors to be used across all chart lines. If array doesn't specify color for all the chart lines, color property is used.
    * @uxpinignoreprop
-  */
+   */
   /** Specifies width of the line for all the chart lines, unless styles array is provided */
   strokeWidth: PropTypes.number,
   /** @uxpinignoreprop */
@@ -194,9 +198,10 @@ MarkChart.propTypes = {
   data: PropTypes.array,
   /** Color filling inside of every circle on the chart */
   fill: PropTypes.string,
-  /** Range of colors to be used as a filling  
+  /**
+   * Range of colors to be used as a filling
    * @uxpinpropignore
-  */
+   */
   /** @uxpinignoreprop */
   fillRange: PropTypes.arrayOf(PropTypes.string),
   hint: PropTypes.bool,
@@ -249,6 +254,7 @@ MarkChart.propTypes = {
   /** Type of the scale for Y axis. Linear allows only for numbers, Ordinal let's you specify x axis as text e.g. "Q1" */
   yScaleType: PropTypes.oneOf(['linear', 'ordinal']),
 };
+/* eslint-enable sort-keys */
 
 MarkChart.defaultProps = {
   crossHair: false,

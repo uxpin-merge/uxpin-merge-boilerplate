@@ -243,6 +243,7 @@ export default class LineMarkChart extends React.Component {
   }
 }
 
+/* eslint-disable sort-keys */
 LineMarkChart.propTypes = {
   /** Height of the Chart in px. Accepts only numbers. */
   height: PropTypes.number,
@@ -252,7 +253,7 @@ LineMarkChart.propTypes = {
   animation: PropTypes.oneOf([false, 'noWobble', 'gentle', 'wobbly', 'stiff']),
   /** Color to be used on all chart lines, unless colorRange is provided */
   color: PropTypes.string,
-  /** Array with colors to be used across all chart lines. If array doesn't specify color for all the chart lines, color property is used. 
+  /** Array with colors to be used across all chart lines. If array doesn't specify color for all the chart lines, color property is used.
    * @uxpinignoreprop
   */
   colorRange: PropTypes.arrayOf(PropTypes.string),
@@ -299,18 +300,20 @@ LineMarkChart.propTypes = {
   curveCatmullRomAlpha: PropTypes.string,
   /** Data Array. Structure: [[{"x": 0, "y": 1}, {"x": 1, "y": 3}], [{"x: 0", "y": 2}, {"x": 1, "y": 3]].  */
   data: PropTypes.array,
-  /** Range of colors to be used as a filling  
+  /**
+   * Range of colors to be used as a filling
    * @uxpinignoreprop
-  */
+   */
   fillRange: PropTypes.arrayOf(PropTypes.string),
   hint: PropTypes.bool,
   /** Turns on/off horizontal grid lines. */
   horizontalGridLines: PropTypes.bool,
   /** Turns on/off vertical grid lines. */
   verticalGridLines: PropTypes.bool,
-  /** Sets margin for the chart inside of the container. Format: {"top": 0, "right": 0, "bottom": 0, "left": 0 } 
+  /**
+   * Sets margin for the chart inside of the container. Format: {"top": 0, "right": 0, "bottom": 0, "left": 0 }
    * @uxpinignoreprop
-  */
+   */
   margin: PropTypes.shape({
     bottom: PropTypes.number,
     left: PropTypes.number,
@@ -340,13 +343,15 @@ LineMarkChart.propTypes = {
   onSeriesRightClick: PropTypes.func,
   /** Specifies opacity for all the chart lines, unless styles array is provided */
   opacity: PropTypes.string,
-  /** Size of marks on the chart 
+  /**
+   * Size of marks on the chart
    * @uxpinpropname Mark size
-  */
+   */
   size: PropTypes.number,
-  /** Color filling inside of every circle on the chart 
+  /**
+   * Color filling inside of every circle on the chart
    * @uxpinpropname Mark fill
-  */
+   */
   fill: PropTypes.string,
   /** Starting point for data set. Used for triggering animation. Same data structure as data property. */
   startData: PropTypes.array,
@@ -375,6 +380,7 @@ LineMarkChart.propTypes = {
   /** Type of the scale for Y axis. Linear allows only for numbers, Ordinal let's you specify x axis as text e.g. "Q1" */
   yScaleType: PropTypes.oneOf(['linear', 'ordinal']),
 };
+/* eslint-enable sort-keys */
 
 LineMarkChart.defaultProps = {
   crossHair: false,

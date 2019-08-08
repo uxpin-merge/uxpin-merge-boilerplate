@@ -221,23 +221,25 @@ export default class AreaChart extends React.Component {
   }
 }
 
+/* eslint-disable sort-keys */
 AreaChart.propTypes = {
   /** Height of the Chart in px. Accepts only numbers. */
   height: PropTypes.number,
-  /** Width of the Chart in px. Accepts only numbers. */ 
+  /** Width of the Chart in px. Accepts only numbers. */
   width: PropTypes.number,
   /** Turns, on/off animation and allows for selection of different types of animations. */
   animation: PropTypes.oneOf([false, 'noWobble', 'gentle', 'wobbly', 'stiff']),
-  /** Color to be used on all chart lines, unless colorRange is provided 
-   * @uxpinignoreprop 
-  */
+  /**
+   * Color to be used on all chart lines, unless colorRange is provided
+   * @uxpinignoreprop
+   */
   color: PropTypes.string,
   /** Array with colors to be used across all chart lines. If array doesn't specify color for all the chart lines, color property is used. */
   colorRange: PropTypes.arrayOf(PropTypes.string),
   /**
-  * Turns on/off crossHair
-  * @uxpindescription Turns on/off crossHair (only in prototype preview)
-  */
+   * Turns on/off crossHair
+   * @uxpindescription Turns on/off crossHair (only in prototype preview)
+   */
   crossHair: PropTypes.bool,
   /** Select the kind of curve for all the chart lines */
   curve: PropTypes.oneOf([
@@ -281,8 +283,8 @@ AreaChart.propTypes = {
   horizontalGridLines: PropTypes.bool,
   /** Turns on/off vertical grid lines. */
   verticalGridLines: PropTypes.bool,
-  /** 
-   * Sets margin for the chart inside of the container. Format: {"top": 0, "right": 0, "bottom": 0, "left": 0 } 
+  /**
+   * Sets margin for the chart inside of the container. Format: {"top": 0, "right": 0, "bottom": 0, "left": 0 }
    * @uxpinignoreprop
    */
   margin: PropTypes.shape({
@@ -324,7 +326,8 @@ AreaChart.propTypes = {
   strokeStyle: PropTypes.oneOf(['solid', 'dashed']),
   /** Specifies width of the line for all the chart lines, unless styles array is provided */
   strokeWidth: PropTypes.number,
-  /** Object with styles that allows for specifying styles for every line separtely. Accepts: StrokeStyle, StrokeWidth and Opacity. Format: [{"strokeStyle": "solid"}]
+  /**
+   * Object with styles that allows for specifying styles for every line separtely. Accepts: StrokeStyle, StrokeWidth and Opacity. Format: [{"strokeStyle": "solid"}]
    * @uxpinignoreprop
    */
   styles: PropTypes.arrayOf(PropTypes.object),
@@ -340,6 +343,7 @@ AreaChart.propTypes = {
    */
   yLabels: PropTypes.bool,
 };
+/* eslint-enable sort-keys */
 
 AreaChart.defaultProps = {
   crossHair: false,
