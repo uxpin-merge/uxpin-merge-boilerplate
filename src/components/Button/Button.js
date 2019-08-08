@@ -9,18 +9,15 @@ const Button = (props) => (
   </ButtonStyles>
 );
 
+/* eslint-disable sort-keys */
 Button.propTypes = {
-<<<<<<< HEAD:src/components/Button/Button.js
-  /** @uxpinignoreprop */
-=======
   onClick: PropTypes.func,
   disabled: PropTypes.bool,
   type: PropTypes.oneOf(['primary', 'secondary', 'success', 'error', 'warning']),
   mode: PropTypes.oneOf(['filled', 'ghost', 'minimal', 'flat']),
-   /** @uxpinignoreprop */
-  itle: PropTypes.string,
-    /** @uxpinignoreprop */
->>>>>>> master:src/Button/Button.js
+  /** @uxpinignoreprop */
+  title: PropTypes.string,
+  /** @uxpinignoreprop */
   background: PropTypes.string,
   /**
    * @uxpinpropname Label
@@ -39,6 +36,7 @@ Button.propTypes = {
   title: PropTypes.string,
   type: PropTypes.oneOf(['primary', 'secondary', 'success', 'error', 'warning']),
 };
+/* eslint-enable sort-keys */
 
 Button.defaultProps = {
   disabled: false,

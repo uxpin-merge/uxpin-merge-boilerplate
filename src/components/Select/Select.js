@@ -95,7 +95,7 @@ Select.propTypes = {
   /** @uxpinignoreprop */
   children: PropTypes.node,
   defaultOpen: PropTypes.bool,
-  /** @uxpinignore */
+  /** @uxpinignoreprop */
   onRestart: PropTypes.func,
   onSelect: PropTypes.func,
   placeholder: PropTypes.string,
