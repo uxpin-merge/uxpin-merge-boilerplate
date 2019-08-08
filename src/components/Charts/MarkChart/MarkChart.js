@@ -181,10 +181,6 @@ MarkChart.propTypes = {
    * @uxpinpropname Stroke opacity
    */
   opacity: PropTypes.string,
-  /**
-   * Array with colors to be used across all chart lines. If array doesn't specify color for all the chart lines, color property is used.
-   * @uxpinignoreprop
-   */
   /** Specifies width of the line for all the chart lines, unless styles array is provided */
   strokeWidth: PropTypes.number,
   /** @uxpinignoreprop */
@@ -202,8 +198,8 @@ MarkChart.propTypes = {
    * Range of colors to be used as a filling
    * @uxpinpropignore
    */
-  /** @uxpinignoreprop */
   fillRange: PropTypes.arrayOf(PropTypes.string),
+  /** @uxpinignoreprop */
   hint: PropTypes.bool,
   /** Turns on/off horizontal grid lines. */
   horizontalGridLines: PropTypes.bool,

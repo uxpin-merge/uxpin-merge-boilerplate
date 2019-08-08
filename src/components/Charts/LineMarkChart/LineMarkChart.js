@@ -253,9 +253,10 @@ LineMarkChart.propTypes = {
   animation: PropTypes.oneOf([false, 'noWobble', 'gentle', 'wobbly', 'stiff']),
   /** Color to be used on all chart lines, unless colorRange is provided */
   color: PropTypes.string,
-  /** Array with colors to be used across all chart lines. If array doesn't specify color for all the chart lines, color property is used.
+  /**
+   * Array with colors to be used across all chart lines. If array doesn't specify color for all the chart lines, color property is used.
    * @uxpinignoreprop
-  */
+   */
   colorRange: PropTypes.arrayOf(PropTypes.string),
   /**
    * Turns on/off crossHair
