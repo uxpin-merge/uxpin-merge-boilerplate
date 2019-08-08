@@ -1,7 +1,7 @@
 /** @jsx jsx */
-import { jsx } from "@emotion/core";
-import PropTypes from "prop-types";
-import React from "react";
+import { jsx } from '@emotion/core';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {
   Crosshair,
   Hint,
@@ -10,25 +10,18 @@ import {
   VerticalGridLines,
   XAxis,
   XYPlot,
-  YAxis
-} from "react-vis";
-import BarChartStyles from "./BarChart.styles";
+  YAxis,
+} from 'react-vis';
+import BarChartStyles from './BarChart.styles';
 
 export default class BarChart extends React.Component {
   constructor(props) {
     super(props);
 
     const getStartData = () => {
-      if (
-        Array.isArray(this.props.startData[0]) &&
-        this.props.startData.length === this.props.data.length
-      ) {
+      if (Array.isArray(this.props.startData[0]) && this.props.startData.length === this.props.data.length) {
         return this.props.startData;
-      }
-      if (
-        !Array.isArray(this.props.startData[0]) &&
-        this.props.startData.length === this.props.data.length
-      ) {
+      } if (!Array.isArray(this.props.startData[0]) && this.props.startData.length === this.props.data.length) {
         return this.props.startData;
       }
 
@@ -38,8 +31,8 @@ export default class BarChart extends React.Component {
     this.state = {
       crosshairValues: [],
       data: this.props.startData ? getStartData() : this.props.data,
-      hintValue: "",
-      showHint: false
+      hintValue: '',
+      showHint: false,
     };
   }
 
@@ -48,7 +41,7 @@ export default class BarChart extends React.Component {
   }
 
   getCrosshair(value, { index }) {
-    this.setState({ crosshairValues: this.state.data.map(d => d[index]) });
+    this.setState({ crosshairValues: this.state.data.map((d) => d[index]) });
   }
 
   restartCrosshair() {
@@ -59,7 +52,7 @@ export default class BarChart extends React.Component {
     if (!this.state.showHint) {
       this.setState({ hintValue: value, showHint: true });
     } else {
-      this.setState({ hintValue: "", showHint: false });
+      this.setState({ hintValue: '', showHint: false });
     }
   }
 
@@ -72,20 +65,11 @@ export default class BarChart extends React.Component {
         onMouseLeave={() => this.restartCrosshair()}
         xType={this.props.xScaleType}
         yType={this.props.yScaleType}
-        margin={this.props.margin}
-      >
+        margin={this.props.margin}>
         {this.props.verticalGridLines ? <VerticalGridLines /> : undefined}
         {this.props.horizontalGridLines ? <HorizontalGridLines /> : undefined}
-        {this.props.xLabels ? (
-          <XAxis title={this.props.xAxisTitle} />
-        ) : (
-          undefined
-        )}
-        {this.props.yLabels ? (
-          <YAxis title={this.props.yAxisTitle} />
-        ) : (
-          undefined
-        )}
+        {this.props.xLabels ? <XAxis title={this.props.xAxisTitle} /> : undefined}
+        {this.props.yLabels ? <YAxis title={this.props.yAxisTitle} /> : undefined}
         {!Array.isArray(this.props.data[0]) ? (
           <VerticalBarSeries
             data={this.state.data}
@@ -100,22 +84,22 @@ export default class BarChart extends React.Component {
                 : this.props.fill
             }
             opacity={
-              this.props.styles !== undefined &&
-              this.props.styles[0] &&
-              this.props.styles[0].opacity
+              this.props.styles !== undefined
+              && this.props.styles[0]
+              && this.props.styles[0].opacity
                 ? parseFloat(this.props.styles[0].opacity)
                 : parseFloat(this.props.opacity)
             }
             stroke={this.props.stroke}
             barWidth={parseFloat(this.props.barWidth)}
             cluster={
-              this.props.styles !== undefined &&
-              this.props.styles[0] &&
-              this.props.styles[0].cluster
+              this.props.styles !== undefined
+              && this.props.styles[0]
+              && this.props.styles[0].cluster
                 ? this.props.styles[0].cluster
-                : ""
+                : ''
             }
-            onValueClick={value => this.getHint(value)}
+            onValueClick={(value) => this.getHint(value)}
             onNearestX={(value, index) => this.getCrosshair(value, index)}
             onNearestXY={this.props.onNearestXY}
             onSeriesClick={this.props.onSeriesClick}
@@ -130,32 +114,34 @@ export default class BarChart extends React.Component {
               key={i}
               data={this.state.data[i]}
               color={
-                this.props.colorRange !== undefined && this.props.colorRange[i]
-                  ? this.props.colorRange[i]
-                  : this.props.color
-              }
+                  this.props.colorRange !== undefined
+                  && this.props.colorRange[i]
+                    ? this.props.colorRange[i]
+                    : this.props.color
+                }
               fill={
-                this.props.fillRange !== undefined && this.props.fillRange[i]
-                  ? this.props.fillRange[i]
-                  : this.props.fill
-              }
+                  this.props.fillRange !== undefined
+                  && this.props.fillRange[i]
+                    ? this.props.fillRange[i]
+                    : this.props.fill
+                }
               opacity={
-                this.props.styles !== undefined &&
-                this.props.styles[i] &&
-                this.props.styles[i].opacity
-                  ? parseFloat(this.props.styles[i].opacity)
-                  : parseFloat(this.props.opacity)
-              }
+                  this.props.styles !== undefined
+                  && this.props.styles[i]
+                  && this.props.styles[i].opacity
+                    ? parseFloat(this.props.styles[i].opacity)
+                    : parseFloat(this.props.opacity)
+                }
               stroke={this.props.stroke}
               barWidth={parseFloat(this.props.barWidth)}
               cluster={
-                this.props.styles !== undefined &&
-                this.props.styles[0] &&
-                this.props.styles[0].cluster
-                  ? this.props.styles[0].cluster
-                  : ""
-              }
-              onValueClick={value => this.getHint(value)}
+                  this.props.styles !== undefined
+                  && this.props.styles[0]
+                  && this.props.styles[0].cluster
+                    ? this.props.styles[0].cluster
+                    : ''
+                }
+              onValueClick={(value) => this.getHint(value)}
               onNearestX={(value, index) => this.getCrosshair(value, index)}
               onNearestXY={this.props.onNearestXY}
               onSeriesClick={this.props.onSeriesClick}
@@ -181,22 +167,20 @@ export default class BarChart extends React.Component {
   }
 }
 
-/* eslint-disable sort-keys */
 BarChart.propTypes = {
   /** Height of the Chart in px. Accepts only numbers. */
   height: PropTypes.number,
   /** Width of the Chart in px. Accepts only numbers. */
   width: PropTypes.number,
   /** Turns, on/off animation and allows for selection of different types of animations. */
-  animation: PropTypes.oneOf([false, "noWobble", "gentle", "wobbly", "stiff"]),
+  animation: PropTypes.oneOf([false, 'noWobble', 'gentle', 'wobbly', 'stiff']),
   /** Width of every bar in %. 1.0 means the full width.  */
   barWidth: PropTypes.number,
   /** Color to be used on all chart lines, unless colorRange is provided */
   color: PropTypes.string,
-  /**
-   * Array with colors to be used across all chart lines. If array doesn't specify color for all the chart lines, color property is used.
+  /** Array with colors to be used across all chart lines. If array doesn't specify color for all the chart lines, color property is used. 
    * @uxpinignoreprop
-   */
+  */
   colorRange: PropTypes.arrayOf(PropTypes.string),
   /**
    * Turns on/off crossHair
@@ -207,25 +191,23 @@ BarChart.propTypes = {
   data: PropTypes.array,
   /** Color filling inside of every circle on the chart */
   fill: PropTypes.string,
-  /**
-   * Range of colors to be used as a filling
+  /** Range of colors to be used as a filling  
    * @uxpinignoreprop
-   */
+  */
   fillRange: PropTypes.arrayOf(PropTypes.string),
   hint: PropTypes.bool,
   /** Turns on/off horizontal grid lines. */
   horizontalGridLines: PropTypes.bool,
   /** Turns on/off vertical grid lines. */
   verticalGridLines: PropTypes.bool,
-  /**
-   * Sets margin for the chart inside of the container. Format: {"top": 0, "right": 0, "bottom": 0, "left": 0 }
+  /** Sets margin for the chart inside of the container. Format: {"top": 0, "right": 0, "bottom": 0, "left": 0 } 
    * @uxpinignoreprop
-   */
+  */
   margin: PropTypes.shape({
     bottom: PropTypes.number,
     left: PropTypes.number,
     right: PropTypes.number,
-    top: PropTypes.number
+    top: PropTypes.number,
   }),
   /**
    * @uxpinignoreprop
@@ -252,15 +234,13 @@ BarChart.propTypes = {
   opacity: PropTypes.string,
   /** Starting point for data set. Used for triggering animation. Same data structure as data property. */
   startData: PropTypes.array,
-  /** 
-   * Stroke color
+  /** Stroke color 
    * @uxpinignoreprop
-   */
+  */
   stroke: PropTypes.string,
-  /** 
-   * Object with styles that allows for specifying styles for every line separtely. Accepts: StrokeStyle, StrokeWidth and Opacity. Format: [{"strokeStyle": "solid"}]
+  /** Object with styles that allows for specifying styles for every line separtely. Accepts: StrokeStyle, StrokeWidth and Opacity. Format: [{"strokeStyle": "solid"}] 
    * @uxpinignoreprop
-   */
+  */
   styles: PropTypes.arrayOf(PropTypes.object),
   /** Title for the horizontal label. */
   xAxisTitle: PropTypes.string,
@@ -270,7 +250,7 @@ BarChart.propTypes = {
    */
   xLabels: PropTypes.bool,
   /** Type of the scale for X axis. Linear allows only for numbers, Ordinal let's you specify x axis as text e.g. "Q1" */
-  xScaleType: PropTypes.oneOf(["linear", "ordinal"]),
+  xScaleType: PropTypes.oneOf(['linear', 'ordinal']),
   /** Title for the vertical label. */
   yAxisTitle: PropTypes.string,
   /**
@@ -279,9 +259,8 @@ BarChart.propTypes = {
    */
   yLabels: PropTypes.bool,
   /** Type of the scale for Y axis. Linear allows only for numbers, Ordinal let's you specify x axis as text e.g. "Q1" */
-  yScaleType: PropTypes.oneOf(["linear", "ordinal"])
+  yScaleType: PropTypes.oneOf(['linear', 'ordinal']),
 };
-/* eslint-disable sort-keys */
 
 BarChart.defaultProps = {
   barWidth: 0.8,
@@ -292,5 +271,5 @@ BarChart.defaultProps = {
   verticalGridLines: true,
   width: 300,
   xLabels: true,
-  yLabels: true
+  yLabels: true,
 };

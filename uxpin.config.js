@@ -15,9 +15,12 @@ module.exports = {
       {
         name: 'Charts',
         include: [
-          'src/components/Charts/**/*.js',
-          '!src/components/Charts/**/*.styles.js',
-          '!src/components/Charts/**/__tests__/*.js',
+          'src/components/Charts/LineChart/LineChart.js',
+          'src/components/Charts/LineMarkChart/LineMarkChart.js',
+          'src/components/Charts/MarkChart/MarkChart.js',
+          'src/components/Charts/AreaChart/AreaChart.js',
+          'src/components/Charts/BarChart/BarChart.js',
+          'src/components/Charts/PieChart/PieChart.js'
         ]
       },
     ]
