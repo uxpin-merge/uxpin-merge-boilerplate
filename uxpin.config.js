@@ -9,21 +9,18 @@ module.exports = {
           'src/components/Icon/Icon.js',
           'src/components/Select/Select.js',
           'src/components/Select/components/SelectItem/SelectItem.js',
-          'src/components/Table/Table.js'
-        ]
+          'src/components/Table/Table.js',
+        ],
       },
       {
         name: 'Charts',
         include: [
-          'src/components/Charts/LineChart/LineChart.js',
-          'src/components/Charts/LineMarkChart/LineMarkChart.js',
-          'src/components/Charts/MarkChart/MarkChart.js',
-          'src/components/Charts/AreaChart/AreaChart.js',
-          'src/components/Charts/BarChart/BarChart.js',
-          'src/components/Charts/PieChart/PieChart.js'
-        ]
+          'src/components/Charts/**/*.js',
+          '!src/components/Charts/**/*.styles.js',
+          '!src/components/Charts/**/__tests__/*.js',
+        ],
       },
-    ]
+    ],
   },
-  name: 'UXPin Merge Boilerplate'
+  name: 'UXPin Merge Boilerplate',
 };
