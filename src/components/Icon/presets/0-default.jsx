@@ -6,6 +6,6 @@ export default (
     icon="CalendarSvg"
     color="primary"
     size="xxl"
-    uxpId="icon_svg"
+    uxpId="icon_1"
   />
 );

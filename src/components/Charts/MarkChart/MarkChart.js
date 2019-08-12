@@ -196,7 +196,7 @@ MarkChart.propTypes = {
   fill: PropTypes.string,
   /**
    * Range of colors to be used as a filling
-   * @uxpinpropignore
+   * @uxpinignoreprop
    */
   fillRange: PropTypes.arrayOf(PropTypes.string),
   /** @uxpinignoreprop */
