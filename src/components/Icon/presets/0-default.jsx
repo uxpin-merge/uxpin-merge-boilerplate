@@ -3,8 +3,9 @@ import Icon from '../Icon';
 
 export default (
   <Icon
-    icon="PinMapSolidSvg"
-    size="l"
+    icon="CalendarSvg"
+    color="primary"
+    size="xxl"
     uxpId="icon1"
   />
 );

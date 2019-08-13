@@ -6,10 +6,10 @@ export default (
   <Button
     icon={<Icon icon="TickerSvg" size="s" uxpId="button2" />}
     mode="filled"
-    size="s"
+    size="l"
     stretched
-    type="error"
+    type="primary"
     uxpId="button1">
-    Merge!
+    Let's Merge!
   </Button>
 );

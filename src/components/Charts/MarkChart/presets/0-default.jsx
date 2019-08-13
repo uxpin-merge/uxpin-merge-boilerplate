@@ -34,7 +34,9 @@ export default (
     height={300}
     hint
     margin={{ right: 20, top: 20 }}
-    opacity="0.3"
+    color="blue"
+    fill="white"
+    opacity="0.6"
     startData={chartStartData}
     strokeWidth={12}
     uxpId="markChart1"

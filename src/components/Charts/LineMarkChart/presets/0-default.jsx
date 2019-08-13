@@ -30,9 +30,11 @@ const chartStartData = [
 export default (
   <LineMarkChart
     animation="gentle"
+    color="blue"
+    fill="white"
     data={chartData}
     height={300}
-    opacity="0.6"
+    opacity="1"
     startData={chartStartData}
     uxpId="lineMarkChart1"
     width={500}

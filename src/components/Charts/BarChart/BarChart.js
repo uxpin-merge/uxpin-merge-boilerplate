@@ -167,14 +167,22 @@ export default class BarChart extends React.Component {
   }
 }
 
+/* eslint-disable sort-keys */
 BarChart.propTypes = {
+  /** Height of the Chart in px. Accepts only numbers. */
+  height: PropTypes.number,
+  /** Width of the Chart in px. Accepts only numbers. */
+  width: PropTypes.number,
   /** Turns, on/off animation and allows for selection of different types of animations. */
   animation: PropTypes.oneOf([false, 'noWobble', 'gentle', 'wobbly', 'stiff']),
   /** Width of every bar in %. 1.0 means the full width.  */
   barWidth: PropTypes.number,
   /** Color to be used on all chart lines, unless colorRange is provided */
   color: PropTypes.string,
-  /** Array with colors to be used across all chart lines. If array doesn't specify color for all the chart lines, color property is used. */
+  /**
+   * Array with colors to be used across all chart lines. If array doesn't specify color for all the chart lines, color property is used.
+   * @uxpinignoreprop
+   */
   colorRange: PropTypes.arrayOf(PropTypes.string),
   /**
    * Turns on/off crossHair
@@ -185,14 +193,20 @@ BarChart.propTypes = {
   data: PropTypes.array,
   /** Color filling inside of every circle on the chart */
   fill: PropTypes.string,
-  /** Range of colors to be used as a filling  */
+  /**
+   * Range of colors to be used as a filling
+   * @uxpinignoreprop
+   */
   fillRange: PropTypes.arrayOf(PropTypes.string),
-  /** Height of the Chart in px. Accepts only numbers. */
-  height: PropTypes.number,
   hint: PropTypes.bool,
   /** Turns on/off horizontal grid lines. */
   horizontalGridLines: PropTypes.bool,
-  /** Sets margin for the chart inside of the container. Format: {"top": 0, "right": 0, "bottom": 0, "left": 0 } */
+  /** Turns on/off vertical grid lines. */
+  verticalGridLines: PropTypes.bool,
+  /**
+   * Sets margin for the chart inside of the container. Format: {"top": 0, "right": 0, "bottom": 0, "left": 0 }
+   * @uxpinignoreprop
+   */
   margin: PropTypes.shape({
     bottom: PropTypes.number,
     left: PropTypes.number,
@@ -224,14 +238,16 @@ BarChart.propTypes = {
   opacity: PropTypes.string,
   /** Starting point for data set. Used for triggering animation. Same data structure as data property. */
   startData: PropTypes.array,
-  /** Stroke color */
+  /**
+   * Stroke color
+   * @uxpinignoreprop
+   */
   stroke: PropTypes.string,
-  /** Object with styles that allows for specifying styles for every line separtely. Accepts: StrokeStyle, StrokeWidth and Opacity. Format: [{"strokeStyle": "solid"}] */
+  /**
+   * Object with styles that allows for specifying styles for every line separtely. Accepts: StrokeStyle, StrokeWidth and Opacity. Format: [{"strokeStyle": "solid"}]
+   * @uxpinignoreprop
+   */
   styles: PropTypes.arrayOf(PropTypes.object),
-  /** Turns on/off vertical grid lines. */
-  verticalGridLines: PropTypes.bool,
-  /** Width of the Chart in px. Accepts only numbers. */
-  width: PropTypes.number,
   /** Title for the horizontal label. */
   xAxisTitle: PropTypes.string,
   /**
@@ -251,6 +267,7 @@ BarChart.propTypes = {
   /** Type of the scale for Y axis. Linear allows only for numbers, Ordinal let's you specify x axis as text e.g. "Q1" */
   yScaleType: PropTypes.oneOf(['linear', 'ordinal']),
 };
+/* eslint-enable sort-keys */
 
 BarChart.defaultProps = {
   barWidth: 0.8,

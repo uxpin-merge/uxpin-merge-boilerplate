@@ -75,18 +75,24 @@ export default class PieChart extends React.Component {
   }
 }
 
+/* eslint-disable sort-keys */
 PieChart.propTypes = {
+  /** Height of the Chart in px. Accepts only numbers. */
+  height: PropTypes.number,
+  /** Width of the Chart in px. Accepts only numbers. */
+  width: PropTypes.number,
   /** Turns, on/off animation and allows for selection of different types of animations. */
   animation: PropTypes.oneOf([false, 'noWobble', 'gentle', 'wobbly', 'stiff']),
-  /** Color to be used on all chart lines, unless colorRange is provided */
+  /**
+   * Color to be used on all chart lines, unless colorRange is provided
+   * @uxpinignoreprop
+   */
   // eslint-disable-next-line react/no-unused-prop-types
   color: PropTypes.string,
   /** Array with colors to be used across all chart lines. If array doesn't specify color for all the chart lines, color property is used. */
   colorRange: PropTypes.arrayOf(PropTypes.string),
   /** Data Array. Structure:  [{ "theta": 1, "label": "apples" }, {"theta": 4, "label": "oranges"}, {"theta": 6, "label": "cherries"}]  */
   data: PropTypes.array,
-  /** Height of the Chart in px. Accepts only numbers. */
-  height: PropTypes.number,
   /** Shows hint on click into every part of the pie chart */
   hint: PropTypes.bool,
   /** In combination with radius property, innerRadius enables ability to create a donut chart. The higher the value the bigger tha hole in the donut.  */
@@ -126,9 +132,8 @@ PieChart.propTypes = {
   showLabels: PropTypes.bool,
   /** Starting point for data set. Used for triggering animation. Same data structure as data property. Place "0" in theta to animate. */
   startData: PropTypes.array,
-  /** Width of the Chart in px. Accepts only numbers. */
-  width: PropTypes.number,
 };
+/* eslint-enable sort-keys */
 
 PieChart.defaultProps = {
   height: 300,
