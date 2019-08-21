@@ -1,12 +1,18 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
-import LinkStyles from './Link.styles';
+import { LinkStyles } from './Link.styles';
 
-function Link(props) {
+/**
+ * @uxpinwrappers
+ * SkipContainerWrapper
+ */
+function Link({ ...props }, uxpinRef) {
   return (
-    <LinkStyles href={props.href}>
-      {props.children}
-    </LinkStyles>
+    <div>
+      <LinkStyles href={props.href} ref={uxpinRef}>
+        {props.children}
+      </LinkStyles>
+    </div>
   );
 }
 
@@ -19,6 +25,11 @@ Link.propTypes = {
     * Provide the `href` attribute for the <a> node
     */
   href: PropTypes.string,
+};
+
+Link.defaultProps = {
+  children: 'Testing',
+  href: '#',
 };
 
 export default Link;
