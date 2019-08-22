@@ -9,7 +9,7 @@ import { LinkStyles } from './Link.styles';
 function Link({ ...props }, uxpinRef) {
   return (
     <div>
-      <LinkStyles href={props.href} ref={uxpinRef}>
+      <LinkStyles href={props.href} ref={uxpinRef} size={props.size}>
         {props.children}
       </LinkStyles>
     </div>
@@ -25,11 +25,16 @@ Link.propTypes = {
     * Provide the `href` attribute for the <a> node
     */
   href: PropTypes.string,
+  /**
+    * Provide the size of the Link based on the px values in `typography`
+    */
+  size: PropTypes.oneOf(['xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl']),
 };
 
 Link.defaultProps = {
   children: 'Testing',
   href: '#',
+  size: 'm',
 };
 
 export default Link;
