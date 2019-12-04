@@ -10,22 +10,22 @@ const ButtonRadek = (props) => (
 );
 
 ButtonRadek.propTypes = {
-  onClick: PropTypes.func,
-  disabled: PropTypes.bool,
-  type: PropTypes.oneOf(['primary', 'secondary', 'success', 'error', 'warning']),
-  mode: PropTypes.oneOf(['filled', 'ghost', 'minimal', 'flat']),
-  title: PropTypes.string,
   background: PropTypes.string,
-  size: PropTypes.oneOf(['xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl']),
-  stretched: PropTypes.bool,
   children: PropTypes.string,
+  disabled: PropTypes.bool,
   icon: PropTypes.node,
   iconDirection: PropTypes.oneOf(['left', 'right']),
+  mode: PropTypes.oneOf(['filled', 'ghost', 'minimal', 'flat']),
+  onClick: PropTypes.func,
+  size: PropTypes.oneOf(['xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl']),
+  stretched: PropTypes.bool,
+  title: PropTypes.string,
+  type: PropTypes.oneOf(['primary', 'secondary', 'success', 'error', 'warning']),
 };
 
 ButtonRadek.defaultProps = {
-  iconDirection: 'left',
   disabled: false,
+  iconDirection: 'left',
   mode: 'filled',
   size: 'm',
   stretched: true,
