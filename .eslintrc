@@ -162,6 +162,14 @@
     "prefer-rest-params": 1,
     "prefer-spread": 1,
     "global-require": 0,
+    "sort-imports": [2, {
+      "ignoreCase": false,
+      "ignoreDeclarationSort": true,
+      "ignoreMemberSort": false
+    }],
+    "sort-keys": [2, "asc", {
+      "caseSensitive": false
+    }],
     "react/forbid-prop-types": 0,
     "react/jsx-closing-bracket-location": [
       2,

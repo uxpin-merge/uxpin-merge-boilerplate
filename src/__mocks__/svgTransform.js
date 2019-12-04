@@ -1,7 +1,4 @@
 module.exports = {
-  process() {
-    return 'module.exports = {};';
-  },
   getCacheKey() {
     // The output is always the same.
     return `<?xml version="1.0" encoding="utf-8"?>
@@ -16,5 +13,8 @@ module.exports = {
           s1.5,0.3,2,0.8l1.1,1L8,3.8L8.8,3l1.1-1c0.5-0.5,1.3-0.8,2-0.8c0.7,0,1.5,0.3,2,0.8c0.6,0.6,1,1.4,1,2.3s-0.3,1.7-1,2.3L8,12.4
           l-0.7-0.7H5.7l0,0L8,14l6.7-6.6C16.4,5.7,16.4,2.9,14.7,1.2z"/>
       </svg>`;
+  },
+  process() {
+    return 'module.exports = {};';
   },
 };

@@ -4,6 +4,7 @@ module.exports = {
       {
         name: 'General',
         include: [
+<<<<<<< HEAD
           'src/Button/Button.js',
           'src/ButtonRadek/ButtonRadek.js',
           'src/Icon/Icon.js',
@@ -11,19 +12,25 @@ module.exports = {
           'src/Select/SelectItem/SelectItem.js',
           'src/Table/Table.js'
         ]
+=======
+          'src/components/Button/Button.js',
+          'src/components/Greeting/Greeting.js',
+          'src/components/Icon/Icon.js',
+          'src/components/Select/Select.js',
+          'src/components/Select/components/SelectItem/SelectItem.js',
+          'src/components/Table/Table.js',
+        ],
+>>>>>>> upstream/master
       },
       {
         name: 'Charts',
         include: [
-          'src/LineChart/LineChart.js',
-          'src/LineMarkChart/LineMarkChart.js',
-          'src/MarkChart/MarkChart.js',
-          'src/AreaChart/AreaChart.js',
-          'src/BarChart/BarChart.js',
-          'src/PieChart/PieChart.js'
-        ]
-      }
-    ]
+          'src/components/Charts/**/*.js',
+          '!src/components/Charts/**/*.styles.js',
+          '!src/components/Charts/**/__tests__/*.js',
+        ],
+      },
+    ],
   },
-  name: 'UXPin Merge Boilerplate'
+  name: 'UXPin Merge Boilerplate',
 };
