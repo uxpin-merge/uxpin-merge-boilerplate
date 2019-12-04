@@ -1,5 +1,5 @@
-import styled from 'react-emotion';
-import { css } from 'emotion';
+import { css } from '@emotion/core';
+import styled from '@emotion/styled';
 import withProps from 'recompose/withProps';
 import * as colors from '../styles/colors.json';
 import * as borders from '../styles/borders.json';
