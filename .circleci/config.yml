@@ -1,3 +1,4 @@
+version: 2
 jobs:
   build:
     docker:
@@ -20,6 +21,15 @@ jobs:
             if [[ "${CIRCLE_BRANCH}" == "master" ]]
             then
             npm run push
+            else
+            echo "On '$CIRCLE_BRANCH' branch - not pushing"
+            fi
+      - run:
+          name: 'Push to UXPin.develop if branch is master'
+          command: |
+            if [[ "${CIRCLE_BRANCH}" == "master" ]]
+            then
+            uxpin-merge push --webpack-config ./webpack.config.js --wrapper ./src/components/UXPinWrapper/UXPinWrapper.js --uxpin-domain develop.uxpin.cloud --token ${UXPIN_AUTH_TOKEN_DEVELOP}
             else
             echo "On '$CIRCLE_BRANCH' branch - not pushing"
             fi
