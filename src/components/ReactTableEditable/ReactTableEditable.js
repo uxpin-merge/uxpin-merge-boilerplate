@@ -21,7 +21,7 @@ const Styles = styled.div`
     th,
     td {
       margin: 0;
-      padding: 0.5rem;
+      padding: 0.5rem 1rem 0.5rem 1rem;
       border-bottom: 1px solid black;
       border-right: 1px solid black;
       :last-child {
@@ -29,14 +29,29 @@ const Styles = styled.div`
       }
       input {
         font-size: 1rem;
-        padding: 0;
+        padding: 0.4rem;
         margin: 0;
         border: 0;
       }
     }
   }
   .pagination {
-    padding: 0.5rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+
+
+    input {
+      font-size: 1rem;
+    }
+
+    select {
+      font-size: 1rem;
+    }
+
+    button {
+      padding : 0.5rem;
+    }
+
   }
 `
 
@@ -135,7 +150,7 @@ function Table({ columns, data, updateMyData, skipPageReset }) {
           })}
         </tbody>
       </table>
-      <div className="pagination">
+      <div className="pagination">      
         <button onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
           {'<<'}
         </button>{' '}
@@ -148,36 +163,36 @@ function Table({ columns, data, updateMyData, skipPageReset }) {
         <button onClick={() => gotoPage(pageCount - 1)} disabled={!canNextPage}>
           {'>>'}
         </button>{' '}
-        <span>
-          Page{' '}
-          <strong>
-            {pageIndex + 1} of {pageOptions.length}
-          </strong>{' '}
-        </span>
-        <span>
-          | Go to page:{' '}
-          <input
-            type="number"
-            defaultValue={pageIndex + 1}
-            onChange={e => {
-              const page = e.target.value ? Number(e.target.value) - 1 : 0
-              gotoPage(page)
-            }}
-            style={{ width: '100px' }}
-          />
-        </span>{' '}
-        <select
-          value={pageSize}
+      <span>
+        Page{' '}
+        <strong>
+          {pageIndex + 1} of {pageOptions.length}
+        </strong>{' '}
+      </span>
+      <span>
+        | Go to page:{' '}
+        <input
+          type="number"
+          defaultValue={pageIndex + 1}
           onChange={e => {
-            setPageSize(Number(e.target.value))
+            const page = e.target.value ? Number(e.target.value) - 1 : 0
+            gotoPage(page)
           }}
-        >
-          {[10, 20, 30, 40, 50].map(pageSize => (
-            <option key={pageSize} value={pageSize}>
-              Show {pageSize}
-            </option>
-          ))}
-        </select>
+          style={{ width: '100px' }}
+        />
+      </span>{' '}
+      <select
+        value={pageSize}
+        onChange={e => {
+          setPageSize(Number(e.target.value))
+        }}
+      >
+        {[10, 20, 30, 40, 50].map(pageSize => (
+          <option key={pageSize} value={pageSize}>
+            Show {pageSize}
+          </option>
+        ))}
+      </select>   
       </div>
     </>
   )
@@ -263,7 +278,6 @@ function ReactTableEditable() {
 
   return (
     <Styles>
-      <button onClick={resetData}>Reset Data</button>
       <Table
         columns={columns}
         data={data}
