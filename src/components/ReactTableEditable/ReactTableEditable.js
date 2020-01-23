@@ -1,3 +1,4 @@
+import * as PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 import { usePagination, useTable } from 'react-table';
@@ -271,6 +272,15 @@ function ReactTableEditable() {
       />
     </Styles>
   )
-}
+};
+
+/* eslint-disable sort-keys */
+ReactTableEditable.propTypes = {
+  pageSize: PropTypes.oneOf([10, 20, 30, 40, 50]),
+};
+
+ReactTableEditable.defaultProps = {
+  pageSize: 10,
+};
 
 export default ReactTableEditable
