@@ -12,6 +12,7 @@ module.exports = {
           'src/components/Table/Table.js',
           'src/components/ReactTable/ReactTable.js',
           'src/components/ReactTableEditable/ReactTableEditable.js',
+          'src/components/ReactTableSorting/ReactTableSorting.js',
         ],
       },
       {
