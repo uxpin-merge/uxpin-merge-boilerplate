@@ -1,8 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
-import { useTable, usePagination } from 'react-table'
+import React from 'react';
+import styled from 'styled-components';
+import { usePagination, useTable } from 'react-table';
+import makeData from './makeData';
 
-import makeData from './makeData'
+/* eslint-disable */
 
 const Styles = styled.div`
   padding: 1rem;

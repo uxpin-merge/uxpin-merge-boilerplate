@@ -1,5 +1,7 @@
 import namor from 'namor';
 
+/* eslint-disable */
+
 const range = (len) => {
   const arr = [];
   for (let i = 0; i < len; i++) {
