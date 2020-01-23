@@ -3,7 +3,7 @@ import { useTable } from 'react-table';
 import styled from 'styled-components';
 import makeData from './makeData';
 
-/* eslint-disable sort-keys */
+/* eslint-disable */
 
 const Styles = styled.div`
   padding: 1rem;
