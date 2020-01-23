@@ -54,10 +54,13 @@
     "d3-shape": "^1.2.2",
     "emotion": "^10.0.14",
     "lodash": "^4.17.15",
+    "namor": "^2.0.2",
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-table": "^7.0.0-rc.15",
     "react-vis": "^1.11.5",
-    "recompose": "^0.30.0"
+    "recompose": "^0.30.0",
+    "styled-components": "^5.0.0"
   }
 }

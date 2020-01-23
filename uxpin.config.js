@@ -10,6 +10,8 @@ module.exports = {
           'src/components/Select/Select.js',
           'src/components/Select/components/SelectItem/SelectItem.js',
           'src/components/Table/Table.js',
+          'src/components/ReactTable/ReactTable.js',
+          'src/components/ReactTableEditable/ReactTableEditable.js',
         ],
       },
       {
