@@ -7,7 +7,7 @@
     "check": "eslint --ext js,jsx src --ignore-pattern *.tests.js",
     "test": "jest",
     "server": "uxpin-merge server --webpack-config ./webpack.uxpin.config.js --wrapper ./src/components/UXPinWrapper/UXPinWrapper.js",
-    "start": "uxpin-merge --webpack-config ./webpack.uxpin.config.js --wrapper ./src/components/UXPinWrapper/UXPinWrapper.js",
+    "start": "uxpin-merge --webpack-config ./webpack.uxpin.config.js --wrapper ./src/components/UXPinWrapper/UXPinWrapper.js --disable-tunneling",
     "push": "uxpin-merge push --webpack-config ./webpack.config.js --wrapper ./src/components/UXPinWrapper/UXPinWrapper.js"
   },
   "repository": {
@@ -19,6 +19,7 @@
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.2",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/preset-env": "^7.5.0",
     "@babel/preset-react": "^7.0.0",
     "@babel/traverse": "^7.5.5",
@@ -51,15 +52,20 @@
   "dependencies": {
     "@emotion/core": "^10.0.14",
     "@emotion/styled": "^10.0.14",
+    "@inlet/react-pixi": "^1.2.6",
     "d3-shape": "^1.2.2",
     "emotion": "^10.0.14",
+    "google-maps-react": "^2.0.2",
     "lodash": "^4.17.15",
     "namor": "^2.0.2",
+    "pixi.js": "^5.2.1",
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-pose": "^4.0.10",
     "react-table": "^7.0.0-rc.15",
     "react-vis": "^1.11.5",
+    "react-webcam": "^5.0.0",
     "recompose": "^0.30.0",
     "styled-components": "^5.0.0"
   }
