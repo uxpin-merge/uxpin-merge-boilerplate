@@ -16,11 +16,11 @@ jobs:
           name: 'Test'
           command: npm run test
       - run:
-          name: 'Push to UXPin'
+          name: 'Push to UXPin if branch is master'
           command: |
             if [[ "${CIRCLE_BRANCH}" == "master" ]]
             then
-            ./node_modules/@uxpin/merge-cli/bin/uxpin-merge push
+            npm run push
             else
             echo "On '$CIRCLE_BRANCH' branch - not pushing"
             fi
