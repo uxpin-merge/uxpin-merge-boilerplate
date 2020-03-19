@@ -9,7 +9,7 @@ export default (
     size="l"
     stretched
     type="primary"
-    uxpId="button1">
+    uxpId="button">
     Let's Merge!
   </Button>
 );
