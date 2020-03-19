@@ -18,6 +18,7 @@ class CreditCard extends React.Component {
   }
 
   static propTypes = {
+    /** @uxpinignoreprop */
     acceptedCards: PropTypes.array,
     cvc: PropTypes.oneOfType([
       PropTypes.string,
@@ -42,6 +43,7 @@ class CreditCard extends React.Component {
       'elo',
       'hipercard',
     ]),
+    /** @uxpinignoreprop */
     locale: PropTypes.shape({
       valid: PropTypes.string,
     }),
@@ -52,6 +54,7 @@ class CreditCard extends React.Component {
     ]),
     onInvalid: PropTypes.func,
     onValid: PropTypes.func,
+    /** @uxpinignoreprop */
     placeholders: PropTypes.shape({
       name: PropTypes.string,
     }),

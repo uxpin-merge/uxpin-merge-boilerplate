@@ -2,4 +2,4 @@ import React from 'react';
 import CameraPreview from '../Camera';
 
 export default
-  <CameraPreview width="500" height="500" />;
+  <CameraPreview cameraHeight="500" cameraWidth="500" />;

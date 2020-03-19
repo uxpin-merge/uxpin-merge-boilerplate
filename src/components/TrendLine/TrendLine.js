@@ -18,12 +18,12 @@ const propTypes = {
       PropTypes.shape({
         value: PropTypes.number,
       }),
-    ])
-  ),
+    ]).isRequired
+  ).isRequired,
   smooth: PropTypes.bool,
   autoDraw: PropTypes.bool,
   autoDrawDuration: PropTypes.number,
-  autoDrawEasing: PropTypes.string,
+  autoDrawEasing: PropTypes.oneOfType(['ease-in', 'ease-out', 'linear']),
   /** @uxpinignoreprop */
   width: PropTypes.number,
   /** @uxpinignoreprop */
@@ -31,27 +31,28 @@ const propTypes = {
   padding: PropTypes.number,
   radius: PropTypes.number,
   gradient: PropTypes.arrayOf(PropTypes.string),
-  stroke: PropTypes.string,
   strokeWidth: PropTypes.number,
 };
 
 const defaultProps = {
+  smooth: true,
   radius: 10,
-  stroke: 'black',
   padding: 8,
-  strokeWidth: 1,
-  autoDraw: false,
-  autoDrawDuration: 2000,
-  autoDrawEasing: 'ease',
-  data: [10, 30, 6, 40, 12, 52, 5],
+  strokeWidth: 3,
+  autoDraw: true,
+  autoDrawDuration: 1600,
+  autoDrawEasing: 'ease-out',
+  // eslint-disable-next-line react/default-props-match-prop-types
+  data: [0, 2, 5, 9, 5, 10, 3, 5, 0, 0, 1, 8, 2, 9, 0],
+  gradient: ['#00c6ff', '#F0F', '#FF0'],
 };
 
-class Trend extends Component {
+class TrendLine extends Component {
   constructor(props) {
     super(props);
 
     // Generate a random ID. This is important for distinguishing between
-    // Trend components on a page, so that they can have different keyframe
+    // TrendLine components on a page, so that they can have different keyframe
     // animations.
     this.trendId = generateId();
     this.gradientId = `react-trend-vertical-gradient-${this.trendId}`;
@@ -179,7 +180,7 @@ class Trend extends Component {
   }
 }
 
-Trend.propTypes = propTypes;
-Trend.defaultProps = defaultProps;
+TrendLine.propTypes = propTypes;
+TrendLine.defaultProps = defaultProps;
 
-export default Trend;
+export default TrendLine;
