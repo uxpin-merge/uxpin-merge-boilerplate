@@ -27,8 +27,6 @@ module.exports = {
         ],
       },
     ],
-    wrapper: 'src/components/UXPinWrapper/UXPinWrapper.js',
-    webpackConfig: 'webpack.uxpin.config.js',
   },
   name: 'UXPin Merge Boilerplate',
 };
