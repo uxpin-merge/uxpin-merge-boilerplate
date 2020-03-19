@@ -18,6 +18,3 @@ jobs:
       - run:
           name: 'Push to UXPin'
           command: ./node_modules/@uxpin/merge-cli/bin/uxpin-merge push --token "$UXPIN_AUTH_TOKEN"
-      - run:
-          name: 'Push to UXPin Product account'
-          command: ./node_modules/@uxpin/merge-cli/bin/uxpin-merge push --token "$UXPIN_TOKEN_UXPIN_PRODUCT_ACCOUNT"
