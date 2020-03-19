@@ -18,8 +18,8 @@ const propTypes = {
       PropTypes.shape({
         value: PropTypes.number,
       }),
-    ]).isRequired
-  ).isRequired,
+    ])
+  ),
   smooth: PropTypes.bool,
   autoDraw: PropTypes.bool,
   autoDrawDuration: PropTypes.number,
@@ -31,6 +31,7 @@ const propTypes = {
   padding: PropTypes.number,
   radius: PropTypes.number,
   gradient: PropTypes.arrayOf(PropTypes.string),
+  stroke: PropTypes.string,
   strokeWidth: PropTypes.number,
 };
 
