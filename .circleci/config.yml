@@ -20,7 +20,7 @@ jobs:
           command: |
             if [[ "${CIRCLE_BRANCH}" == "master" ]]
             then
-            npm run push ${UXPIN_AUTH_TOKEN} && ${UXPIN_TOKEN_UXPIN_PRODUCT_ACCOUNT}
+            npm run push ${UXPIN_TOKEN_UXPIN_PRODUCT_ACCOUNT} && ${UXPIN_AUTH_TOKEN}  
             else
             echo "On '$CIRCLE_BRANCH' branch - not pushing"
             fi
