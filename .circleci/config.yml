@@ -25,5 +25,5 @@ jobs:
             echo "On '$CIRCLE_BRANCH' branch - not pushing"
             fi
       -run:
-          name: ‘Push to UXPin Product account’
+          name: 'Push to UXPin Product account'
           command: ./node_modules/@uxpin/merge-cli/bin/uxpin-merge push --token “$UXPIN_TOKEN_UXPIN_PRODUCT_ACCOUNT”
