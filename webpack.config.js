@@ -20,7 +20,7 @@ module.exports = {
         loader: 'svg-react-loader',
       },
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         enforce: 'pre',
         loader: 'eslint-loader',
@@ -31,13 +31,30 @@ module.exports = {
       },
       {
         loader: 'babel-loader',
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
       },
       {
         enforce: 'pre',
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         loader: 'source-map-loader',
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 2,
+            },
+          },
+          {
+            loader: 'sass-loader',
+          },
+        ],
       },
     ],
   },
