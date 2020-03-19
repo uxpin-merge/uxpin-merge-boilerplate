@@ -48,10 +48,9 @@ class CameraPreview extends React.Component {
 }
 
 CameraPreview.propTypes = {
-  onClick: PropTypes.func,
-  fileName: PropTypes.string,
-  cameraWidth: PropTypes.number,
   cameraHeight: PropTypes.number,
+  cameraWidth: PropTypes.number,
+  onClick: PropTypes.func,
 };
 
 export default CameraPreview;

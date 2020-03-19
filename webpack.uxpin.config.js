@@ -1,3 +1,4 @@
+/* eslint-disable sort-keys */
 const path = require('path');
 
 module.exports = {

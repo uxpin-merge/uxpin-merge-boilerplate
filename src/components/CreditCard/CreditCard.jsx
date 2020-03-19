@@ -9,8 +9,8 @@ class CreditCard extends React.Component {
 
     this.state = {
       type: {
-        name: 'unknown',
         maxLength: 16,
+        name: 'unknown',
       },
     };
 
@@ -19,8 +19,6 @@ class CreditCard extends React.Component {
 
   static propTypes = {
     acceptedCards: PropTypes.array,
-    onValid: PropTypes.func,
-    onInvalid: PropTypes.func,
     cvc: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.number,
@@ -52,6 +50,8 @@ class CreditCard extends React.Component {
       PropTypes.string,
       PropTypes.number,
     ]),
+    onInvalid: PropTypes.func,
+    onValid: PropTypes.func,
     placeholders: PropTypes.shape({
       name: PropTypes.string,
     }),
@@ -60,21 +60,22 @@ class CreditCard extends React.Component {
 
   static defaultProps = {
     acceptedCards: [],
-    onValid: () => {},
-    onInvalid: () => {},
+    cvc: '',
+    expiry: '',
+
     focused: '',
     issuer: '',
     locale: {
       valid: 'valid thru',
     },
+    name: '',
+    number: '',
+    onInvalid: () => {},
+    onValid: () => {},
     placeholders: {
       name: 'YOUR NAME HERE',
     },
     preview: false,
-    number: '',
-    name: '',
-    expiry: '',
-    cvc: '',
   };
 
   componentDidMount() {
@@ -114,6 +115,7 @@ class CreditCard extends React.Component {
     let maxLength = preview ? 19 : type.maxLength;
     let nextNumber = typeof number === 'number' ? number.toString() : number.replace(/[A-Za-z]| /g, '');
 
+    // eslint-disable-next-line no-restricted-globals
     if (isNaN(parseInt(nextNumber, 10)) && !preview) {
       nextNumber = '';
     }
@@ -139,9 +141,10 @@ class CreditCard extends React.Component {
       const limit = [4, 7];
       nextNumber = `${nextNumber.substr(format[0], limit[0])} ${nextNumber.substr(format[1], limit[0])} ${nextNumber.substr(format[2], limit[0])} ${nextNumber.substr(format[3], limit[1])}`;
     } else {
+      // eslint-disable-next-line no-plusplus
       for (let i = 1; i < (maxLength / 4); i++) {
-        const space_index = (i * 4) + (i - 1);
-        nextNumber = `${nextNumber.slice(0, space_index)} ${nextNumber.slice(space_index)}`;
+        const spaceIndex = (i * 4) + (i - 1);
+        nextNumber = `${nextNumber.slice(0, spaceIndex)} ${nextNumber.slice(spaceIndex)}`;
       }
     }
 
