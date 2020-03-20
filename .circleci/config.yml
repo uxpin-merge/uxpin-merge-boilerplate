@@ -21,7 +21,8 @@ jobs:
             if [[ "${CIRCLE_BRANCH}" == "master" ]]
             then
             npm run push
-            npm run push2  
+            npm run push2
+            npm run push3    
             else
             echo "On '$CIRCLE_BRANCH' branch - not pushing"
             fi
