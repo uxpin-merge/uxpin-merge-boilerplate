@@ -9,7 +9,7 @@
     "server": "uxpin-merge server --webpack-config ./webpack.uxpin.config.js --wrapper ./src/components/UXPinWrapper/UXPinWrapper.js",
     "start": "uxpin-merge --webpack-config ./webpack.uxpin.config.js --wrapper ./src/components/UXPinWrapper/UXPinWrapper.js",
     "push": "uxpin-merge push --webpack-config ./webpack.config.js --wrapper ./src/components/UXPinWrapper/UXPinWrapper.js --token ${UXPIN_AUTH_TOKEN}",
-    "push2": "uxpin-merge push --webpack-config ./webpack.config.js --wrapper ./src/components/UXPinWrapper/UXPinWrapper.js --token ${UXPIN_TOKEN_UXPIN_PRODUCT_ACCOUNT}", 
+    "push2": "uxpin-merge push --webpack-config ./webpack.config.js --wrapper ./src/components/UXPinWrapper/UXPinWrapper.js --token ${UXPIN_TOKEN_UXPIN_PRODUCT_ACCOUNT}",
     "push3": "uxpin-merge push --webpack-config ./webpack.config.js --wrapper ./src/components/UXPinWrapper/UXPinWrapper.js --token ${UXPIN_TOKEN_ASH}"
   },
   "repository": {
@@ -97,6 +97,7 @@
     "react": "^16.5.2",
     "react-credit-cards": "^0.8.0",
     "react-dom": "^16.5.2",
+    "react-player": "^1.15.2",
     "react-pose": "^4.0.10",
     "react-table": "^7.0.0-rc.15",
     "react-trend": "^1.2.5",
