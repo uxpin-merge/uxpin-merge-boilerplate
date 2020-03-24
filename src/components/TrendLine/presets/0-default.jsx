@@ -1,4 +1,6 @@
 import React from 'react';
-import TrendLine from '../index'
+import TrendLine from '../index';
 
-export default <TrendLine />
+export default (
+    <TrendLine />
+  );
