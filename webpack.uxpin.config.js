@@ -1,7 +1,8 @@
+/* eslint-disable sort-keys */
 const path = require('path');
 
 module.exports = {
-  entry: ['./src/index.js'],
+  entry: ['./src/components/index.js'],
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js',
@@ -21,13 +22,30 @@ module.exports = {
       },
       {
         loader: 'babel-loader',
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
       },
       {
         enforce: 'pre',
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         loader: 'source-map-loader',
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 2,
+            },
+          },
+          {
+            loader: 'sass-loader',
+          },
+        ],
       },
     ],
   },
