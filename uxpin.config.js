@@ -15,7 +15,6 @@ module.exports = {
           'src/components/Select/components/SelectItem/SelectItem.js',
           'src/components/Table/Table.js',
           'src/components/TrendLine/TrendLine.js',
-          'src/components/ReactTableEditable/ReactTableEditable.js',
           // 'src/components/SimpleMap/SimpleMap.js',
         ],
       },

@@ -99,7 +99,6 @@
     "react-dom": "^16.5.2",
     "react-player": "^1.15.2",
     "react-pose": "^4.0.10",
-    "react-table": "^7.0.0-rc.15",
     "react-trend": "^1.2.5",
     "react-vis": "^1.11.5",
     "react-webcam": "^5.0.0",
