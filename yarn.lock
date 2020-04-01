@@ -1885,10 +1885,9 @@
     lodash.unescape "4.0.1"
     semver "5.5.0"
 
-"@uxpin/merge-cli@^2.5.0":
-  version "2.5.0"
-  resolved "https://registry.uxpin.pl:4873/@uxpin%2fmerge-cli/-/merge-cli-2.5.0.tgz#5bda829842b42661dcd042747ada6d6d58f110a8"
-  integrity sha512-vMWQSmJnG4wUS8u4vovGH9LQ3vYJ4lyhTXbhrK9pnAbpcAZUi/+yFh+kW70keJNis91X4KiV8UmNKkhKuYx87g==
+"@uxpin/merge-cli@https://registry.npmjs.org/@uxpin/merge-cli/-/merge-cli-2.5.3-dev-26281.tgz":
+  version "2.5.3-dev-26281"
+  resolved "https://registry.npmjs.org/@uxpin/merge-cli/-/merge-cli-2.5.3-dev-26281.tgz#97c96eaf4fd9d71a1944368487f45aeeadb5e24a"
   dependencies:
     "@babel/core" "^7.2.2"
     "@babel/plugin-proposal-class-properties" "^7.2.3"
@@ -1901,6 +1900,7 @@
     clean-stacktrace "^1.1.0"
     clean-stacktrace-relative-paths "^1.0.4"
     colors "^1.1.2"
+    commander "^2.11.0"
     formidable "^1.2.1"
     fs-extra "^7.0.0"
     globby "^8.0.1"

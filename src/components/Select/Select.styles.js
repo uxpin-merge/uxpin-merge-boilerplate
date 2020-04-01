@@ -17,7 +17,7 @@ const getWidth = (width) => {
 };
 
 const SelectContainerStyles = styled('div')`
-    width: ${(props) => (props.stretched ? '100%' : 'auto')};
+    width: ${(props) => getWidth(props.width)};
     font-family: ${typography.fontFamily};
     font-weight: normal;
     font-size: ${typography.size.l}px;
