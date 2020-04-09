@@ -14,7 +14,7 @@ export default class TextField extends PureComponent {
 
   static defaultProps = {
     width: 'stretched',
-    onClick: () => void(0),
+    onChange: () => void(0),
     value: '',
   };
 
