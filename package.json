@@ -8,9 +8,7 @@
     "test": "jest",
     "server": "uxpin-merge server --webpack-config ./webpack.uxpin.config.js --wrapper ./src/components/UXPinWrapper/UXPinWrapper.js",
     "start": "uxpin-merge --webpack-config ./webpack.uxpin.config.js --wrapper ./src/components/UXPinWrapper/UXPinWrapper.js",
-    "push": "uxpin-merge push --webpack-config ./webpack.config.js --wrapper ./src/components/UXPinWrapper/UXPinWrapper.js --token ${UXPIN_AUTH_TOKEN}",
-    "push2": "uxpin-merge push --webpack-config ./webpack.config.js --wrapper ./src/components/UXPinWrapper/UXPinWrapper.js --token ${UXPIN_TOKEN_UXPIN_PRODUCT_ACCOUNT}",
-    "push3": "uxpin-merge push --webpack-config ./webpack.config.js --wrapper ./src/components/UXPinWrapper/UXPinWrapper.js --token ${UXPIN_TOKEN_ASH}"
+    "push": "uxpin-merge push --webpack-config ./webpack.config.js --wrapper ./src/components/UXPinWrapper/UXPinWrapper.js --token ${UXPIN_AUTH_TOKEN}"
   },
   "repository": {
     "type": "git",
