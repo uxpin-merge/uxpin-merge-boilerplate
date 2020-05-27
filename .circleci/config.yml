@@ -16,11 +16,5 @@ jobs:
           name: 'Test'
           command: npm run test
       - run:
-          name: 'Push to UXPin if branch is master'
-          command: |
-            if [[ "${CIRCLE_BRANCH}" == "master" ]]
-            then
-            npm run push
-            else
-            echo "On '$CIRCLE_BRANCH' branch - not pushing"
-            fi
+          name: 'Push to UXPin'
+          command: npm run push
