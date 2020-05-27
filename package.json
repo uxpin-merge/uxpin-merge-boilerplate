@@ -41,7 +41,7 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/traverse": "^7.5.5",
     "@babel/types": "^7.5.5",
-    "@uxpin/merge-cli": "https://registry.npmjs.org/@uxpin/merge-cli/-/merge-cli-2.5.3-dev-26281.tgz",
+    "@uxpin/merge-cli": "2.6.1",
     "autoprefixer": "^9.7.4",
     "babel-eslint": "^10.0.2",
     "babel-loader": "^8.0.4",
