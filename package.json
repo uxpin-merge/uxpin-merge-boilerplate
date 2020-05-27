@@ -8,7 +8,7 @@
     "test": "jest",
     "server": "uxpin-merge server",
     "start": "uxpin-merge",
-    "push": "uxpin-merge push --token ${UXPIN_AUTH_TOKEN}"
+    "push": "uxpin-merge push"
   },
   "repository": {
     "type": "git",
