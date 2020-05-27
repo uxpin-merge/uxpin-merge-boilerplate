@@ -22,7 +22,7 @@ module.exports = {
           'src/components/Select/Select.js',
           'src/components/Select/components/SelectItem/SelectItem.js',
           'src/components/TextField/TextField.jsx',
-        ]
+        ],
       },
       {
         name: 'Charts',
