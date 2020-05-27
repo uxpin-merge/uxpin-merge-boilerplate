@@ -6,7 +6,7 @@ module.exports = {
         name: 'General',
         include: [
           'src/components/Camera/Camera.js',
-          //'src/components/CreditCard/CreditCard.jsx',
+          'src/components/CreditCard/CreditCard.jsx',
           'src/components/Greeting/Greeting.js',
           'src/components/Icon/Icon.js',
           'src/components/MediaPlayer/MediaPlayer.js',
