@@ -15,7 +15,7 @@ const getWidth = (width) => {
   return `${width}px`;
 };
 
-export const StyledInput = styled.input`
+export default styled.input`
     border-width: 0px;
     padding: 3px;
     border-bottom: 1px solid ${colors.silver.dark20};

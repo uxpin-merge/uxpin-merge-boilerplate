@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { StyledInput } from './TextField.styles';
+import StyledInput from './TextField.styles';
 
 export default class TextField extends PureComponent {
   static propTypes = {
@@ -14,11 +14,11 @@ export default class TextField extends PureComponent {
 
   static defaultProps = {
     width: 'stretched',
-    onChange: () => void(0),
+    onChange: () => undefined,
     value: '',
   };
 
   render() {
-    return (<StyledInput {...this.props} type='text' />);
+    return (<StyledInput {...this.props} type="text" />);
   }
 }
