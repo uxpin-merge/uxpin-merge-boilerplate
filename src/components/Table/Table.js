@@ -14,6 +14,13 @@ import {
 } from './Table.styles';
 
 export default class Table extends React.Component {
+  static getDerivedStateFromProps(props) {
+    return {
+      body: props.data.body,
+      header: props.data.header,
+    };
+  }
+
   constructor(props) {
     super(props);
     this.state = {
