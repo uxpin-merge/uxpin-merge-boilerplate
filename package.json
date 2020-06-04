@@ -8,7 +8,7 @@
     "test": "jest",
     "server": "uxpin-merge server",
     "start": "uxpin-merge",
-    "push": "uxpin-merge push"
+    "push": "uxpin-merge push --uxpin-domain 27441removepropcalltriggers.uxpin.pl --token b992b63615576bbfba83008880b082c1a5da6443"
   },
   "repository": {
     "type": "git",
@@ -41,7 +41,7 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/traverse": "^7.5.5",
     "@babel/types": "^7.5.5",
-    "@uxpin/merge-cli": "2.6.1-dev-27471",
+    "@uxpin/merge-cli": "2.6.1",
     "autoprefixer": "^9.7.4",
     "babel-eslint": "^10.0.2",
     "babel-loader": "^8.0.4",
