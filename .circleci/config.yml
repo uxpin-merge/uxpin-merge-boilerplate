@@ -1,4 +1,11 @@
-version: 2
+version: 2.1
+
+workflows:
+  default:
+    jobs:
+      - build:
+          context: "Boilerplate library"
+
 jobs:
   build:
     docker:
