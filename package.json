@@ -8,7 +8,7 @@
     "test": "jest",
     "server": "uxpin-merge server",
     "start": "uxpin-merge",
-    "push": "uxpin-merge push --uxpin-domain 27441removepropcalltriggers.uxpin.pl --token b992b63615576bbfba83008880b082c1a5da6443"
+    "push": "uxpin-merge push"
   },
   "repository": {
     "type": "git",
