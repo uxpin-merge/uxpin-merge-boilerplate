@@ -42,7 +42,6 @@ const defaultProps = {
   autoDraw: true,
   autoDrawDuration: 1600,
   autoDrawEasing: 'ease-out',
-  // eslint-disable-next-line react/default-props-match-prop-types
   gradient: ['#00c6ff', '#F0F', '#FF0'],
 };
 
