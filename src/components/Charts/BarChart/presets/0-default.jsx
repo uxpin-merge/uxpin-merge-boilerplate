@@ -30,7 +30,7 @@ export default (
   <BarChart
     animation="wobbly"
     color="black"
-    fill="blue"
+    fill="green"
     data={chartData}
     height={300}
     hint
