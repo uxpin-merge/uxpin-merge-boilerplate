@@ -8,7 +8,7 @@
     "test": "jest",
     "server": "uxpin-merge server",
     "start": "uxpin-merge --disable-tunneling",
-    "push": "uxpin-merge push --token 714d6e814f5b4a405133da99698d01907f748aeb --uxpin-domain=uxpin.dev"
+    "push": "uxpin-merge push --token f25ee4ec772196f9119340067b299ad9fca3ec86 --webpack-config ./webpack.uxpin.config.js --uxpin-domain=uxpin.dev"
   },
   "repository": {
     "type": "git",

@@ -24,14 +24,14 @@ module.exports = {
           'src/components/Select/components/SelectItem/SelectItem.js',
         ],
       },
-      {
-        name: 'Charts',
-        include: [
-          'src/components/Charts/**/*.js',
-          '!src/components/Charts/**/*.styles.js',
-          '!src/components/Charts/**/__tests__/*.js',
-        ],
-      },
+      // {
+      //   name: 'Charts',
+      //   include: [
+      //     'src/components/Charts/**/*.js',
+      //     '!src/components/Charts/**/*.styles.js',
+      //     '!src/components/Charts/**/__tests__/*.js',
+      //   ],
+      // },
     ],
     wrapper: './src/components/UXPinWrapper/UXPinWrapper.js',
     webpackConfig: './webpack.uxpin.config.js',
