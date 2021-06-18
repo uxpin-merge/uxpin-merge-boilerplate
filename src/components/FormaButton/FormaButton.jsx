@@ -156,7 +156,7 @@ FormaButton.propTypes = {
   label: PropTypes.string,
   /**
   * Below we change prop name in UXPin
-  * @uxpinpropname  variant
+  * @uxpinpropname  Variant
   * */
   buttonType: PropTypes.oneOf(["primary", "secondary", "positive", "negative"]),
   size: PropTypes.oneOf(["small", "medium", "large"]),
