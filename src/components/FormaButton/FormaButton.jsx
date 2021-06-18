@@ -13,11 +13,15 @@ const FormaButton = (props) => (
 FormaButton.propTypes = {
   label: PropTypes.string,
 
+  disabled: PropTypes.disabled,
+
   /**
    * The variant of the button
    * @uxpinpropname  variant
    * */
   buttonType: PropTypes.oneOf(["negative", "positive", "primary", "secondary", "warning"]),
+
+  size: PropTypes.oneOf(["large", "small"]),
 
   icon: PropTypes.oneOf(["Star", "Asset", "Calendar", "ArrowUp", "ChevronRight"]),
 
@@ -28,7 +32,8 @@ FormaButton.propTypes = {
 
 FormaButton.defaultProps = {
   label: "Button",
-  buttonType:"primary",
+  buttonType: "primary",
+  size: "default",
   onChange: () => undefined
 };
 

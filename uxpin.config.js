@@ -5,8 +5,12 @@ module.exports = {
       {
         name: 'General',
         include: [
+          'src/components/FormaAsset/FormaAsset.jsx',
           'src/components/FormaButton/FormaButton.jsx',
+          'src/components/FormaIcons/FormaIcons.jsx',
+          'src/components/FormaSpinner/FormaSpinner.jsx',
           'src/components/FormaTabs/FormaTabs.jsx',
+          'src/components/FormaValidationMessage/FormaValidationMessage.jsx',
           'src/components/Workbench/Workbench.jsx',
           'src/components/WorkbenchHeader/WorkbenchHeader.jsx',
 
