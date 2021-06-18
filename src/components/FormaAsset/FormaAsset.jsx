@@ -9,22 +9,30 @@ const FormaAsset = (props) => (
 
 
 FormaAsset.propTypes = {
-  src: PropTypes.string,
-
-  status: PropTypes.oneOf(["archived", "published", "draft", "changed", "deleted"]),
-
-  title: PropTypes.string,
-
+  /**
+  * The type of asset being represented
+  */
   type: PropTypes.oneOf(["audio", "code", "video", "image", "archive", "markup", "pdf", "plaintext"]),
+  /**
+  * The title of the asset
+  */
+  title: PropTypes.string,
+  /**
+  * The publish status of the asset
+  */
+  status: PropTypes.oneOf(["archived", "published", "draft", "changed", "deleted"]),
+  /**
+  * A src attribute to use for image assets
+  */
+  src: PropTypes.string,
 };
 
 
-
 FormaAsset.defaultProps = {
-  src: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg",
-  status: "published",
+  type: "image",
   title: "A published asset",
-  type: "image"
+  status: "published",
+  src: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg",
 };
 
 export { FormaAsset as default };
