@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-	 xml:space="preserve"
-	 id="stroke-end-butt"
-	 x="0px" y="0px"
-	 width="9" height="14"
-	 viewBox="0 0 9 14">
-	<path d="M9,1H1v4H0v3h1v4h8v-1H2V8h1V7h1V6H3V5H2V2h7V1z M2,7H1V6h1V7z M5,6h1v1H5V6z M7,6h1v1H7V6z"/>
-</svg>

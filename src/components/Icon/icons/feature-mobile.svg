@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-	 xml:space="preserve"
-	 x="0px" y="0px"
-	 width="10px" height="14px"
-	 viewBox="0 0 10 14">
-	<path d="M9,1v12H1V1H9 M10,0H0v14h10V0L10,0z"/>
-	<rect x="4" y="10" width="2" height="2"/>
-</svg>

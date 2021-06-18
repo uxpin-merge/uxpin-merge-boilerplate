@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-	xml:space="preserve"
-	id="icon-elements-slice"
-	x="0px" y="0px"
-	width="14" height="14"
-	viewBox="0 0 14 14">
-	<path d="M8,14h2V13H8ZM4,14H6V13H4ZM14,4H13V6h1Zm0,4H13v2h1Zm-1,4v1H12v1h2V12ZM12,1h1V2h1V0H12ZM1.55,1.36l0,0h0l2.07,2.1c.12.13.12.24,0,.45l-.54.91a.47.47,0,0,0,0,.67L4.6,7.06A6.38,6.38,0,0,0,9.11,9h1.27a.16.16,0,0,0,.12-.27L2.47.54h0A.61.61,0,0,0,1.66.49.62.62,0,0,0,1.55,1.36ZM10,0H8V1h2ZM0,10H1V8H0Zm2,3H1V12H0v2H2Z"/>
-</svg>

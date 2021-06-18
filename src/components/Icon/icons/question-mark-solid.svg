@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-     xml:space="preserve"
-     id="icon-question-mark-solid"
-     x="0px" y="0px"
-     width="14" height="14"
-     viewBox="0 0 14 14">
-    <path d="M7,0a7,7,0,1,0,7,7A7,7,0,0,0,7,0ZM7,11.67H5.84V10.5H7Zm.84-3.79C7.13,8.22,7,8.45,7,9.33H5.83a2.36,2.36,0,0,1,1.5-2.5c.74-.36,1.42-.8,1.42-1.58a1.75,1.75,0,0,0-3.5,0H4.08a2.92,2.92,0,0,1,5.84,0A3.08,3.08,0,0,1,7.84,7.88Z"/>
-</svg>

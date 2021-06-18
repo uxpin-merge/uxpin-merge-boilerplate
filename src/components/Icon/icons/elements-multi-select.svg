@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-	xml:space="preserve"
-	id="icon-elements-multi-select"
-	x="0px" y="0px"
-	width="14" height="14"
-	viewBox="0 0 14 14">
-	<path d="M0,10H14v1H0Zm0,4H14V13H0ZM0,5H14V8H0ZM1,7H13V6H1ZM14,0V3H0V0ZM13,1H1V2H13Z"/>
-</svg>

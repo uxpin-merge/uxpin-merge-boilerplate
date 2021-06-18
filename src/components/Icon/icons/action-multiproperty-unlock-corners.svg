@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-	 xml:space="preserve"
-	 id="action-multiproperty-unlock-corners"
-	 x="0px" y="0px"
-	 width="14" height="14"
-	 viewBox="0 0 14 14">
-	<path d="M8.8,14v-1.8h3.5V8.8H14V14H8.8z M0,14V8.8h1.8v3.5h3.5V14H0z M12.2,5.2V1.8H8.8V0H14v5.2H12.2z M0,5.2V0h5.2v1.8H1.8v3.5H0z"/>
-</svg>

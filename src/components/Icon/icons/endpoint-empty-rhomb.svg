@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-	 xml:space="preserve"
-	 id="endpoint-empty-rhomb"
-	 x="0px" y="0px"
-	 width="30" height="14"
-	 viewBox="0 0 30 14">
-	<path d="M30,6H6.5l-3-3L0,6.5,3.5,10l3-3H30ZM3.5,8.59,1.41,6.5,3.5,4.41,5.59,6.5Z"/>
-</svg>
