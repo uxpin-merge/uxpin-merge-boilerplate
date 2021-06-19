@@ -180,7 +180,7 @@ FormaButton.defaultProps = {
   label: "Button",
   buttonType: "primary",
   size: "medium",
-  icon:"",
+  icon: null,
   onChange: () => undefined
 };
 
