@@ -7,7 +7,9 @@ module.exports = {
         include: [
           'src/components/FormaAsset/FormaAsset.jsx',
           'src/components/FormaButton/FormaButton.jsx',
+          'src/components/FormaCopyButton/FormaCopyButton.jsx',
           'src/components/FormaIcons/FormaIcons.jsx',
+          'src/components/FormaPill/FormaPill.jsx',
           'src/components/FormaSpinner/FormaSpinner.jsx',
           'src/components/FormaTabs/FormaTabs.jsx',
           'src/components/FormaValidationMessage/FormaValidationMessage.jsx',
