@@ -12,6 +12,7 @@ module.exports = {
           'src/components/FormaPill/FormaPill.jsx',
           'src/components/FormaSpinner/FormaSpinner.jsx',
           'src/components/FormaTabs/FormaTabs.jsx',
+          'src/components/FormaTextLink/FormaTextLink.jsx',
           'src/components/FormaValidationMessage/FormaValidationMessage.jsx',
           'src/components/Workbench/Workbench.jsx',
           'src/components/WorkbenchHeader/WorkbenchHeader.jsx',
