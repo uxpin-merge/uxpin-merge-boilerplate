@@ -199,8 +199,6 @@ FormaTextLink.propTypes = {
 
 };
 
-
-
 FormaTextLink.defaultProps = {
   text: "I am a text link",
   onClick: () => undefined
