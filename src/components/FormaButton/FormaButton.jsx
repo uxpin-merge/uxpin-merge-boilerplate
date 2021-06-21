@@ -1,8 +1,150 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
 import { Button } from '@contentful/forma-36-react-components';
-
-
+const buttonIcons =[
+  'Heading',
+     'ArrowDown',
+     'ArrowDownTrimmed',
+     'ArrowUp',
+     'ArrowUpTrimmed',
+     'Asset',
+     'AssetTrimmed',
+     'Calendar',
+     'ChatBubble',
+     'ChatBubbleTrimmed',
+     'CheckCircle',
+     'CheckCircleTrimmed',
+     'ChevronDown',
+     'ChevronDownTrimmed',
+     'ChevronLeft',
+     'ChevronLeftTrimmed',
+     'ChevronRight',
+     'ChevronRightTrimmed',
+     'ChevronUp',
+     'ChevronUpTrimmed',
+     'Clock',
+     'ClockTrimmed',
+     'Close',
+     'CloseTrimmed',
+     'CloudUpload',
+     'Code',
+     'CodeTrimmed',
+     'Copy',
+     'CopyTrimmed',
+     'Cycle',
+     'CycleTrimmed',
+     'Delete',
+     'DeleteTrimmed',
+     'Done',
+     'DoubleArrow',
+     'Download',
+     'DownloadTrimmed',
+     'Drag',
+     'DragTrimmed',
+     'Edit',
+     'EditTrimmed',
+     'EmbeddedEntryBlock',
+     'EmbeddedEntryBlockTrimmed',
+     'EmbeddedEntryInline',
+     'EmbeddedEntryInlineTrimmed',
+     'Entry',
+     'EntryTrimmed',
+     'Environment',
+     'EnvironmentAlias',
+     'ErrorCircle',
+     'ErrorCircleOutline',
+     'ErrorCircleTrimmed',
+     'ExternalLink',
+     'ExternalLinkTrimmed',
+     'FaceHappy',
+     'FaceHappyTrimmed',
+     'Filter',
+     'FilterTrimmed',
+     'Folder',
+     'FolderCreate',
+     'FolderCreateTrimmed',
+     'FolderOpen',
+     'FolderOpenTrimmed',
+     'FolderTrimmed',
+     'FormatBold',
+     'FormatBoldTrimmed',
+     'FormatItalic',
+     'FormatItalicTrimmed',
+     'FormatUnderlined',
+     'FormatUnderlinedTrimmed',
+     'Gift',
+     'HeadingOne',
+     'HeadingOneTrimmed',
+     'HeadingTrimmed',
+     'HeadingTwo',
+     'HeadingTwoTrimmed',
+     'HelpCircle',
+     'HelpCircleInverted',
+     'HelpCircleTrimmed',
+     'HorizontalRule',
+     'HorizontalRuleTrimmed',
+     'InfoCircle',
+     'InfoCircleTrimmed',
+     'Language',
+     'Link',
+     'LinkAlternate',
+     'LinkTrimmed',
+     'ListBulleted',
+     'ListBulletedTrimmed',
+     'ListNumbered',
+     'ListNumberedTrimmed',
+     'Lock',
+     'LockTrimmed',
+     'Logout',
+     'LooksOne',
+     'LooksOneTrimmed',
+     'LooksTwo',
+     'LooksTwoTrimmed',
+     'Menu',
+     'MenuTrimmed',
+     'Minus',
+     'MoreHorizontal',
+     'MoreHorizontalTrimmed',
+     'MoreVertical',
+     'MoreVerticalTrimmed',
+     'Person',
+     'Plus',
+     'PlusCircle',
+     'PlusCircleTrimmed',
+     'PlusTrimmed',
+     'Preview',
+     'Quote',
+     'QuoteTrimmed',
+     'Receipt',
+     'ReceiptTrimmed',
+     'References',
+     'Release',
+     'ReleaseTrimmed',
+     'Search',
+     'SearchTrimmed',
+     'Settings',
+     'SettingsTrimmed',
+     'ShoppingCart',
+     'ShoppingCartTrimmed',
+     'Star',
+     'StarTrimmed',
+     'Subscript',
+     'SubscriptTrimmed',
+     'Superscript',
+     'SuperscriptTrimmed',
+     'Tags',
+     'Text',
+     'TextTrimmed',
+     'ThumbDown',
+     'ThumbDownTrimmed',
+     'ThumbUp',
+     'ThumbUpTrimmed',
+     'Users',
+     'UsersTrimmed',
+     'Warning',
+     'WarningTrimmed',
+     'Workflows'
+]
 const FormaButton = (props) => (
   <Button {...props}>
     {props.label}
@@ -12,28 +154,33 @@ const FormaButton = (props) => (
 
 FormaButton.propTypes = {
   label: PropTypes.string,
-
-  disabled: PropTypes.disabled,
-
   /**
-   * The variant of the button
-   * @uxpinpropname  variant
-   * */
-  buttonType: PropTypes.oneOf(["negative", "positive", "primary", "secondary", "warning"]),
-
-  size: PropTypes.oneOf(["large", "small"]),
-
-  icon: PropTypes.oneOf(["Star", "Asset", "Calendar", "ArrowUp", "ChevronRight"]),
-
-  onClick: PropTypes.func
+  * Below we change prop name in UXPin
+  * @uxpinpropname  Variant
+  * */
+  buttonType: PropTypes.oneOf(["primary", "secondary", "positive", "negative"]),
+  size: PropTypes.oneOf(["small", "medium", "large"]),
+  icon: PropTypes.oneOf(buttonIcons),
+  href: PropTypes.string,
+  target: PropTypes.string,
+  isFullWidth: PropTypes.bool,
+  loading: PropTypes.bool,
+  disabled: PropTypes.bool,
+  /**
+  * Below we change prop name in UXPin
+  * @uxpinpropname  Dropdown
+  * */
+  indicateDropdown: PropTypes.bool,
+  onClick: PropTypes.func,
+  onBlur: PropTypes.func,
 };
-
 
 
 FormaButton.defaultProps = {
   label: "Button",
   buttonType: "primary",
-  size: "default",
+  size: "medium",
+  icon: null,
   onChange: () => undefined
 };
 
@@ -43,60 +190,3 @@ export { FormaButton as default };
 
 
 
-// /**
-//  * Determines size variation of Button component
-//  * @default medium
-//  */
-// size?: ButtonSize;
-// /**
-//  * Applies active styles
-//  * @default false
-//  */
-// isActive?: boolean;
-// /**
-//  * Disabled interaction and applies disabled styles
-//  * @default false
-//  */
-// disabled?: boolean;
-// /**
-//  * Button html type attribute
-//  */
-// type?: 'submit' | 'button' | 'reset';
-// /**
-//  * Adds dropdown indicator icon
-//  */
-// isDropdown?: boolean;
-// /**
-//  * Expects any of the icon components
-//  */
-// /** @uxpinignoreprop */
-// icon?: IconComponent;
-// /**
-//  * Adds loading indicator icon and disables interactions
-//  */
-// isLoading?: boolean;
-// /**
-//  * Forces button to take 100% of the container
-//  */
-// isFullWidth?: boolean;
-// /**
-//  * Test id
-//  */
-// /** @uxpinignoreprop */
-// testId?: string;
-// /**
-//  * Adds onClick function
-//  */
-// onClick?: () => void;
-// /**
-//  * Type of Icon
-//  */
-// iconName?: 'Menu' | 'ArrowDown' | 'ArrowUp';
-// iconSize?: 'large' | 'medium' | 'small' | 'tiny';
-// iconVariant?:
-//   | 'negative'
-//   | 'positive'
-//   | 'primary'
-//   | 'secondary'
-//   | 'warning'
-//   | 'white';

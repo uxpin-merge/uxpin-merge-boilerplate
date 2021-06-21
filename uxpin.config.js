@@ -15,6 +15,8 @@ module.exports = {
           'src/components/FormaValidationMessage/FormaValidationMessage.jsx',
           'src/components/Workbench/Workbench.jsx',
           'src/components/WorkbenchHeader/WorkbenchHeader.jsx',
+          'src/components/TextField/TextField.jsx',
+          'src/components/Note/Note.jsx',
 
         ],
       },
