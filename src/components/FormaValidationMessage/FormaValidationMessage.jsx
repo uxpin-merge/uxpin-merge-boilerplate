@@ -8,14 +8,14 @@ const FormaValidationMessage = (props) => (
 
 FormaValidationMessage.propTypes = {
   /**
-   * The variant of the button
-   * @uxpinpropname  text
+   * The validation message to be displayed
+   * @uxpinpropname  Text
    * */
   validationMessageText: PropTypes.string,
 };
 
 FormaValidationMessage.defaultProps = {
-  validationMessageText: "Validation Message Text"
+  validationMessageText: "Name is a required field"
 };
 
 export { FormaValidationMessage as default };
