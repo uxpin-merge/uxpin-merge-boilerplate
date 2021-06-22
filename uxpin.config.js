@@ -5,6 +5,13 @@ module.exports = {
       {
         name: 'General',
         include: [
+          'src/components/FormaTypography/FormaTypography.jsx',
+          'src/components/FormaDisplayText/FormaDisplayText.jsx',
+          'src/components/FormaHeading/FormaHeading.jsx',
+          'src/components/FormaSectionHeading/FormaSectionHeading.jsx',
+          'src/components/FormaSubheading/FormaSubheading.jsx',
+          'src/components/FormaParagraph/FormaParagraph.jsx',
+
           'src/components/FormaAsset/FormaAsset.jsx',
           'src/components/FormaButton/FormaButton.jsx',
           'src/components/FormaCheckbox/FormaCheckbox.jsx',
@@ -28,7 +35,6 @@ module.exports = {
           'src/components/TextField/TextField.jsx',
           'src/components/Note/Note.jsx',
           'src/components/Tag/Tag.jsx',
-
         ],
       },
     ],
