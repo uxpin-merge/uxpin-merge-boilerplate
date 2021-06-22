@@ -1,21 +1,33 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
 import { Tag } from '@contentful/forma-36-react-components';
+
 const FormaTag = (props) => (
   <Tag {...props}>
-    {props.tagText}
+    {props.children}
   </Tag>
 );
-  FormaTag.propTypes = {
-    tagType: PropTypes.oneOf(["primary", "primary-filled", "positive", "negative", "warning", "secondary", "featured", "muted"]),
-    size: PropTypes.oneOf(["small", "default"]),
-    tagText: PropTypes.string,
+
+FormaTag.propTypes = {
+  /**
+ * The text of the Tag
+ * @uxpinpropname  Text
+ */
+  children: PropTypes.string,
+  /**
+ * The Tag type  
+ */
+  tagType: PropTypes.oneOf(["primary", "primary-filled", "positive", "negative", "warning", "secondary", "featured", "muted"]),
+  /**
+* The size of the Tag  
+*/
+  size: PropTypes.oneOf(["small", "default"]),
 };
 
-  FormaTag.defaultProps = {
-    tagText: "published",
-    tagType: "primary",
-    size: "default",
+FormaTag.defaultProps = {
+  children: "published",
+  tagType: "primary",
+  size: "default",
 };
 
 export { FormaTag as default };

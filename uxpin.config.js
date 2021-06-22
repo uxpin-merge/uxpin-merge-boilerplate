@@ -11,7 +11,6 @@ module.exports = {
           'src/components/FormaSectionHeading/FormaSectionHeading.jsx',
           'src/components/FormaSubheading/FormaSubheading.jsx',
           'src/components/FormaParagraph/FormaParagraph.jsx',
-
           'src/components/FormaAsset/FormaAsset.jsx',
           'src/components/FormaButton/FormaButton.jsx',
           'src/components/FormaCheckbox/FormaCheckbox.jsx',
@@ -35,6 +34,7 @@ module.exports = {
           'src/components/TextField/TextField.jsx',
           'src/components/Note/Note.jsx',
           'src/components/Tag/Tag.jsx',
+          'src/components/FormaTooltip/FormaTooltip.jsx',
         ],
       },
     ],
