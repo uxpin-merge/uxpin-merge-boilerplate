@@ -9,13 +9,27 @@ const FormaCopyButton = (props) => (
 
 
 FormaCopyButton.propTypes = {
-  tooltipText: PropTypes.node,
+  tooltipText: PropTypes.string,
 
-  tooltipCopiedText: PropTypes.node,
+  tooltipCopiedText: PropTypes.string,
 
   copyValue: PropTypes.string,
 
-  tooltipPlace: PropTypes.oneOf(["left", "right"]),
+  tooltipPlace: PropTypes.oneOf(["left",
+    "right",
+    "auto",
+    "auto-start",
+    "auto-end",
+    "top",
+    "bottom",
+    "top-start",
+    "top-end",
+    "bottom-start",
+    "bottom-end",
+    "right-start",
+    "right-end",
+    "left-start",
+    "left-end"]),
 
   onCopy: PropTypes.func,
 };
@@ -24,9 +38,9 @@ FormaCopyButton.propTypes = {
 
 FormaCopyButton.defaultProps = {
   tooltipText: "Copy to clipboard",
+  tooltipPlace: "top",
   tooltipCopiedText: "Copied!",
   copyValue: "Loren Ipsum",
-  tooltipPlace: "left",
 };
 
 export { FormaCopyButton as default };
