@@ -26,6 +26,7 @@ module.exports = {
           'src/components/WorkbenchHeader/WorkbenchHeader.jsx',
           'src/components/TextField/TextField.jsx',
           'src/components/Note/Note.jsx',
+          'src/components/Tag/Tag.jsx',
 
         ],
       },
