@@ -27,12 +27,8 @@ module.exports = {
           'src/components/WorkbenchHeader/WorkbenchHeader.jsx',
           'src/components/TextField/TextField.jsx',
           'src/components/Note/Note.jsx',
-<<<<<<< HEAD
-          'src/components/FormaTooltip/FormaTooltip.jsx',
-=======
           'src/components/Tag/Tag.jsx',
-
->>>>>>> 4ad81da7ae5273c8abe4fee3b734283a4d66fd19
+          'src/components/Tooltip/Tooltip.jsx',
         ],
       },
     ],
