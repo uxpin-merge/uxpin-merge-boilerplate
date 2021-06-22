@@ -12,6 +12,7 @@ module.exports = {
           'src/components/FormaDropdown/FormaDropdown.jsx',
           'src/components/FormaDropdownList/FormaDropdownlist.jsx',
           'src/components/FormaDropdownListItem/FormaDropDownListItem.jsx',
+          'src/components/FormaEntityListItem/FormaEntityListItem.jsx',
           'src/components/FormaIcons/FormaIcons.jsx',
           'src/components/FormaIllustration/FormaIllustration.jsx',
           'src/components/FormaPill/FormaPill.jsx',
@@ -26,7 +27,12 @@ module.exports = {
           'src/components/WorkbenchHeader/WorkbenchHeader.jsx',
           'src/components/TextField/TextField.jsx',
           'src/components/Note/Note.jsx',
+<<<<<<< HEAD
           'src/components/FormaTooltip/FormaTooltip.jsx',
+=======
+          'src/components/Tag/Tag.jsx',
+
+>>>>>>> 4ad81da7ae5273c8abe4fee3b734283a4d66fd19
         ],
       },
     ],
