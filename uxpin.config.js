@@ -12,6 +12,7 @@ module.exports = {
           'src/components/FormaDropdown/FormaDropdown.jsx',
           'src/components/FormaDropdownList/FormaDropdownlist.jsx',
           'src/components/FormaDropdownListItem/FormaDropDownListItem.jsx',
+          'src/components/FormaEntityListItem/FormaEntityListItem.jsx',
           'src/components/FormaIcons/FormaIcons.jsx',
           'src/components/FormaIllustration/FormaIllustration.jsx',
           'src/components/FormaPill/FormaPill.jsx',
