@@ -28,7 +28,7 @@ module.exports = {
           'src/components/TextField/TextField.jsx',
           'src/components/Note/Note.jsx',
           'src/components/Tag/Tag.jsx',
-          'src/components/Tooltip/Tooltip.jsx',
+          'src/components/FormaTooltip/FormaTooltip.jsx',
         ],
       },
     ],
