@@ -3,43 +3,88 @@ import * as React from 'react';
 import { DropdownListItem } from '@contentful/forma-36-react-components';
 
 
-const FormaDropdownListItem = (props) => (
-  <DropdownListItem {...props} />
-);
+const FormaDropdownListItem = (props) => {
+  const { onClick, onMouseDown, onFocus, onLeave, onEnter, ...other } = props;
+
+  return (
+
+
+    <DropdownListItem {...props.isTitle
+      // If closeable prop = true
+      ? { ...other }
+      //else
+      : { ...props }}>{props.children}</DropdownListItem>
+  )
+}
 
 
 FormaDropdownListItem.propTypes = {
-  DropdownListItemText: PropTypes.string,
+  /**
+   * The text of the dropdown list item
+  * @uxpinpropname Text
+  */
   children: PropTypes.string,
 
-  isDisabled: PropTypes.bool,
+  /**
+    * @uxpinignoreprop
+    */
+  listItemRef: PropTypes.shape({ current: PropTypes.instanceOf(HTMLElement) }),
 
-  listItemRef: PropTypes.shape({ current: PropTypes.instanceOf(HTMLElement)}),
-
-  isActive: PropTypes.bool,
-
+  /**
+   * If checked, text will render as title
+  */
   isTitle: PropTypes.bool,
 
-  onClick: PropTypes.func,
+  /**
+  * If checked, item will be set to active
+  */
+  isActive: PropTypes.bool,
 
-  onMouseDown: PropTypes.func,
+  /**
+  * If checked, item will be set to disable
+  */
+  isDisabled: PropTypes.bool,
 
-  submenuToggleLabel: PropTypes.string,
-
+  /**
+   * A URL link when clicked.
+   */
   href: PropTypes.string,
 
+  /**
+   * Function fired when clicked.
+   */
+  onClick: PropTypes.func,
+
+  /**
+   * Function fired when mouse is pressed.
+   */
+  onMouseDown: PropTypes.func,
+
+  /**
+    * @uxpinignoreprop
+    */
+  submenuToggleLabel: PropTypes.string,
+
+  /**
+    * @uxpinignoreprop
+    */
   onFocus: PropTypes.func,
 
+  /**
+    * @uxpinignoreprop
+    */
   onLeave: PropTypes.func,
 
+  /**
+    * @uxpinignoreprop
+    */
   onEnter: PropTypes.func,
 };
 
 
-
 FormaDropdownListItem.defaultProps = {
-  DropdownListItemText: "Test text",
-  children: "Test text",
+
+children: "I am a dropdown list item jack"
 };
 
 export { FormaDropdownListItem as default };
