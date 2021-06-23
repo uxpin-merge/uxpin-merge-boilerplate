@@ -35,8 +35,9 @@ module.exports = {
           'src/components/FormaNote/FormaNote.jsx',
           'src/components/FormaTag/FormaTag.jsx',
           'src/components/FormaTooltip/FormaTooltip.jsx',
-          'src/components/FormaGrid/FormaGrid.jsx',
+          // 'src/components/FormaGrid/FormaGrid.jsx',
           // 'src/components/FormaGridItem/FormaGridItem.jsx',
+          'src/components/FormaRadioButtonField/FormaRadioButtonField.jsx',
 
         ],
       },
