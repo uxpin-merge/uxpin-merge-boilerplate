@@ -11,10 +11,11 @@ const dropDownElement =
   </DropdownList>;
 
 function FormaEntityListItem(props) {
-  const { dropDownActive, ...other } = props;
+  const { cardDragHandlePropTypes, dropDownActive, ...other } = props;
   return (
     <EntityListItem
       {...other} 
+      cardDragHandleProptypes
       dropdownListElements={
         props.dropDownActive
           ? dropDownElement
@@ -25,60 +26,121 @@ function FormaEntityListItem(props) {
 }
 ;
 
-
 FormaEntityListItem.propTypes = {
-  dropDownActive: PropTypes.bool,
-
+  /**
+   * Title of entity
+   */
   title: PropTypes.string,
 
-  description: PropTypes.string,
-
+  /**
+   * Content type of entity
+   */
   contentType: PropTypes.string,
 
-  thumbnailUrl: PropTypes.string,
+  /**
+   * Description of entity
+   */
+  description: PropTypes.string,
 
-  thumbnailAltText: PropTypes.string,
+  /**
+   * A URL to link to
+   */
+  href: PropTypes.string,
 
+  /**
+   * The publish status if the entry
+   */
+  status: PropTypes.oneOf(["published", "draft", "archived", "changed"]),
+  
+  /**
+   * If checked: A thumbnail will be shown
+   * Below we change prop name in UXPin
+   * @uxpinpropname Thumbnail
+   */
   withThumbnail: PropTypes.bool,
 
   /**
-   * @uxpinignoreprop
+   * Styling will be applied based on type
+   * Below we change prop name in UXPin
+   * @uxpinpropname Type
    */
-  entityType: PropTypes.oneOf(["Asset", "Entry", "Release", "entry", "asset"]),
+  entityType: PropTypes.oneOf(["Asset", "Entry", "Release"]),
 
-  status: PropTypes.oneOf(["published", "draft", "archieved", "changed"]),
+  /**
+   * The URL of the entity's preview thumbnail. Use 46px x 46px images for best results
+   * @uxpinpropname thmb URL
+   */
+  thumbnailUrl: PropTypes.string,
 
-  drodownListElements: PropTypes.element,
+  /**
+   * The alt text for the thumbnail
+   * @uxpinpropname thmb Alt Text
+   */
+  thumbnailAltText: PropTypes.string,
+  
+  /**
+   * Custom prop - If checked: will enable dropdown icon and functionality
+   * Below we change prop name in UXPin
+   * @uxpinpropname Drowdown
+   */
+  dropDownActive: PropTypes.bool,
 
+  /**
+   * If checked: will disable dropdown
+   * Below we change prop name in UXPin
+   * @uxpinpropname Drpdwn disable
+   */
+  isActionsDisabled: PropTypes.bool,
+
+  /**
+   * The DropdownList elements - adjust item dynamically
+   */
+  dropownListElements: PropTypes.element,
+
+  /**
+   * If checked: Renders drag handle
+   * Below we change prop name in UXPin
+   * @uxpinpropname Drag Handle
+   */
   withDragHandle: PropTypes.bool,
 
+  /**
+   * If checked: Applies css as if component is being dragged
+   */
   isDragActive: PropTypes.bool,
 
+  /**
+   * Props to pass to a custom drag handle component
+   * Below we change prop name in UXPin
+   * @uxpinpropname Custom Drag Handle
+   * @uxpinignoreprop
+   */
   cardDragHandleComponent: PropTypes.node,
 
-// /**
-//  * @uxpinignoreprop
-//  */
-//   cardDragHandleProps: PropTypes.
+  /**
+   * Props to pass to the default drag handle.
+   * Does not work with Custom Drag Handle prop
+   * @uxpinignoreprop
+   */
+  // cardDragHandleProps: PropTypes.
 
+  /**
+   * OnClick event 
+   */
   onClick: PropTypes.func,
-
-  href: PropTypes.string,
-
-  isActionsDisabled: PropTypes.bool,
 };
 
 
 
 FormaEntityListItem.defaultProps = {
-  title: "Change Title",
-  contentType: "Change Title",
-  description: "Change Description",
+  title: "Title",
+  contentType: "Content Type",
+  description: "Description",
   entityType: "Asset",
   status: "published",
   thumbnailAltText: "Change Thumbnail Alt Text",
-  thumbnailUrl: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg",
   withThumbnail: true,
+  dropDownActive: true,
 };
 
 export { FormaEntityListItem as default };

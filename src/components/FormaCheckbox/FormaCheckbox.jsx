@@ -12,7 +12,7 @@ FormaCheckbox.propTypes = {
   required: PropTypes.bool,
 
   labelText: PropTypes.string,
-  
+
   /**
    * @uxpinbind onChange 0.target.checked
    */
@@ -27,8 +27,6 @@ FormaCheckbox.propTypes = {
   value: PropTypes.string,
 
   disabled: PropTypes.bool,
-
-  type: PropTypes.oneOf(["Checbox"]),
 
   indeterminate: PropTypes.bool,
 };
