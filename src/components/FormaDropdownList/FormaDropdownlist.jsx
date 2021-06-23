@@ -17,7 +17,14 @@ FormaDropdownList.propTypes = {
     * @uxpinignoreprop
     */
   listRef: PropTypes.shape({ current: PropTypes.instanceOf(React.Component)}),
+    /**
+    * Adds a border above or below the list
+    */
   border: PropTypes.oneOf(["top", "bottom"]),
+    /**
+    * If set will add a max-height to the list
+    */
+  maxHeight: PropTypes.string
 };
 
 
