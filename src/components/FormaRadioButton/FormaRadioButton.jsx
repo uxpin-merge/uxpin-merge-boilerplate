@@ -14,7 +14,7 @@ FormaRadioButton.propTypes = {
   required: PropTypes.bool,
 
   labelText: PropTypes.string,
-  
+
   /**
    * @uxpinbind onChange 0.target.checked
    */
@@ -29,8 +29,6 @@ FormaRadioButton.propTypes = {
   value: PropTypes.string,
 
   disabled: PropTypes.bool,
-
-  type: PropTypes.oneOf(["Radio"]),
 
   indeterminate: PropTypes.bool,
 };
