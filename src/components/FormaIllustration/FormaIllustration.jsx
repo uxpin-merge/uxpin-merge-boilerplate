@@ -20,12 +20,16 @@ const FormaIllustration = (props) => (
 
 
 FormaIllustration.propTypes = {
+  /**
+  * The Illustration icon to display.
+  * 
+  * */
   illustration: PropTypes.oneOf(illustations)
 }
 
 
 FormaIllustration.defaultProps = {
-illustration: "Archive",
+  illustration: "Archive",
 };
 
 export { FormaIllustration as default };
