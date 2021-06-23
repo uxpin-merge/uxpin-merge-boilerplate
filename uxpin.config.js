@@ -35,6 +35,9 @@ module.exports = {
           'src/components/Note/Note.jsx',
           'src/components/Tag/Tag.jsx',
           'src/components/FormaTooltip/FormaTooltip.jsx',
+          'src/components/FormaGrid/FormaGrid.jsx',
+          // 'src/components/FormaGridItem/FormaGridItem.jsx',
+
         ],
       },
     ],
