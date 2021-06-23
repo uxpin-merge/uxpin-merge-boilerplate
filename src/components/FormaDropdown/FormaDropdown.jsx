@@ -1,14 +1,44 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
-import { Dropdown } from '@contentful/forma-36-react-components';
+import { Button, Dropdown, DropdownList, DropdownListItem } from '@contentful/forma-36-react-components';
 
+function FormaDropdown(props) {
+  const [isOpen, setOpen] = React.useState(false);
+   //On prop change (re render), set state 'open' to isOpen prop value
+   React.useEffect(() => setOpen(props.isOpen), [props]);
+   
+  const { triggerText, uxpinRef, ...other } = props;
+  return (
+   
+    <Dropdown
+    {...other}
+    
+      isOpen={isOpen}
+      onClose={() => setOpen(false)}
+      toggleElement={
+        <Button
+          size="small"
+          buttonType="muted"
+          indicateDropdown
+          onClick={() => setOpen(!isOpen)}
+         
+        >
+          {triggerText}
+        </Button>
+      }
+    >
+      {props.children}
 
-const FormaDropdown = (props) => (
-  <Dropdown {...props} />
-);
+    </Dropdown>
+  );
+}
 
 
 FormaDropdown.propTypes = {
+  /**
+  The label to be displayed above the dropdown
+  * @uxpinpropname Label
+  */
   submenuToggleLabel: PropTypes.string,
 
   /**
@@ -24,18 +54,25 @@ FormaDropdown.propTypes = {
 
   onClose: PropTypes.func,
 
-  position: PropTypes.oneOf(["left", "right", "top", "bottom"]),
+  position: PropTypes.oneOf(["default","left", "right", "top", "bottom"]),
 
   /**
    * @uxpinignoreprop
    */
   toggleElement: PropTypes.func,
+  /**
+  The text to be displayed on the button
+  * @uxpinpropname Button Text
+  */
+  triggerText: PropTypes.string,
 };
 
 
 
 FormaDropdown.defaultProps = {
-
+  triggerText: "This is the button text",
+  submenuToggleLabel: "Dropdown label",
+  isOpen:false
 };
 
 export { FormaDropdown as default };
