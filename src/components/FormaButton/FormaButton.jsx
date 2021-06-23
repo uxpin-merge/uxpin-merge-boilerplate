@@ -153,25 +153,69 @@ const FormaButton = (props) => (
 
 
 FormaButton.propTypes = {
+  /**
+   * Button text
+   * Below we change prop name in UXPin
+   * @uxpinpropname  Text
+   */
   label: PropTypes.string,
   /**
-  * Below we change prop name in UXPin
-  * @uxpinpropname  Variant
-  * */
+   * Below we change prop name in UXPin
+   * @uxpinpropname  Variant
+   */
   buttonType: PropTypes.oneOf(["primary", "secondary", "positive", "negative"]),
-  size: PropTypes.oneOf(["small", "medium", "large"]),
-  icon: PropTypes.oneOf(buttonIcons),
-  href: PropTypes.string,
-  target: PropTypes.string,
-  isFullWidth: PropTypes.bool,
-  loading: PropTypes.bool,
-  disabled: PropTypes.bool,
+
   /**
-  * Below we change prop name in UXPin
-  * @uxpinpropname  Dropdown
-  * */
+   * Button size
+   */
+  size: PropTypes.oneOf(["small", "medium", "large"]),
+
+  /**
+   * If checked: The button will stretch to fill available spacw
+   * @uxpinpropname Full width
+   */
+  isFullWidth: PropTypes.bool,
+
+  /**
+   * Select an icon for inside the button
+   */
+  icon: PropTypes.oneOf(buttonIcons),
+
+  /**
+   * If checked: Button will have loading spinner
+   */
+  loading: PropTypes.bool,
+
+  /**
+   * If checked: Button will have have a dropdown indication icon
+   * Below we change prop name in UXPin
+   * @uxpinpropname Dropdown
+   */
   indicateDropdown: PropTypes.bool,
+
+  /**
+   * A URL to link to
+   */
+  href: PropTypes.string,
+
+  /**
+   * A target where the link will open
+   */
+  target: PropTypes.string,
+
+  /**
+   * If checked: The button will be disabled
+   */
+  disabled: PropTypes.bool,
+  
+  /**
+   * OnClick event 
+   */
   onClick: PropTypes.func,
+
+  /**
+   * OnBlur event 
+   */
   onBlur: PropTypes.func,
 };
 
