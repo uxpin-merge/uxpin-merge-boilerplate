@@ -1,5 +1,5 @@
 import React from 'react';
-import FormaTextField from '../TextField';
+import FormaTextField from '../FormaTextField';
 
 export default (
   <FormaTextField

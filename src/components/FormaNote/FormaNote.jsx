@@ -13,17 +13,37 @@ const FormaNote = (props) => (
 
 
 FormaNote.propTypes = {
+  /**
+  * The type of note being represented
+  * @uxpinpropname Type
+  */
   noteType: PropTypes.oneOf(["primary", "positive", "negative", "warning"]),
+
+  /**
+  * The title of the note
+  * @uxpinpropname Title
+  */
   noteTitle: PropTypes.string,
+
+   /**
+  * The text of the note
+  * @uxpinpropname Text
+  */
   noteText: PropTypes.string,
+
+   /**
+  * If checked: The close Button will be enabled
+  * @uxpinpropname Close Button
+  */
   hasCloseButton: PropTypes.bool,
 };
 
 
 
 FormaNote.defaultProps = {
-  noteTitle: "Title",
-  noteText: "Note text",
+  noteType: "primary",
+  noteTitle: "Change Title",
+  noteText: "Change Text",
 };
 
 export { FormaNote as default };
