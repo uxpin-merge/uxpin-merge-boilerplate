@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Tabs } from '@contentful/forma-36-react-components';
 import { Tab } from '@contentful/forma-36-react-components';
 import { TabPanel } from '@contentful/forma-36-react-components';
+import { Button } from '@contentful/forma-36-react-components';
 
 import '@contentful/forma-36-react-components/dist/styles.css';
 
@@ -16,36 +17,22 @@ function FormaTabs(props) {
   return (
     <div>
       <Tabs {...props}>
-        <Tab
-          id="first"
-          selected={selected === 'first'}
-          // onSelect={(id: string) => {
-          //   action('onSelect')(id);
-          //   setSelected(id);
-          // }}
-        >
-          First
-        </Tab>
-        <Tab
+
+        {/* <Tab
           id="second"
           selected={selected === 'second'}
           onSelect={handleClick}
         >
           Second
-        </Tab>
-        <Tab
-          id="third"
-          disabled
-          selected={selected === 'third'}
-          // onSelect={(id: string) => {
-          //   action('onSelect')(id);
-          //   setSelected(id);
-          // }}
-        >
-          Third (disabled)
-        </Tab>
+        </Tab> */}
+        {props.children}
+        {React.Children.map(props.children, (child, index) => {
+<Button onClick={handleClick}>{child.props.children}</Button>
+           })}
       </Tabs>
-      {selected === 'first' && (
+
+
+      {/* {selected === 'first' && (
         <TabPanel id="first">content first tab</TabPanel>
       )}
       {selected === 'second' && (
@@ -53,7 +40,7 @@ function FormaTabs(props) {
       )}
       {selected === 'third' && (
         <TabPanel id="third">content third tab</TabPanel>
-      )}
+      )} */}
     </div>
   );
       };
@@ -61,7 +48,7 @@ function FormaTabs(props) {
 
 /* eslint-disable sort-keys */
 FormaTabs.propTypes = {
-    label: PropTypes.string
+    label: PropTypes.string,
 //   onClick: PropTypes.func,
 //   disabled: PropTypes.bool,
 //   type: PropTypes.oneOf(['primary', 'secondary', 'success', 'error', 'warning']),
@@ -73,7 +60,8 @@ FormaTabs.propTypes = {
 //   /**
 //    * @uxpinpropname Label
 //    */
-//   children: PropTypes.string,
+children: PropTypes.node,
+
 //   icon: PropTypes.node,
 //   iconDirection: PropTypes.oneOf(['left', 'right']),
 //   size: PropTypes.oneOf(['xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl']),

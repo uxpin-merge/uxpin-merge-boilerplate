@@ -1,15 +1,13 @@
-// import React from 'react';
-// import Forma from '../CreditCard';
+import React from 'react';
+import FormaTabs from '../FormaTabs';
+import FormaTab from '../../FormaTab/FormaTab';
+import FormaButton from '../../FormaButton/FormaButton';
 
-// export default (
-//   <CreditCard
-//     uxpId="Card1"
-//     preview="true"
-//     name="Jane Doe"
-//     number="2341657400019862"
-//     cvc="772"
-//     expiry="12/24"
-//     issuer="visa"
-//     locale="expires"
-//   />
-// );
+
+
+export default (
+    <FormaTabs uxpId="tabs-1">
+        <FormaButton  uxpId="tab-1">Tab 1</FormaButton>
+        <FormaButton  uxpId="tab-2">Tab 2</FormaButton>
+    </FormaTabs>
+);

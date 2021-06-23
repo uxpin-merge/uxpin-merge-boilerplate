@@ -26,6 +26,7 @@ module.exports = {
           'src/components/FormaSpinner/FormaSpinner.jsx',
           'src/components/FormaSwitch/FormaSwitch.jsx',
           'src/components/FormaTabs/FormaTabs.jsx',
+          'src/components/FormaTab/FormaTab.jsx',
           'src/components/FormaTextLink/FormaTextLink.jsx',
           'src/components/FormaTooltip/FormaTooltip.jsx',
           'src/components/FormaValidationMessage/FormaValidationMessage.jsx',
