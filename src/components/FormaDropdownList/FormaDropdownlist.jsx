@@ -9,6 +9,13 @@ const FormaDropdownList = (props) => (
 
 
 FormaDropdownList.propTypes = {
+    /**
+    * @uxpinignoreprop
+    */
+  children: PropTypes.node,
+    /**
+    * @uxpinignoreprop
+    */
   listRef: PropTypes.shape({ current: PropTypes.instanceOf(React.Component)}),
   border: PropTypes.oneOf(["top", "bottom"]),
 };
@@ -16,7 +23,7 @@ FormaDropdownList.propTypes = {
 
 
 FormaDropdownList.defaultProps = {
-  border: "bottom",
+
 };
 
 export { FormaDropdownList as default };
