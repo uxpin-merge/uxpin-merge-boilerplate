@@ -9,12 +9,24 @@ const FormaCopyButton = (props) => (
 
 
 FormaCopyButton.propTypes = {
+  /**
+   * Tooltip text when hovering
+   */
   tooltipText: PropTypes.string,
 
+  /**
+   * Tooltip text after clicking button to copy
+   */
   tooltipCopiedText: PropTypes.string,
 
+  /**
+   * Value to copy after clicking button
+   */
   copyValue: PropTypes.string,
 
+  /**
+   * Tooltip for hover and copy location
+   */
   tooltipPlace: PropTypes.oneOf(["left",
     "right",
     "auto",
@@ -33,8 +45,6 @@ FormaCopyButton.propTypes = {
 
   onCopy: PropTypes.func,
 };
-
-
 
 FormaCopyButton.defaultProps = {
   tooltipText: "Copy to clipboard",
