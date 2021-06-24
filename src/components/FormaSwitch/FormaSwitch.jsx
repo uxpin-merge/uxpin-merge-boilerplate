@@ -2,31 +2,52 @@ import * as PropTypes from 'prop-types';
 import * as React from 'react';
 import { Switch } from '@contentful/forma-36-react-components';
 
+function FormaSwitch (props) {
+  //State variable 'checked' set to true
+  const [isActive, setActive] = React.useState(false);
+  //On prop change (re render), set state 'active' to isChecked prop value
+  React.useEffect(() => setActive(props.isChecked), [props]);
 
-const FormaSwitch = (props) => (
-  <Switch {...props} />
-);
-
-
-FormaSwitch.propTypes = {
-  labelText: PropTypes.string,
-  
-  /**
-   * @uxpinbind onToggle 0.target.ischecked
-   */
-  isChecked: PropTypes.bool,
-
-  size: PropTypes.oneOf(["small", "large"]),
-
-  isDisabled: PropTypes.bool,
-
-  onToggle: PropTypes.func
+  return (
+    <Switch 
+      {...props} 
+      isChecked={isActive}
+      onToggle={setActive}
+    />
+  )
 };
 
 
+FormaSwitch.propTypes = {
+  /**
+   * Text of Label
+   */
+  labelText: PropTypes.string,
+  
+  /**
+   * If checked: Switch will be active
+   */
+  isChecked: PropTypes.bool,
+
+  /**
+   * The size of the switch
+   */
+  size: PropTypes.oneOf(["small", "large"]),
+
+  /**
+   * If checked: the switch will not be usable
+   */
+  isDisabled: PropTypes.bool,
+
+  /**
+   * On toggle event
+   * @uxpinignoreprop
+   */
+  onToggle: PropTypes.func
+};
 
 FormaSwitch.defaultProps = {
-  isChecked: true,
+  isChecked: false,
   size: "large",
   labelText: "Switch Label",
 };
