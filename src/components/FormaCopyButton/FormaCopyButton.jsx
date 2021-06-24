@@ -20,11 +20,6 @@ FormaCopyButton.propTypes = {
   tooltipCopiedText: PropTypes.string,
 
   /**
-   * Value to copy after clicking button
-   */
-  copyValue: PropTypes.string,
-
-  /**
    * Tooltip for hover and copy location
    */
   tooltipPlace: PropTypes.oneOf(["left",
@@ -43,6 +38,14 @@ FormaCopyButton.propTypes = {
     "left-start",
     "left-end"]),
 
+  /**
+   * Value to copy after clicking button
+   */
+  copyValue: PropTypes.string,
+
+  /**
+   * Function called on copy
+   */
   onCopy: PropTypes.func,
 };
 
