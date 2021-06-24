@@ -2,10 +2,10 @@ import * as PropTypes from 'prop-types';
 import * as React from 'react';
 import { Modal } from '@contentful/forma-36-react-components';
 import { Button } from '@contentful/forma-36-react-components';
-import { propTypes } from 'react-widgets/lib/Calendar';
 
 function FormaModal(props) {
   const [isShown, setShown] = React.useState(false);
+  React.useEffect(() => setShown(props.isShown), [props]);
 
   return (
     <React.Fragment>
@@ -41,6 +41,7 @@ FormaModal.propTypes = {
 };
 
 FormaModal.defaultProps = {
+  isShown: false,
   title: "Default modal",
   buttonText: "Show modal",
 };
