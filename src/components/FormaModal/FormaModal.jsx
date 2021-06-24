@@ -14,7 +14,7 @@ function FormaModal(props) {
         {() => (
           <React.Fragment>
             <Modal.Header title={props.title} />
-            <Modal.Content>Hello from controlled modal window</Modal.Content>
+            <Modal.Content>{props.content}</Modal.Content>
             <Modal.Controls>
               <Button buttonType="positive" onClick={() => setShown(false)}>
                 Confirm
@@ -35,6 +35,7 @@ FormaModal.propTypes = {
   size: PropTypes.oneOf(["small", "medium", "large"]),
   title: PropTypes.string,
   isShown: PropTypes.bool,
+  content: PropTypes.string,
   shouldCloseOnEscapePress: PropTypes.bool,
   onClick: PropTypes.func,
   buttonText: PropTypes.string,
@@ -44,6 +45,7 @@ FormaModal.defaultProps = {
   isShown: false,
   title: "Default modal",
   buttonText: "Show modal",
+  content: "Hello from controlled modal window",
 };
 
 export { FormaModal as default };
