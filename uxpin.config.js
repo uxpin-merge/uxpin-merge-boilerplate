@@ -18,6 +18,7 @@ module.exports = {
       {
         name: 'Form',
         include: [
+          'src/components/MwcAppBar/mwcAppBar.js',
           'src/components/Button/Button.js',
           'src/components/Select/Select.js',
           'src/components/Select/components/SelectItem/SelectItem.js',
