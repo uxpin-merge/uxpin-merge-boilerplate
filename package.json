@@ -89,7 +89,7 @@
     "emotion": "^10.0.27",
     "google-map-react": "^1.1.7",
     "google-maps-react": "^2.0.2",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "namor": "^2.0.2",
     "node-sass": "^4.13.1",
     "payment": "^2.3.0",
