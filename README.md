@@ -60,7 +60,7 @@ Adding components to Merge is no different than creating normal React.js compone
 - You have to add the component to uxpin.config.js file
 - You have to prepare presets for every component (temporary restrictions to be replaced by jsx presets)
 
-## Creating presets (temporary requirement)
+## Creating presets
 
 Preset is a JSX file that describes components in a structured way.
 
