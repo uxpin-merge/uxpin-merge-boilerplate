@@ -83,4 +83,4 @@ Example preset:
 
 As you can see we are defining the default props and the structure of the Button component. When dragged onto the UXPin canvas, the initial render of the component will appear with the above structure. One thing to note is that every component set in a preset file must have a unique UXPin ID attribute `uxpId`. This allows Merge to properly render every component and track overrides of components. 
 
-If you would like to learn more about managing JSX presets and Merge integration. Please see our [Merge documentation] (https://www.uxpin.com/docs/merge/what-is-uxpin-merge/).
+If you would like to learn more about managing JSX presets and Merge integration. Please see our [Merge documentation](https://www.uxpin.com/docs/merge/what-is-uxpin-merge/).
