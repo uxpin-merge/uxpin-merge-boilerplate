@@ -69,7 +69,7 @@ $rccs-visaelectron-logo: 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBl
   width: $rccs-size;
 
   &__card {
-    height: $rccs-size / $rccs-card-ratio;
+    height: calc($rccs-size / $rccs-card-ratio);
     margin: 0 auto;
     position: relative;
     transform-style: preserve-3d;
@@ -80,7 +80,7 @@ $rccs-visaelectron-logo: 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBl
     &--back {
       backface-visibility: hidden;
       background: $rccs-default-background;
-      border-radius: $rccs-size / 20;
+      border-radius: calc($rccs-size / 20);
       color: $rccs-light-text-color;
       height: 100%;
       left: 0;
@@ -357,11 +357,11 @@ $rccs-visaelectron-logo: 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBl
     background-image: url($rccs-chip-image);
     background-repeat: no-repeat;
     background-size: contain;
-    height: $rccs-size / 11;
+    height: calc($rccs-size / 11);
     left: 10%;
     position: absolute;
     top: 10%;
-    width: $rccs-size / 7;
+    width: calc($rccs-size / 7);
   }
 
   &__issuer {
